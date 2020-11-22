@@ -1,6 +1,16 @@
 # vue3-tailwind2
 
+
 WIP 🚧
+
+This template is built using Vue.js 3 + TypeScript + Tailwind CSS 2.
+
+
+## Usage
+
+clone this project by running
+
+    git clone https://github.com/boussadjra/vue3-tailwind2.git
 
 ## Project setup
 ```
