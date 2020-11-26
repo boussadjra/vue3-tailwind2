@@ -1,26 +1,26 @@
 <template>
 <div>
-    <nav class="h-16 w-full p-4 bg-purple-100 text-gray-600 flex flex-row items-center justify-between">
-        <h1 class="logo text-4xl font-bold text-purple-800 ">
+    <nav class="h-16 w-full p-4  bg-purple-800  text-purple-100 flex flex-row items-center justify-between shadow-md">
+        <h1 class="logo text-4xl font-bold text-yellow-300">
             VUEWIND
         </h1>
 
-        <ul class="flex flex-row justify-between w-4/12 text-md uppercase cursor-pointer ">
+        <ul class="flex flex-row justify-between w-4/12 text-sm uppercase cursor-pointer ">
             <li class="min-w-max">
-                <router-link to="/" active-class="text-purple-600">Home</router-link>
+                <router-link to="/" active-class="text-yellow-300">Home</router-link>
             </li>
             <li class="min-w-max">
-                <router-link to="/components" active-class="text-purple-600">Components</router-link>
+                <router-link to="/components" active-class="text-yellow-300">Components</router-link>
             </li>
             <li class="min-w-max">Icons</li>
             <li class="min-w-max">
 
-                <router-link to="/about" active-class="text-purple-600">About me</router-link>
+                <router-link to="/about" active-class="text-yellow-300">About me</router-link>
 
             </li>
         </ul>
 
-        <div class="uppercase text-purple-800 cursor-pointer">
+        <div class="uppercase text-purple-200 cursor-pointer">
             <a href="https://github.com/boussadjra/vue3-tailwind2" target="_blank" rel="noopener noreferrer">Github</a>
 
         </div>

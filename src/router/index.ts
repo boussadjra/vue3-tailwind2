@@ -11,27 +11,32 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/about',
     name: 'About',
-  
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+
+    component: () => import('../views/About.vue')
   },
   {
     path: '/components',
     name: 'Components',
-  
-    component: () => import( '../views/components/Index.vue'),
-    children:[
+
+    component: () => import('../views/components/Index.vue'),
+    children: [
       {
 
-        path:'alerts',
-        name:'Alerts',
-        component:()=>import( '../views/components/Alerts.vue'),
-      }
-    ]
-  },{
+        path: 'alerts',
+        name: 'Alerts',
+        component: () => import('../views/components/Alerts.vue'),
+      },
+      {
 
+        path: 'icons',
+        name: 'Icons',
+        component: () => import('../views/components/Icons.vue'),
+      },
+    ]
+  }, {
     path: '/:pathMatch(.*)*',
-    name:'NotFound',
-    component:NotFound
+    name: 'NotFound',
+    component: NotFound
   }
 ]
 

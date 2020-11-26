@@ -29,14 +29,21 @@
 
 <script lang="ts">
 import {
-    defineComponent
+    defineComponent,
+    ref
 } from 'vue';
 import HelloWorld from '@/components/HelloWorld.vue';
-
+import {
+    RouterLink
+} from 'vue-router';
+interface keyable {
+    [key: string]: any;
+}
 export default defineComponent({
     name: 'Home',
     components: {
         HelloWorld,
     },
+
 });
 </script>
