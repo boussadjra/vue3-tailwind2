@@ -1,14 +1,14 @@
 <template>
 <div class="flex flex-row">
     <div class="min-h-screen flex justify-center bg-purple-100 py-6 w-64">
-        <div class="flex w-full p-4">
+        <div class="flex w-full py-4">
             <ul class="flex flex-col w-32">
-                <li class="p-2 relative" v-for="(component, index) in components" :key="index">
+                <li class=" relative w-full" v-for="(component, index) in components" :key="index">
                     <!-- <span class="w-2 h-2 rounded-full bg-purple-500 absolute  left-0 top-2">
 
                     </span>-->
 
-                    <router-link active-class="text-purple-500" class="flex text-gray-600" :to="`/components/${component.toLowerCase()}`">
+                    <router-link active-class="text-purple-700 bg-purple-200" class="flex text-gray-600 w-full pl-4 p-2" :to="`/components/${component.toLowerCase()}`">
                         <IconDevelopment class="mr-4 " />{{ component }}
                     </router-link>
                 </li>

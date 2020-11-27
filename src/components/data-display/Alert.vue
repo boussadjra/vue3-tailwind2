@@ -1,12 +1,21 @@
 <template>
 <transition name="fade">
-    <div class="text-gray-100 w-96 h-20 p- pl-6 pr-4 rounded text-sm flex items-center" :class="classes" v-if="modelValue">
-        <div class="w-11/12">
-            <slot></slot>
+    <div class="relative w-auto h-20 p-2 pl-6 pr-4 rounded text-sm flex items-center" :class="classes" v-if="modelValue">
+        <div>
+
+        </div>
+        <div class="w-11/12 pt-2">
+            <h1 v-if="title" class="text-lg pt-2  flex items-center">
+                <component :is="variant" class="mr-2"></component>
+                {{title}}
+            </h1>
+            <div class="pb-4">
+                <slot></slot>
+            </div>
         </div>
         <div class="w-1/12 justify-self-end">
-            <div>
-                <icon-x :height="32" :width="40" class="text-gray-300 cursor-pointer" @click="$emit('update:modelValue', false)" />
+            <div class="flex justify-end">
+                <icon-close class=" cursor-pointer " @click="$emit('update:modelValue', false)" />
             </div>
         </div>
     </div>
@@ -18,30 +27,38 @@ import {
     defineComponent,
     PropType
 } from "vue";
-import IconX from "@/components/icons/IconX.vue";
+import IconClose from "@/components/icons/IconClose.vue";
+import IconInformation from "@/components/icons/IconInformation.vue";
+import IconWarning from '../icons/IconWarning.vue';
+import IconCheckmarkOutline from '../icons/IconCheckmarkOutline.vue';
+import IconCloseOutline from '../icons/IconCloseOutline.vue';
 export default defineComponent({
     name: "alert",
     props: {
         variant: {
             type: String as PropType <
                 "default" | "info" | "success" | "danger" | "warning" > ,
-            default: "default",
+            default: "info",
         },
         modelValue: {
             type: Boolean,
             default: true,
+        },
+        title: {
+            type: String,
+            default: "",
         },
     },
     emits: ["update:modelValue"],
     data() {
         return {
             variants: {
-                default: "bg-gray-500",
-                info: "bg-blue-600",
-                success: "bg-green-400",
+                default: ["bg-gray-300", "text-gray-800"],
+                info: ["bg-blue-300", "text-blue-800"],
+                success: ["bg-green-300", "bg-text-800"],
 
-                danger: "bg-red-400",
-                warning: "bg-yellow-500",
+                danger: ["bg-red-300", "text-red-800"],
+                warning: ["bg-yellow-300", "text-yellow-800"],
             },
         };
     },
@@ -52,11 +69,16 @@ export default defineComponent({
     },
     computed: {
         classes(): Array < string > {
-            return [this.variants[this.variant]];
+            return this.variants[this.variant];
         },
+
     },
     components: {
-        IconX,
+        IconClose,
+        "info": IconInformation,
+        "warning": IconWarning,
+        "success": IconCheckmarkOutline,
+        "danger": IconCloseOutline
     },
 });
 </script>

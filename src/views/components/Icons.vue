@@ -17,7 +17,7 @@
         <span role="button" @click="!lastPage?page++:{}" class="p-4 bg-purple-600 text-gray-100 rounded-full m-2 hover:bg-purple-800 cursor-pointer" :class="{'cursor-not-allowed ':lastPage}">
             <IconCaretRight />
         </span>
-        {{(this.page + 1) * this.pageSize}} {{this.iconNames.length}}
+
     </div>
 </div>
 </template>

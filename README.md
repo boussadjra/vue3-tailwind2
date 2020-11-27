@@ -3,7 +3,7 @@
 
 WIP 🚧
 
-This template is built using Vue.js 3 + TypeScript + Tailwind CSS 2.
+This template is built using Vue.js 3 + TypeScript + Tailwind CSS 2, it serves as starter for new projects and it contains some basic components to get started, It configured using the Vue ecosystem (Vue-router + Vuex)
 
 
 ## Usage
