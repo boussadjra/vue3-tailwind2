@@ -1,6 +1,6 @@
 <template>
 <transition name="fade">
-    <div class="relative w-auto h-20 p-2 pl-6 pr-4 rounded text-sm flex items-center" :class="classes" v-if="modelValue">
+    <div class="relative w-auto h-20 p-2 pl-6 pr-4 rounded text-sm flex items-center  " :class="classes" v-if="modelValue">
         <div>
 
         </div>
@@ -44,6 +44,10 @@ export default defineComponent({
             type: Boolean,
             default: true,
         },
+        raised: {
+            type: Boolean,
+            default: true,
+        },
         title: {
             type: String,
             default: "",
@@ -69,7 +73,8 @@ export default defineComponent({
     },
     computed: {
         classes(): Array < string > {
-            return this.variants[this.variant];
+            let classShadow: string = this.raised ? 'shadow-md' : ''
+            return [...this.variants[this.variant], classShadow];
         },
 
     },

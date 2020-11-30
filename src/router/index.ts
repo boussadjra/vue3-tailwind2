@@ -28,6 +28,12 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
 
+        path: 'avatars',
+        name: 'Avatars',
+        component: () => import('../views/components/Avatars.vue'),
+      },
+      {
+
         path: 'icons',
         name: 'Icons',
         component: () => import('../views/components/Icons.vue'),
