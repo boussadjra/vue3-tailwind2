@@ -6,7 +6,7 @@
         <slot></slot>
     </div>
 
-    <slot name="badge" :avatar="{size,variant}"></slot>
+    <slot name="badge" :avatar="{size,shape}"></slot>
 
     <div></div>
 </div>
@@ -33,7 +33,7 @@ export default defineComponent({
             type: String as PropType < "xs" | "sm" | "md" | "lg" > ,
             default: "md",
         },
-        variant: {
+        shape: {
             type: String as PropType < "circle" | "rounded" | "square" > ,
             default: "circle",
         },
@@ -54,7 +54,7 @@ export default defineComponent({
     computed: {
         classes(): Array < string | keyable > {
             let className = "rounded";
-            switch (this.variant) {
+            switch (this.shape) {
                 case "rounded":
                     className = "rounded";
                     break;

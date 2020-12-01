@@ -1,6 +1,6 @@
 <template>
 <div class="badge relative top-0">
-    <span v-if="$slots.default" class="mt-2 px-4 py-1 text-purple-700 bg-purple-200" :class="classes">
+    <span v-if="$slots.default" class="mt-2 px-4 py-1" :class="classes">
         <slot></slot>
     </span>
 
@@ -25,19 +25,19 @@ export default defineComponent({
             type: String as PropType < "xs" | "sm" | "md" | "lg" > ,
             default: "full",
         },
-        variant: {
+        shape: {
             type: String as PropType < "circle" | "rounded" | "square" > ,
             default: "rounded",
         },
         color: {
             type: String,
-            default: "green",
+            default: "",
         },
         avatar: {
             type: Object as PropType < keyable > ,
             default: () => ({
                 size: "sm",
-                variant: "circle",
+                shape: "circle",
             }),
         },
         position: {
@@ -48,6 +48,14 @@ export default defineComponent({
         ping: {
             type: Boolean,
             default: false,
+        },
+        bgColor: {
+            type: String,
+            default: "bg-purple-200",
+        },
+        textColor: {
+            type: String,
+            default: "text-purple-700",
         },
     },
     data() {
@@ -65,7 +73,7 @@ export default defineComponent({
     computed: {
         classes(): Array < string > {
             let roundedClass = "rounded";
-            switch (this.variant) {
+            switch (this.shape) {
                 case "rounded":
                     roundedClass = "rounded";
                     break;
@@ -90,14 +98,15 @@ export default defineComponent({
                 positionClass = "right-0 bottom-0";
             }
 
-            if (["rounded", "square"].includes(this.avatar.variant)) {
+            if (["rounded", "square"].includes(this.avatar.shape)) {
                 positionClass = "right-0 bottom-0 -mr-1 -mb-1";
             }
-
+            let colors = this.color ?
+                `text-${this.color}-200 bg-${this.color}-500` : `${this.bgColor} ${this.textColor}`;
             return [
                 `h-${this.sizes[this.size]}`,
                 `w-${this.sizes[this.size]}`,
-                `text-${this.color}-100 bg-${this.color}-500`,
+                colors,
                 roundedClass,
                 positionClass,
             ];
@@ -112,7 +121,11 @@ export default defineComponent({
             }
         },
     },
-    mounted() {},
+    mounted() {
+        console.log("--------------------");
+        console.log(this.textColor, this.bgColor);
+        console.log("--------------------");
+    },
 });
 </script>
 

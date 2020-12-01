@@ -34,36 +34,36 @@
     <div class="w-full flex flex-row  justify-between items-center">
         <avatar src="https://i.pravatar.cc/200?img=56" variant="circle" class="bg-purple-200 row-start-1 text-purple-650">
             <template #badge>
-                <badge variant="circle" size="md"></badge>
+                <badge shape="circle" size="md"></badge>
             </template>
         </avatar>
         <avatar src="https://i.pravatar.cc/200?img=58" variant="circle" size="xs" class="bg-purple-200 row-start-1 text-purple-650">
             <template #badge='{avatar}'>
-                <badge variant="circle" size="xs" :avatar="avatar"></badge>
+                <badge shape="circle" size="xs" :avatar="avatar"></badge>
             </template>
         </avatar>
         <avatar src="https://i.pravatar.cc/200?img=64" variant="circle" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
             <template #badge='{avatar}'>
 
-                <badge variant="circle" color="red" size="sm" :avatar="avatar"></badge>
+                <badge shape="circle" color="red" size="sm" :avatar="avatar"></badge>
             </template>
         </avatar>
         <avatar src="https://i.pravatar.cc/200?img=65" variant="rounded" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
             <template #badge='{avatar}'>
 
-                <badge variant="circle" color="green" size="md" :avatar="avatar"></badge>
+                <badge shape="circle" color="green" size="md" :avatar="avatar"></badge>
             </template>
         </avatar>
         <avatar src="https://i.pravatar.cc/200?img=67" size="sm" class="bg-purple-200 row-start-1 text-purple-600">
             <template #badge='{avatar}'>
 
-                <badge variant="circle" ping position="top-right" color="blue" size="sm" :avatar="avatar"></badge>
+                <badge shape="circle" ping position="top-right" color="blue" size="sm" :avatar="avatar"></badge>
             </template>
         </avatar>
         <avatar src="https://i.pravatar.cc/200?img=42" variant="square" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
             <template #badge='{avatar}'>
 
-                <badge variant="circle" color="green" size="md" :avatar="avatar"></badge>
+                <badge shape="circle" color="green" size="md" :avatar="avatar"></badge>
             </template>
         </avatar>
 
@@ -89,7 +89,7 @@
             {{i}}
             <template #badge='{avatar}'>
 
-                <badge variant="circle" :color="index%2===0?'green':'red'" size="md" :avatar="avatar"></badge>
+                <badge shape="circle" :color="index%2===0?'green':'red'" size="md" :avatar="avatar"></badge>
             </template>
         </avatar>
     </div>

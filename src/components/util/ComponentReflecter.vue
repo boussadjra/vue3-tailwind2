@@ -6,7 +6,7 @@
         <thead class="text-gray-600 text-left border border-gray-200">
             <th class="p-2">Name</th>
             <th class="p-2">Default</th>
-            <th class="p-2">Description</th>
+            <th class="p-2">Type</th>
         </thead>
         <tbody class="border border-gray-100 text-gray-500">
             <tr class="border border-gray-200" v-for="(prop,key,index) in component.props">
