@@ -6,9 +6,10 @@
         <slot></slot>
     </div>
 
-    <slot name="badge" :avatar="{size,shape}"></slot>
+    <div class="relative">
+        <slot name="badge" :avatar="{size,shape}"></slot>
 
-    <div></div>
+    </div>
 </div>
 </template>
 

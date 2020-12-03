@@ -1,6 +1,6 @@
 <template>
 <div class="space-y-2">
-    <h1 class="text-xl ml-2 pt-16 pb-8 text-gray-700 ">Avatars with images and different sizes:</h1>
+    <h1 class="section__title ">Avatars with images and different sizes:</h1>
     <div class="w-full grid grid-cols-4 gap-4 place-items-center">
         <template v-for="(img,i) in images">
 
@@ -15,7 +15,7 @@
 </div>
 
 <div class="space-y-2">
-    <h1 class="text-xl ml-2 pt-16 pb-8 text-gray-700 ">Avatars with images and different sizes:</h1>
+    <h1 class="section__title ">Avatars with images and different sizes:</h1>
     <div class="w-full flex flex-row  justify-between items-center">
         <div class="flex flex-col justify-center items-center space-y-4" v-for="(variant,i) in variants" :key="i">
 
@@ -30,7 +30,7 @@
 </div>
 
 <div class="space-y-2">
-    <h1 class="text-xl ml-2 pt-16 pb-8 text-gray-700 "> Avatars with badges:</h1>
+    <h1 class="section__title "> Avatars with badges:</h1>
     <div class="w-full flex flex-row  justify-between items-center">
         <avatar src="https://i.pravatar.cc/200?img=56" variant="circle" class="bg-purple-200 row-start-1 text-purple-650">
             <template #badge>
@@ -70,7 +70,7 @@
     </div>
 </div>
 <div class="space-y-2">
-    <h1 class="text-xl ml-2 pt-16 pb-8 text-gray-700 "> Stacked avatars :</h1>
+    <h1 class="section__title "> Stacked avatars :</h1>
     <div class="w-full flex flex-row  items-center justify-center  ">
         <avatar v-for="i in 10" :key="i" :src="'https://i.pravatar.cc/200?img='+(60+i)" variant="circle" size="sm" class="flex bg-purple-200 row-start-1 text-purple-650 -ml-4 ring-1 ring-white">
 
@@ -83,7 +83,7 @@
     </div>
 </div>
 <div class="space-y-2 pb-4">
-    <h1 class="text-xl ml-2 pt-16 pb-8 text-gray-700 "> Avatars with letters :</h1>
+    <h1 class="section__title "> Avatars with letters :</h1>
     <div class="w-full flex flex-row  items-center justify-between ">
         <avatar v-for="(i,index) in 'KLPOABCDEF'" :key="i" variant="circle" size="sm" class="flex bg-purple-200 row-start-1 text-purple-650 ring-1 ring-white">
             {{i}}

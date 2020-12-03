@@ -1,11 +1,15 @@
 <template>
 <div class="badge relative top-0">
-    <span v-if="$slots.default" class="mt-2 px-4 py-1" :class="classes">
+    <span v-if="$slots.default" class="mt-2 py-1" :class="[...classes, ...paddingClasse]">
         <slot></slot>
     </span>
 
-    <div v-else class="absolute border-2 border-white z-10" :class="classes" :style="styles"></div>
-    <span v-if="ping" :class="classes" :style="styles" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+    <div v-else class="relative">
+        <div class="border-2 border-white z-10" :class="[...classes, ...absoluteClass]" :style="styles"></div>
+        <span v-if="ping" :class="[...classes]" :style="styles" class="absolute  animate-ping  rounded-full w-4 h-4 bg-purple-400 opacity-75">
+        </span>
+    </div>
+
 </div>
 </template>
 
@@ -23,7 +27,7 @@ export default defineComponent({
     props: {
         size: {
             type: String as PropType < "xs" | "sm" | "md" | "lg" > ,
-            default: "full",
+            default: "sm",
         },
         shape: {
             type: String as PropType < "circle" | "rounded" | "square" > ,
@@ -42,7 +46,7 @@ export default defineComponent({
         },
         position: {
             type: String as PropType <
-                "top-left" | "top-right" | "bottom-right" | "bottom-left" > ,
+                "top-left" | "top-right" | "bottom-right" | "bottom-left" | "initial" > ,
             default: "bottom-right",
         },
         ping: {
@@ -66,6 +70,12 @@ export default defineComponent({
                 md: "16px",
                 lg: "24px",
                 auto: "auto",
+            },
+            px: {
+                xs: 2,
+                sm: 4,
+                md: 8,
+                lg: 16,
             },
         };
     },
@@ -111,7 +121,12 @@ export default defineComponent({
                 positionClass,
             ];
         },
-
+        absoluteClass(): Array < string > {
+            return [this.position === "initial" ? "initial" : "absolute"];
+        },
+        paddingClasse(): Array < string > {
+            return ["px-" + this.px[this.size]];
+        },
         styles() {
             if (this.position === "top-right") {
                 return {
@@ -121,11 +136,7 @@ export default defineComponent({
             }
         },
     },
-    mounted() {
-        console.log("--------------------");
-        console.log(this.textColor, this.bgColor);
-        console.log("--------------------");
-    },
+    mounted() {},
 });
 </script>
 

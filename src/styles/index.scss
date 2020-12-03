@@ -10,3 +10,7 @@
 body{
     font-family: 'Inter';
 }
+
+.section__title{
+    @apply text-xl ml-2 pt-16 pb-8 text-gray-700
+}

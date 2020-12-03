@@ -40,6 +40,12 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
 
+        path: 'buttons',
+        name: 'Buttons',
+        component: () => import('../views/components/Buttons.vue'),
+      },
+      {
+
         path: 'icons',
         name: 'Icons',
         component: () => import('../views/components/Icons.vue'),
