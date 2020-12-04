@@ -14,7 +14,7 @@
     </div>
 </div>
 <div class="space-y-2">
-    <h1 class="section__title">Squared buttons shape:</h1>
+    <h1 class="section__title ">Squared buttons shape:</h1>
     <div class="w-full grid grid-cols-5 gap-4 place-items-center">
         <vw-btn v-for="variant in variants" shape="rounded-none" :key="variant" :variant="variant">{{ variant }}</vw-btn>
     </div>
@@ -68,6 +68,24 @@
         </vw-btn>
     </div>
 </div>
+<div class="space-y-2">
+    <h1 class="section__title">Buttons with different sizes:</h1>
+
+    <div class="w-full grid grid-cols-5 gap-4 place-items-center">
+        <vw-btn v-for="(size,i) in sizes" :key="size" :size="size">{{ texts[i] }}
+
+        </vw-btn>
+    </div>
+</div>
+<div class="space-y-2">
+    <h1 class="section__title">Block button:</h1>
+
+    <div class="w-full ">
+        <vw-btn size="md" full>
+            block
+        </vw-btn>
+    </div>
+</div>
 </template>
 
 <script lang="ts">
@@ -87,6 +105,9 @@ export default defineComponent({
     data() {
         return {
             variants: ["default", "primary", "danger", "success", "warning"],
+            sizes: ["sm", "md", "lg"],
+
+            texts: ["OK", "next", "Submit", "GET STARTED"]
         };
     },
     components: {

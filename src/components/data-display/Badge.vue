@@ -17,6 +17,8 @@
 import {
     keyable
 } from "@/@types/global";
+import shaped from '@/mixins/shaped';
+import sizeable from '@/mixins/sizeable';
 import {
     defineComponent,
     PropType
@@ -29,10 +31,7 @@ export default defineComponent({
             type: String as PropType < "xs" | "sm" | "md" | "lg" > ,
             default: "sm",
         },
-        shape: {
-            type: String as PropType < "circle" | "rounded" | "square" > ,
-            default: "rounded",
-        },
+
         color: {
             type: String,
             default: "",
@@ -62,6 +61,8 @@ export default defineComponent({
             default: "text-purple-700",
         },
     },
+    mixins: [shaped, sizeable],
+
     data() {
         return {
             sizes: {
@@ -82,39 +83,20 @@ export default defineComponent({
 
     computed: {
         classes(): Array < string > {
-            let roundedClass = "rounded";
-            switch (this.shape) {
-                case "rounded":
-                    roundedClass = "rounded";
-                    break;
-                case "circle":
-                    roundedClass = "rounded-full";
-                    break;
-                case "square":
-                    roundedClass = "rounded-none";
-                    break;
-                default:
-                    break;
-            }
-            // let placements=["top-left" , "top-right" , "bottom-right" , "bottom-left"]
+            let roundedClass = this.shapes[this.shape];
 
-            // let positions:keyable={}
-
-            // placements.forEach(pl=>{
-            //     positions[pl]=pl.concat('-').replace('-','-1 ').trim()
-            // })
             let positionClass = "right-1 bottom-1";
             if (this.avatar.size === "xs") {
                 positionClass = "right-0 bottom-0";
             }
 
-            if (["rounded", "square"].includes(this.avatar.shape)) {
+            if (["rounded", "rounded-none"].includes(this.avatar.shape)) {
                 positionClass = "right-0 bottom-0 -mr-1 -mb-1";
             }
             let colors = this.color ?
                 `text-${this.color}-200 bg-${this.color}-500` : `${this.bgColor} ${this.textColor}`;
             return [
-                `h-${this.sizes[this.size]}`,
+                `h-${this.sizes[this.size]} text-${this.size}`,
                 `w-${this.sizes[this.size]}`,
                 colors,
                 roundedClass,
@@ -130,8 +112,8 @@ export default defineComponent({
         styles() {
             if (this.position === "top-right") {
                 return {
-                    top: "-4rem",
-                    right: "0",
+                    top: "-68px",
+                    right: "2px",
                 };
             }
         },

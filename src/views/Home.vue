@@ -10,16 +10,16 @@
                 Let's see the magic of Vue + Tailwind
             </p>
 
-            <button class="mt-8 px-8 py-4 bg-purple-800 text-purple-100 shadow-md rounded-sm self-end focus:outline-none hover:bg-purple-900">
+            <vw-btn size="lg">
                 <router-link to="/components"> GET STARTED </router-link>
-            </button>
+            </vw-btn>
         </div>
         <div class="flex flex-row  pr-4 -ml-64">
             <div class="rounded-full h-64 w-64 flex justify-center items-center ">
-                <img alt="Vue logo" src="https://www.markusantonwolf.com/media/pages/blog/tailwind-css/265298487-1596675041/tailwind-css-logo.svg" />
+                <img alt="tailwind logo" src="../assets/tailwind-css-logo.svg" />
             </div>
             <div class="rounded-full h-64 w-64 flex justify-center items-center ">
-                <img alt="Vue logo" src="../assets/logo.png" />
+                <img alt="Vue logo" src="../assets/vue-logo.svg" />
             </div>
         </div>
     </div>
@@ -35,6 +35,8 @@ import HelloWorld from "@/components/HelloWorld.vue";
 import {
     RouterLink
 } from "vue-router";
+import Button from '@/components/actions/Button.vue';
+
 interface keyable {
     [key: string]: any;
 }
@@ -42,6 +44,7 @@ export default defineComponent({
     name: "Home",
     components: {
         HelloWorld,
+        "vw-btn": Button
     },
 });
 </script>

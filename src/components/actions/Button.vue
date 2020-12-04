@@ -16,6 +16,8 @@ import {
     PropType
 } from "vue";
 import shaped from "@/mixins/shaped";
+import sizeable from '@/mixins/sizeable';
+
 export default defineComponent({
     name: "vw-btn",
     props: {
@@ -41,12 +43,13 @@ export default defineComponent({
             type: Boolean,
             default: false,
         },
-        shape: {
-            type: String as PropType < "rounded-none" | "rounded" | "rounded-full" > ,
-            default: "rounded",
-        },
-    },
+        full: {
+            type: Boolean,
+            default: false,
+        }
 
+    },
+    mixins: [shaped, sizeable],
     data() {
         return {
             bgColors: {
@@ -84,11 +87,12 @@ export default defineComponent({
                 success: "text-green-600",
                 warning: "text-yellow-600",
             },
-            shapes: {
-                "rounded-none": "rounded-none",
-                rounded: "rounded",
-                "rounded-full": "rounded-full",
-            },
+            padding: {
+                "sm": "px-4 py-1",
+                "md": "px-6 py-2",
+                "lg": "px-8 py-4",
+
+            }
         };
     },
 
@@ -96,7 +100,7 @@ export default defineComponent({
         buttonClasses(): Array < string > {
             let classes: Array < string > = [];
 
-            classes = [...classes, this.shapes[this.shape]];
+            classes = [...classes, this.shapes[this.shape], this.full ? 'w-full flex justify-center' : ''];
 
             if (this.smooth) {
                 classes = [
@@ -135,7 +139,7 @@ export default defineComponent({
                     "w-12 h-12 p-1 rounded-full flex justify-center items-center",
                 ];
             } else {
-                classes = [...classes, "px-6 py-2"];
+                classes = [...classes, this.padding[this.size]];
             }
 
             return classes;

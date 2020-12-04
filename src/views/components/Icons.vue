@@ -1,5 +1,6 @@
 <template>
-<div>icons</div>
+<div class="section__title">icons :</div>
+<p class="pl-4">Vue components based on <a class="text-purple-600" href="https://www.npmjs.com/package/@carbon/icons" target="_blank" rel="noopener noreferrer">@carbon/icons</a> </p>
 <div class="flex flex-row  justify-around py-4">
     <div class="flex flex-wrap p-2 w-full ">
         <div v-for="icon in currentPageIcons" :title="icon" class="p-2 m-1 bg-purple-100 w-12 h-12 flex items-center justify-center rounded-full cursor-pointer text-gray-600 hover:text-gray-100 hover:bg-purple-500">

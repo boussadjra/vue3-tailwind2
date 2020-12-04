@@ -40,6 +40,12 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
 
+        path: 'breadcrumbs',
+        name: 'breadcrumbs',
+        component: () => import('../views/components/Breadcrumbs.vue'),
+      },
+      {
+
         path: 'buttons',
         name: 'Buttons',
         component: () => import('../views/components/Buttons.vue'),

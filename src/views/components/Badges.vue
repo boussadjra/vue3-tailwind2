@@ -16,10 +16,10 @@
     <div class="w-full grid grid-cols-4 gap-4 place-items-center">
         <badge bgColor="bg-red-200" textColor="text-red-700"> +9 </badge>
         <badge bgColor="bg-red-500" textColor="text-red-200"> +99 </badge>
-        <badge bgColor="bg-green-500" shape="circle" textColor="text-green-100">
+        <badge bgColor="bg-green-500" shape="rounded-full" textColor="text-green-100">
             5
         </badge>
-        <badge bgColor="bg-blue-500" shape="circle" textColor="text-blue-100">
+        <badge bgColor="bg-blue-500" shape="rounded-full" textColor="text-blue-100">
             +100
         </badge>
     </div>
@@ -27,34 +27,34 @@
 <div class="space-y-2">
     <h1 class="section__title">Badges on avatars:</h1>
     <div class="w-full flex flex-row justify-between items-center">
-        <avatar src="https://i.pravatar.cc/200?img=56" variant="circle" class="bg-purple-200 row-start-1 text-purple-650">
+        <avatar src="https://i.pravatar.cc/200?img=56" variant="rounded-full" class="bg-purple-200 row-start-1 text-purple-650">
             <template #badge>
-                <badge shape="circle" size="md"></badge>
+                <badge shape="rounded-full" size="md"></badge>
             </template>
         </avatar>
-        <avatar src="https://i.pravatar.cc/200?img=58" variant="circle" size="xs" class="bg-purple-200 row-start-1 text-purple-650">
+        <avatar src="https://i.pravatar.cc/200?img=58" variant="rounded-full" size="xs" class="bg-purple-200 row-start-1 text-purple-650">
             <template #badge="{ avatar }">
-                <badge shape="circle" size="xs" :avatar="avatar"></badge>
+                <badge shape="rounded-full" size="xs" :avatar="avatar"></badge>
             </template>
         </avatar>
-        <avatar src="https://i.pravatar.cc/200?img=64" variant="circle" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
+        <avatar src="https://i.pravatar.cc/200?img=64" variant="rounded-full" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
             <template #badge="{ avatar }">
-                <badge shape="circle" color="red" size="sm" :avatar="avatar"></badge>
+                <badge shape="rounded-full" color="red" size="sm" :avatar="avatar"></badge>
             </template>
         </avatar>
         <avatar src="https://i.pravatar.cc/200?img=65" variant="rounded" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
             <template #badge="{ avatar }">
-                <badge shape="circle" color="green" size="sm" :avatar="avatar"></badge>
+                <badge shape="rounded-full" color="green" size="sm" :avatar="avatar"></badge>
             </template>
         </avatar>
         <avatar src="https://i.pravatar.cc/200?img=67" size="sm" class="bg-purple-200 row-start-1 text-purple-600">
             <template #badge="{ avatar }">
-                <badge shape="circle" ping position="top-right" color="blue" size="sm" :avatar="avatar"></badge>
+                <badge shape="rounded-full" ping position="top-right" color="blue" size="sm" :avatar="avatar"></badge>
             </template>
         </avatar>
-        <avatar src="https://i.pravatar.cc/200?img=42" variant="square" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
+        <avatar src="https://i.pravatar.cc/200?img=42" variant="rounded-none" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
             <template #badge="{ avatar }">
-                <badge shape="circle" color="green" size="sm" :avatar="avatar"></badge>
+                <badge shape="rounded-full" color="green" size="sm" :avatar="avatar"></badge>
             </template>
         </avatar>
     </div>
@@ -69,7 +69,7 @@
             </template>
 
             <template #badge>
-                <badge shape="circle" position="initial" color="purple" size="sm"></badge>
+                <badge shape="rounded-full" position="initial" color="purple" size="sm"></badge>
             </template>
         </icon-with-badge>
 
@@ -79,7 +79,7 @@
             </template>
 
             <template #badge>
-                <badge shape="circle" position="initial" color="red" size="sm"></badge>
+                <badge shape="rounded-full" position="initial" color="red" size="sm"></badge>
             </template>
         </icon-with-badge>
         <icon-with-badge>
@@ -88,7 +88,7 @@
             </template>
 
             <template #badge>
-                <badge shape="circle" ping position="initial" color="green" size="sm"></badge>
+                <badge shape="rounded-full" ping position="initial" color="green" size="sm"></badge>
             </template>
         </icon-with-badge>
 
@@ -98,7 +98,7 @@
             </template>
 
             <template #badge-text>
-                <badge bgColor="bg-red-500" shape="circle" textColor="text-red-100">
+                <badge bgColor="bg-red-500" shape="rounded-full" textColor="text-red-100">
                     <span class="text-sm"> +9</span>
                 </badge>
             </template>
@@ -109,7 +109,7 @@
             </template>
 
             <template #badge-text>
-                <badge bgColor="bg-blue-500" shape="circle" textColor="text-blue-100">
+                <badge bgColor="bg-blue-500" shape="rounded-full" textColor="text-blue-100">
                     <span class="text-sm"> 4</span>
                 </badge>
             </template>
@@ -121,12 +121,25 @@
             </template>
 
             <template #badge-text>
-                <badge bgColor="bg-yellow-500" shape="circle" size="xs" textColor="text-yellow-100">
+                <badge bgColor="bg-yellow-500" shape="rounded-full" size="xs" textColor="text-yellow-100">
                     <span class="text-xs"> New</span>
                 </badge>
             </template>
 
         </icon-with-badge>
+    </div>
+</div>
+<div class="space-y-2">
+    <h1 class="section__title">Badges on Icons:</h1>
+    <div class="w-full flex flex-row space-x-24 items-center">
+        <vw-btn @click="count++">
+            Count
+            <template #append>
+                <badge bgColor="bg-green-500" shape="rounded-full" size="xs" textColor="text-green-100">
+                    {{count}}
+                </badge>
+            </template>
+        </vw-btn>
     </div>
 </div>
 <div class="p-8">
@@ -146,6 +159,7 @@ import IconNotification from "@/components/icons/IconNotification.vue";
 import IconShoppingBag from '@/components/icons/IconShoppingBag.vue';
 import IconShoppingCart from '@/components/icons/IconShoppingCart.vue';
 import ComponentReflecter from "@/components/util/ComponentReflecter.vue";
+import Button from "@/components/actions/Button.vue";
 
 import {
     defineComponent
@@ -154,8 +168,9 @@ import {
 export default defineComponent({
     data() {
         return {
-            shapes: ["circle", "rounded", "square"],
+            shapes: ["rounded-full", "rounded", "rounded-none"],
             badge: Badge,
+            count: 0
         };
     },
     components: {
@@ -169,7 +184,9 @@ export default defineComponent({
         IconShoppingBag,
         IconFavorite,
         IconShoppingCart,
-        IconModel
+        IconModel,
+        "vw-btn": Button,
+
     },
 });
 </script>

@@ -9,8 +9,23 @@
 
 body{
     font-family: 'Inter';
+    overflow-y: hidden;
+
+}
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px
 }
 
+::-webkit-scrollbar-track {
+    background: inherit;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+   @apply bg-purple-700;
+    border-radius: 5px;
+}
 .section__title{
     @apply text-xl ml-2 pt-16 pb-8 text-gray-700
 }
