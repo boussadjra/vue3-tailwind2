@@ -15,11 +15,11 @@
             </ul>
         </div>
     </aside>
-    <section class="w-full" style="overflow-y: scroll; max-height: calc(100vh - 64px)">
+    <section class="w-full" style="overflow-y: auto; max-height: calc(100vh - 64px)">
         <div class="w-full place-items-center sticky top-0 z-20">
             <breadcrumb :path="$route.path"> </breadcrumb>
         </div>
-        <main class="pl-8 pr-16 py-4 w-full">
+        <main class="pl-8 pr-16 pt-4 pb-32 w-full">
             <router-view></router-view>
         </main>
     </section>

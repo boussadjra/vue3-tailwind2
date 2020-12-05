@@ -1,6 +1,6 @@
 <template>
 <div>
-    <nav class="h-16 w-full sticky top-0 z-20 p-4 bg-purple-800 text-purple-100 flex flex-row items-center justify-between shadow-md">
+    <nav class="h-16 w-full sticky top-0 z-20 p-4 bg-purple-800 text-purple-100 flex flex-row items-center justify-between">
         <h1 class="logo text-4xl font-bold text-yellow-300">VUEWIND</h1>
 
         <ul class="flex flex-row justify-between w-4/12 text-sm uppercase cursor-pointer">

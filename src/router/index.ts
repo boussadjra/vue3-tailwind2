@@ -52,6 +52,12 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
 
+        path: 'cards',
+        name: 'Cards',
+        component: () => import('../views/components/Cards.vue'),
+      },
+      {
+
         path: 'icons',
         name: 'Icons',
         component: () => import('../views/components/Icons.vue'),

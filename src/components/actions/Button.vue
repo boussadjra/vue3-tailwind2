@@ -1,5 +1,6 @@
 <template>
-<button :class="buttonClasses" class="flex items-center ">
+<button :class="buttonClasses" class="flex items-center hover:shadow-lg">
+
     <span class="mr-2">
         <slot name="prepend"></slot>
     </span>
@@ -26,7 +27,10 @@ export default defineComponent({
                 "default" | "primary" | "danger" | "success" | "warning" > ,
             default: "primary",
         },
-
+        text: {
+            type: Boolean,
+            default: false,
+        },
         smooth: {
             type: Boolean,
             default: false,
@@ -88,6 +92,7 @@ export default defineComponent({
                 warning: "text-yellow-600",
             },
             padding: {
+                "xs": "px-1 py-0",
                 "sm": "px-4 py-1",
                 "md": "px-6 py-2",
                 "lg": "px-8 py-4",
@@ -124,6 +129,14 @@ export default defineComponent({
                     "shadow-lg hover:shadow-xl border-t border-l border-r border-gray-100 bg-transparent",
                     this.colors[this.variant],
                 ];
+            } else if (this.text) {
+
+                classes = [
+                    ...classes,
+                    "text-gray-100 whitespace-nowrap px-2",
+                    this.colors[this.variant],
+                    this.bgSmoothColorsHover[this.variant],
+                ]
             } else {
                 classes = [
                     ...classes,

@@ -1,8 +1,8 @@
 <template>
-<div :class="classes" class="flex items-end  justify-end ">
+<div :class="classes" class="avatar flex items-end  justify-end   text-purple-600 min-w-max">
     <!-- -->
     <img :class="classes" v-if="!$slots.default" :src="src" alt="" />
-    <div v-else-if="$slots.default" class="w-full self-center  text-4xl flex justify-center items-center  text-purple-600 font-semibold">
+    <div v-else-if="$slots.default" class="w-full self-center  text-4xl flex justify-center items-center  font-semibold">
         <slot></slot>
     </div>
 
@@ -47,7 +47,7 @@ export default defineComponent({
 
             return [
                 `h-${this.sizes[this.size]}`,
-                `w-${this.sizes[this.size]}`,
+                `w-${this.sizes[this.size]}`, `${this.size}`,
                 className, 'relative'
             ];
         },
@@ -55,5 +55,9 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style lang="scss">
+.avatar.sm {
+    min-width: 64px;
+
+}
 </style>

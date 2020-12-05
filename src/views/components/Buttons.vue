@@ -26,9 +26,9 @@
     </div>
 </div>
 <div class="space-y-2">
-    <h1 class="section__title">d buttons:</h1>
+    <h1 class="section__title">Text buttons:</h1>
     <div class="w-full grid grid-cols-5 gap-4 place-items-center">
-        <vw-btn v-for="variant in variants" :key="variant" d :variant="variant">{{
+        <vw-btn v-for="variant in variants" :key="variant" text :variant="variant">{{
         variant
       }}</vw-btn>
     </div>
@@ -105,7 +105,7 @@ export default defineComponent({
     data() {
         return {
             variants: ["default", "primary", "danger", "success", "warning"],
-            sizes: ["sm", "md", "lg"],
+            sizes: ["xs", "sm", "md", "lg"],
 
             texts: ["OK", "next", "Submit", "GET STARTED"]
         };
