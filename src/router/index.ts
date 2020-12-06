@@ -58,6 +58,12 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
 
+        path: 'chips',
+        name: 'Chips',
+        component: () => import('../views/components/Chips.vue'),
+      },
+      {
+
         path: 'icons',
         name: 'Icons',
         component: () => import('../views/components/Icons.vue'),

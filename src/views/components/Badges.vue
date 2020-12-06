@@ -130,7 +130,7 @@
     </div>
 </div>
 <div class="space-y-2">
-    <h1 class="section__title">Badges on Icons:</h1>
+    <h1 class="section__title">Badges on buttons:</h1>
     <div class="w-full flex flex-row space-x-24 items-center">
         <vw-btn @click="count++">
             Count

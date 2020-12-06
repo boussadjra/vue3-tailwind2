@@ -8,20 +8,20 @@ export default defineComponent({
         }
     },
     mounted() {
-        console.log('--------------------');
-        console.log(this.path);
-        console.log('--------------------');
+
+
+
     },
     methods: {
         renderCrumb(token: string | VNode, index: number, length: number) {
 
-            let renderedToken=typeof token ==="string"?h('span',token):h(token)
+            let renderedToken = typeof token === "string" ? h('span', token) : h(token)
 
             if (index < length - 1) {
                 return [h(renderedToken), h('span', this.$slots.separator ? this.$slots.separator() : '/')];
             } else {
-                console.log('------reach--------------')
-        
+
+
                 return h(renderedToken);
             }
         }
@@ -31,9 +31,9 @@ export default defineComponent({
             if (this.path) {
 
                 let pathTokens = this.path.split('/').filter(token => token)
-                console.log('--------------------')
-                console.log(pathTokens)
-                console.log('--------------------')
+
+
+
                 return pathTokens.map((token, index) => {
                     return this.renderCrumb(token, index, pathTokens.length)
 

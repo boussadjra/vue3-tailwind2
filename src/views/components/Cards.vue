@@ -160,13 +160,118 @@
     <div class="w-full grid  gap-4 place-items-start">
         <card>
             <template #mediaAside>
-                <img src="@/assets/img/scott-webb.jpg" alt="" srcset="" />
+                <div class="w-96">
+                    <img src="@/assets/img/scott-webb.jpg" alt="" srcset="" />
+                </div>
             </template>
-            <p class="text-gray-600 text-sm">
-
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, a accusantium itaque explicabo, incidunt aliquam molestias neque asperiores obcaecati libero commodi, consectetur eveniet officiis hic rerum totam? Perferendis, repellendus eum ullam asperiores quas optio! Minima beatae expedita quam at non.
-            </p>
+            <div class="h-full ">
+                <h1 class="text-2xl font-bold text-gray-700 ">
+                    Some title
+                </h1>
+                <p class="text-gray-600 text-md leading-snug ">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rem maiores provident mollitia tenetur alias quidem quia suscipit, amet aut eaque nisi tempora voluptates numquam. Soluta dolorem recusandae sapiente atque, quos fugiat dicta consectetur, explicabo et modi facere pariatur officiis quod suscipit neque expedita earum laboriosam itaque voluptate distinctio aperiam. Neque, dolorum sint, quo aspernatur ullam, qui doloremque quod perspiciatis fugiat fuga quis repudiandae! Laborum, enim! Sit, optio commodi esse eaque eum dolorum nulla accusamus, sequi quidem ut eveniet explicabo laborum iste perferendis architecto maxime. Vel labore possimus ipsa reiciendis officia assumenda minus repudiandae? Facere cupiditate molestias ea, repudiandae excepturi odit modi sequi ducimus possimus totam quia a dignissimos laboriosam explicabo repellendus reiciendis consequuntur. Quibusdam culpa voluptas iure dolorem excepturi explicabo nostrum minus. Laborum, doloribus illum sint doloremque quod exercitationem omnis quibusdam qui eligendi illo ipsam cum deserunt. Culpa, distinctio voluptates similique architecto sint repudiandae eveniet dolor quasi amet minus ex, natus porro eligendi. Ad culpa enim veritatis mollitia harum quibusdam sapiente reprehenderit dolores. Odio ipsa ducimus dicta iure obcaecati itaque assumenda, quaerat minus nesciunt accusantium architecto ex? Tenetur odio enim mollitia placeat reprehenderit dolores, vel ipsum, hic eum libero perferendis culpa exercitationem illum itaque unde officia animi sapiente maiores.
+                </p>
+            </div>
         </card>
+    </div>
+</div>
+<div class="space-y-2">
+    <h1 class="section__title">Cards weather:</h1>
+    <div class="w-full grid grid-cols-3 gap-4 place-items-start">
+        <card class="w-full bg-gradient-to-r from-purple-900 to-purple-700 text-purple-50 rounded-md ">
+            <template #header>
+                <div class="flex justify-between">
+                    <badge shape="rounded">Algiers</badge>
+                    <span class="text-lg font-bold ">{{new Date().toLocaleTimeString().slice(0,-6)}}</span>
+                </div>
+            </template>
+
+            <div class="flex justify-center items-center w-96">
+                <IconAwake class="h-32 w-32 text-yellow-300" />
+            </div>
+            <template #footer>
+                <div class="flex justify-between items-center">
+                    <div class="space-y-2">
+                        <span class="flex space-x-2 items-center">
+                            <IconWindyStrong /> <span>14km/h</span>
+                        </span>
+                        <span class="flex space-x-2 items-center">
+                            <IconRainDrop /> <span>58%</span>
+                        </span>
+
+                    </div>
+
+                    <div>
+                        <h1 class="text-6xl">
+                            18°
+                        </h1>
+                    </div>
+                </div>
+            </template>
+        </card>
+        <card class="w-full bg-gradient-to-r from-purple-900 to-purple-700 text-purple-50 rounded-md ">
+            <template #header>
+                <div class="flex justify-between">
+                    <badge shape="rounded">Laghouat</badge>
+                    <span class="text-lg font-bold ">{{new Date().toLocaleTimeString().slice(0,-6)}}</span>
+                </div>
+            </template>
+
+            <div class="flex justify-center items-center w-96">
+                <IconMostlyCloudy class="h-32 w-32 text-yellow-300" />
+            </div>
+            <template #footer>
+                <div class="flex justify-between items-center">
+                    <div class="space-y-2">
+                        <span class="flex space-x-2 items-center">
+                            <IconWindyStrong /> <span>27km/h</span>
+                        </span>
+                        <span class="flex space-x-2 items-center">
+                            <IconRainDrop /> <span>32%</span>
+                        </span>
+
+                    </div>
+
+                    <div>
+                        <h1 class="text-6xl">
+                            12°
+                        </h1>
+                    </div>
+                </div>
+            </template>
+        </card>
+        <card class="w-full bg-gradient-to-r from-purple-900 to-purple-700 text-purple-50 rounded-md ">
+            <template #header>
+                <div class="flex justify-between">
+                    <badge shape="rounded">Annaba</badge>
+                    <span class="text-lg font-bold ">{{new Date().toLocaleTimeString().slice(0,-6)}}</span>
+                </div>
+            </template>
+
+            <div class="flex justify-center items-center w-96">
+                <IconCloudy class="h-32 w-32 text-yellow-300" />
+            </div>
+            <template #footer>
+                <div class="flex justify-between items-center">
+                    <div class="space-y-2">
+                        <span class="flex space-x-2 items-center">
+                            <IconWindyStrong /> <span>31km/h</span>
+                        </span>
+                        <span class="flex space-x-2 items-center">
+                            <IconRainDrop /> <span>62%</span>
+                        </span>
+
+                    </div>
+
+                    <div>
+                        <h1 class="text-6xl">
+                            21°
+                        </h1>
+                    </div>
+                </div>
+            </template>
+        </card>
+
     </div>
 </div>
 </template>
@@ -175,6 +280,7 @@
 //mL72nBk16#hak
 import Button from "@/components/actions/Button.vue";
 import Card from "@/components/surface/Card.vue";
+
 import {
     defineComponent
 } from "vue";
@@ -184,6 +290,12 @@ import IconShare from "@/components/icons/IconShare.vue";
 import IconFavoriteFilled from "@/components/icons/IconFavoriteFilled.vue";
 import Avatar from "@/components/data-display/Avatar.vue";
 import IconOverflowMenuVertical from "@/components/icons/IconOverflowMenuVertical.vue";
+import Badge from '@/components/data-display/Badge.vue';
+import IconAwake from '@/components/icons/IconAwake.vue';
+import IconWindyStrong from '@/components/icons/IconWindyStrong.vue';
+import IconRainDrop from '@/components/icons/IconRainDrop.vue';
+import IconMostlyCloudy from '@/components/icons/IconMostlyCloudy.vue';
+import IconCloudy from '@/components/icons/IconCloudy.vue';
 
 export default defineComponent({
     name: "cards",
@@ -196,6 +308,12 @@ export default defineComponent({
         IconFavoriteFilled,
         Avatar,
         IconOverflowMenuVertical,
+        Badge,
+        IconAwake,
+        IconWindyStrong,
+        IconRainDrop,
+        IconMostlyCloudy,
+        IconCloudy
     },
 });
 </script>

@@ -45,6 +45,7 @@ export default defineComponent({
                 "Breadcrumbs",
                 "Buttons",
                 "Cards",
+                "Chips",
                 "Icons",
                 "Inputs",
             ],

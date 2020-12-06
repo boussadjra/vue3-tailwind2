@@ -6,7 +6,7 @@
     <div class="w-full card__media" v-if="$slots.media">
         <slot name="media"> </slot>
     </div>
-    <div class="h-full card__media--aside ">
+    <div class="  card__media--aside ">
         <slot name="mediaAside"> </slot>
     </div>
     <div class="flex items-center p-4">
@@ -45,15 +45,13 @@ export default defineComponent({
             let hoveredElevation = this.elevations[index + 1]
             classes.push(`shadow-${this.elevation} hover:shadow-${hoveredElevation}`)
             if (this.$slots.mediaAside) {
-                classes.push('flex')
+                classes.push('flex items-center')
             }
             return classes
         }
     },
     mounted() {
-        console.log('--------------------')
-        console.log(this.$slots.mediaAside)
-        console.log('--------------------')
+
     },
 });
 </script>
@@ -67,14 +65,6 @@ export default defineComponent({
             max-height: 240px;
         }
 
-        &--aside {
-            max-width: 50%;
-            max-width: 50%;
-
-            img {
-                width: 100%;
-            }
-        }
     }
 }
 </style>
