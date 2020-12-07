@@ -68,6 +68,12 @@ const routes: Array<RouteRecordRaw> = [
         name: 'Icons',
         component: () => import('../views/components/Icons.vue'),
       },
+      {
+
+        path: 'tabs',
+        name: 'Tabs',
+        component: () => import('../views/components/Tabs.vue'),
+      },
     ]
   }, {
     path: '/:pathMatch(.*)*',

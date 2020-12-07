@@ -48,6 +48,7 @@ export default defineComponent({
                 "Chips",
                 "Icons",
                 "Inputs",
+                "Tabs"
             ],
         };
     },

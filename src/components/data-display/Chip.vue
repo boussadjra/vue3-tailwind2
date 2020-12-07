@@ -1,6 +1,6 @@
 <template>
-<div :class="chipClasses" class="flex items-center  rounded space-x-1 px-2  ">
-    <span>
+<div :class="chipClasses" class="flex items-center rounded space-x-1 px-2">
+    <span class="text-sm">
         <slot></slot>
     </span>
     <IconCloseOutline class="text-xs cursor-pointer" height="16" width="16" />
@@ -8,35 +8,65 @@
 </template>
 
 <script lang="ts">
-import variantable from '@/mixins/variantable';
+import {
+    outlineable,
+    shaped,
+    sizeable,
+    smoothable,
+    variantable,
+} from "@/mixins";
 import {
     defineComponent
-} from 'vue';
-import IconCloseOutline from '../icons/IconCloseOutline.vue';
+} from "vue";
+import IconCloseOutline from "../icons/IconCloseOutline.vue";
 
 export default defineComponent({
-    mixins: [variantable],
+    mixins: [outlineable, shaped, sizeable, smoothable, variantable],
 
     components: {
-        IconCloseOutline
+        IconCloseOutline,
     },
-    computed: {
 
+    computed: {
         chipClasses(): Array < string > {
             let classes: Array < string > = [];
-            classes = [
 
-                "text-gray-100",
-                this.bgColors[this.variant],
-                this.bgColorsHover[this.variant],
+            classes = [
+                this.shapes[this.shape],
+                this.full ? "w-full flex justify-center" : "",
+                // this.padding[this.size],
             ];
 
-            return classes
-        }
-    }
-})
+            if (this.smooth) {
+                classes = [
+                    ...classes,
+                    this.bgSmoothColors[this.variant],
+                    this.colors[this.variant],
+                    this.bgSmoothColorsHover[this.variant],
+                ];
+            } else if (this.outlined) {
+                classes = [
+                    ...classes,
+                    "border bg-transparent",
+                    this.borderColors[this.variant],
+                    this.colors[this.variant],
+                    this.borderColorsHover[this.variant],
+                    this.colorsHover[this.variant],
+                ];
+            } else {
+                classes = [
+                    ...classes,
+                    "text-gray-100",
+                    this.bgColors[this.variant],
+                    this.bgColorsHover[this.variant],
+                ];
+            }
+
+            return classes;
+        },
+    },
+});
 </script>
 
 <style>
-
 </style>

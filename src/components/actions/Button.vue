@@ -1,6 +1,5 @@
 <template>
 <button :class="buttonClasses" class="flex items-center hover:shadow-lg">
-
     <span class="mr-2">
         <slot name="prepend"></slot>
     </span>
@@ -16,26 +15,22 @@ import {
     defineComponent,
     PropType
 } from "vue";
-import shaped from "@/mixins/shaped";
-import sizeable from '@/mixins/sizeable';
-import variantable from '@/mixins/variantable';
 
+import {
+    outlineable,
+    shaped,
+    sizeable,
+    smoothable,
+    variantable,
+} from "@/mixins/index";
 export default defineComponent({
     name: "vw-btn",
     props: {
-
         text: {
             type: Boolean,
             default: false,
         },
-        smooth: {
-            type: Boolean,
-            default: false,
-        },
-        outlined: {
-            type: Boolean,
-            default: false,
-        },
+
         raised: {
             type: Boolean,
             default: false,
@@ -47,21 +42,22 @@ export default defineComponent({
         full: {
             type: Boolean,
             default: false,
-        }
-
+        },
     },
-    mixins: [shaped, sizeable, variantable],
+    mixins: [shaped, sizeable, variantable, smoothable, outlineable],
     data() {
-        return {
-
-        };
+        return {};
     },
 
     computed: {
         buttonClasses(): Array < string > {
             let classes: Array < string > = [];
 
-            classes = [this.shapes[this.shape], this.full ? 'w-full flex justify-center' : ''];
+            classes = [
+
+                this.shapes[this.shape],
+                this.full ? "w-full flex justify-center" : "",
+            ];
 
             if (this.smooth) {
                 classes = [
@@ -86,13 +82,12 @@ export default defineComponent({
                     this.colors[this.variant],
                 ];
             } else if (this.text) {
-
                 classes = [
                     ...classes,
                     "text-gray-100 whitespace-nowrap px-2",
                     this.colors[this.variant],
                     this.bgSmoothColorsHover[this.variant],
-                ]
+                ];
             } else {
                 classes = [
                     ...classes,
