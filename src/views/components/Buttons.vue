@@ -2,88 +2,88 @@
 <div class="space-y-2">
     <h1 class="section__title">Default buttons shape:</h1>
     <div class="w-full grid grid-cols-5 gap-4 place-items-center">
-        <vw-btn v-for="variant in variants" :key="variant" :variant="variant">{{
+        <w-btn v-for="variant in variants" :key="variant" :variant="variant">{{
         variant
-      }}</vw-btn>
+      }}</w-btn>
     </div>
 </div>
 <div class="space-y-2">
     <h1 class="section__title">Circular buttons shape:</h1>
     <div class="w-full grid grid-cols-5 gap-4 place-items-center">
-        <vw-btn v-for="variant in variants" shape="rounded-full" :key="variant" :variant="variant">{{ variant }}</vw-btn>
+        <w-btn v-for="variant in variants" shape="rounded-full" :key="variant" :variant="variant">{{ variant }}</w-btn>
     </div>
 </div>
 <div class="space-y-2">
     <h1 class="section__title ">Squared buttons shape:</h1>
     <div class="w-full grid grid-cols-5 gap-4 place-items-center">
-        <vw-btn v-for="variant in variants" shape="rounded-none" :key="variant" :variant="variant">{{ variant }}</vw-btn>
+        <w-btn v-for="variant in variants" shape="rounded-none" :key="variant" :variant="variant">{{ variant }}</w-btn>
     </div>
 </div>
 <div class="space-y-2">
     <h1 class="section__title">Smooth buttons:</h1>
     <div class="w-full grid grid-cols-5 gap-4 place-items-center">
-        <vw-btn v-for="variant in variants" :key="variant" smooth :variant="variant">{{ variant }}</vw-btn>
+        <w-btn v-for="variant in variants" :key="variant" smooth :variant="variant">{{ variant }}</w-btn>
     </div>
 </div>
 <div class="space-y-2">
     <h1 class="section__title">Text buttons:</h1>
     <div class="w-full grid grid-cols-5 gap-4 place-items-center">
-        <vw-btn v-for="variant in variants" :key="variant" text :variant="variant">{{
+        <w-btn v-for="variant in variants" :key="variant" text :variant="variant">{{
         variant
-      }}</vw-btn>
+      }}</w-btn>
     </div>
 </div>
 
 <div class="space-y-2">
     <h1 class="section__title">Raised buttons:</h1>
     <div class="w-full grid grid-cols-5 gap-4 place-items-center">
-        <vw-btn v-for="variant in variants" :key="variant" raised :variant="variant">{{ variant }}</vw-btn>
+        <w-btn v-for="variant in variants" :key="variant" raised :variant="variant">{{ variant }}</w-btn>
     </div>
 </div>
 <div class="space-y-2">
     <h1 class="section__title">Only icons:</h1>
     <div class="w-full grid grid-cols-5 gap-4 place-items-center">
-        <vw-btn v-for="variant in variants" circle :key="variant" :variant="variant">
+        <w-btn v-for="variant in variants" circle :key="variant" :variant="variant">
             <component :is="variant"></component>
-        </vw-btn>
+        </w-btn>
     </div>
 </div>
 <div class="space-y-2">
     <h1 class="section__title">Buttons text+icons:</h1>
     <div class="w-full grid grid-cols-5 gap-4 place-items-center">
-        <vw-btn v-for="variant in variants" :key="variant" :variant="variant">{{ variant }}
+        <w-btn v-for="variant in variants" :key="variant" :variant="variant">{{ variant }}
             <template #append>
                 <component :is="variant"></component>
             </template>
-        </vw-btn>
+        </w-btn>
     </div>
 </div>
 <div class="space-y-2">
     <h1 class="section__title">Buttons icons+text:</h1>
     <div class="w-full grid grid-cols-5 gap-4 place-items-center">
-        <vw-btn v-for="variant in variants" :key="variant" :variant="variant">{{ variant }}
+        <w-btn v-for="variant in variants" :key="variant" :variant="variant">{{ variant }}
             <template #prepend>
                 <component :is="variant"></component>
             </template>
-        </vw-btn>
+        </w-btn>
     </div>
 </div>
 <div class="space-y-2">
     <h1 class="section__title">Buttons with different sizes:</h1>
 
     <div class="w-full grid grid-cols-5 gap-4 place-items-center">
-        <vw-btn v-for="(size,i) in sizes" :key="size" :size="size">{{ texts[i] }}
+        <w-btn v-for="(size,i) in sizes" :key="size" :size="size">{{ texts[i] }}
 
-        </vw-btn>
+        </w-btn>
     </div>
 </div>
 <div class="space-y-2">
     <h1 class="section__title">Block button:</h1>
 
     <div class="w-full ">
-        <vw-btn size="md" full>
+        <w-btn size="md" full>
             block
-        </vw-btn>
+        </w-btn>
     </div>
 </div>
 </template>
@@ -111,7 +111,7 @@ export default defineComponent({
         };
     },
     components: {
-        "vw-btn": Button,
+        "w-btn": Button,
         default: IconSearch,
         info: IconInformation,
         warning: IconWarning,

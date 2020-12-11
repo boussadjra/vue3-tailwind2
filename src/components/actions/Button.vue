@@ -24,7 +24,7 @@ import {
     variantable,
 } from "@/mixins/index";
 export default defineComponent({
-    name: "vw-btn",
+    name: "w-btn",
     props: {
         text: {
             type: Boolean,
@@ -54,9 +54,9 @@ export default defineComponent({
             let classes: Array < string > = [];
 
             classes = [
-
+                "h- focus:outline-none  focus:ring  focus:border-blue-300",
                 this.shapes[this.shape],
-                this.full ? "w-full flex justify-center" : "",
+                this.full ? "w-full flex justify-center " : "",
             ];
 
             if (this.smooth) {
@@ -100,7 +100,7 @@ export default defineComponent({
             if (this.circle) {
                 classes = [
                     ...classes,
-                    "w-12 h-12 p-1 rounded-full flex justify-center items-center",
+                    "w-12 h-12 p-1 rounded-full flex justify-center items-center  ",
                 ];
             } else {
                 classes = [...classes, this.padding[this.size]];

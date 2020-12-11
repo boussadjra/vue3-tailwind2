@@ -13,9 +13,9 @@
                 Let's see the magic of Vue + Tailwind
             </p>
 
-            <vw-btn size="lg">
+            <w-btn size="lg">
                 <router-link to="/components"> GET STARTED </router-link>
-            </vw-btn>
+            </w-btn>
         </div>
         <div class="flex flex-row pr-4 -ml-64">
             <div class="rounded-full h-64 w-64 flex justify-center items-center">
@@ -47,7 +47,7 @@ export default defineComponent({
     name: "Home",
     components: {
         HelloWorld,
-        "vw-btn": Button,
+        "w-btn": Button,
     },
     created() {
         window.addEventListener('scroll', this.handleScroll);

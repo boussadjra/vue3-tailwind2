@@ -18,12 +18,12 @@
 
         <div class="uppercase text-purple-200 cursor-pointer">
             <a href="https://github.com/boussadjra/vue3-tailwind2" target="_blank" rel="noopener noreferrer">
-                <vw-btn>Github
+                <w-btn>Github
                     <template #prepend>
 
                         <icon-logo-github />
                     </template>
-                </vw-btn>
+                </w-btn>
             </a>
         </div>
     </nav>
@@ -40,7 +40,7 @@ import IconLogoGithub from '@/components/icons/IconLogoGithub.vue';
 
 export default {
     components: {
-        "vw-btn": Button,
+        "w-btn": Button,
         IconLogoGithub
     },
 };

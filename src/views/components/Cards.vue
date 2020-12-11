@@ -46,8 +46,8 @@
             </p>
             <template #footer>
                 <div class="flex flex-row-reverse space-x-2 space-x-reverse">
-                    <vw-btn size="sm"> Add </vw-btn>
-                    <vw-btn size="sm" outlined variant="danger"> Cancel </vw-btn>
+                    <w-btn size="sm"> Add </w-btn>
+                    <w-btn size="sm" outlined variant="danger"> Cancel </w-btn>
                 </div>
             </template>
         </card>
@@ -110,9 +110,9 @@
                             <span class="text-xs whitespace-nowrap text-gray-500">December 5, 2020</span>
                         </div>
                     </div>
-                    <vw-btn circle text>
+                    <w-btn circle text>
                         <IconOverflowMenuVertical height="24" width="24" class="justify-self-end text-gray-600 cursor-pointer" />
-                    </vw-btn>
+                    </w-btn>
                 </div>
             </template>
             <template #media>
@@ -148,8 +148,8 @@
             </div>
             <template #footer>
                 <div class="flex ">
-                    <vw-btn size="xs" variant="success" text>SHARE</vw-btn>
-                    <vw-btn size="xs" text>LEARN MORE</vw-btn>
+                    <w-btn size="xs" variant="success" text>SHARE</w-btn>
+                    <w-btn size="xs" text>LEARN MORE</w-btn>
                 </div>
             </template>
         </card>
@@ -301,7 +301,7 @@ export default defineComponent({
     name: "cards",
     components: {
         Card,
-        "vw-btn": Button,
+        "w-btn": Button,
         IconChat,
         IconShare,
         IconFavorite,

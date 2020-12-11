@@ -132,14 +132,14 @@
 <div class="space-y-2">
     <h1 class="section__title">Badges on buttons:</h1>
     <div class="w-full flex flex-row space-x-24 items-center">
-        <vw-btn @click="count++">
+        <w-btn @click="count++">
             Count
             <template #append>
                 <badge bgColor="bg-green-500" shape="rounded-full" size="xs" textColor="text-green-100">
                     {{count}}
                 </badge>
             </template>
-        </vw-btn>
+        </w-btn>
     </div>
 </div>
 <div class="p-8">
@@ -185,7 +185,7 @@ export default defineComponent({
         IconFavorite,
         IconShoppingCart,
         IconModel,
-        "vw-btn": Button,
+        "w-btn": Button,
 
     },
 });
