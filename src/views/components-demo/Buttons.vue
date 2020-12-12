@@ -26,6 +26,14 @@
     </div>
 </div>
 <div class="space-y-2">
+    <h1 class="section__title">Outlined buttons:</h1>
+    <div class="w-full grid grid-cols-5 gap-4 place-items-center">
+        <w-btn v-for="variant in variants" :key="variant" outlined :variant="variant">{{
+        variant
+      }}</w-btn>
+    </div>
+</div>
+<div class="space-y-2">
     <h1 class="section__title">Text buttons:</h1>
     <div class="w-full grid grid-cols-5 gap-4 place-items-center">
         <w-btn v-for="variant in variants" :key="variant" text :variant="variant">{{

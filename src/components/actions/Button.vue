@@ -1,6 +1,6 @@
 <template>
 <button :class="buttonClasses" class="flex items-center hover:shadow-lg">
-    <span class="mr-2">
+    <span class="mr-2 ">
         <slot name="prepend"></slot>
     </span>
     <slot></slot>
@@ -54,9 +54,9 @@ export default defineComponent({
             let classes: Array < string > = [];
 
             classes = [
-                "h- focus:outline-none  focus:ring  focus:border-blue-300",
+                "flex justify-center  focus:outline-none  focus:ring  focus:border-blue-300",
                 this.shapes[this.shape],
-                this.full ? "w-full flex justify-center " : "",
+                this.full ? "w-full " : "",
             ];
 
             if (this.smooth) {
@@ -73,7 +73,7 @@ export default defineComponent({
                     this.borderColors[this.variant],
                     this.colors[this.variant],
                     this.borderColorsHover[this.variant],
-                    this.colorsHover[this.variant],
+                    this.borderColorsHover[this.variant],
                 ];
             } else if (this.raised) {
                 classes = [

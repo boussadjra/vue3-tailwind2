@@ -1,24 +1,40 @@
 <template>
 <div class="space-y-2">
-    <h1 class="section__title">Tab views:</h1>
-    <div class="w-full grid grid-cols-2 gap-4 place-items-center">
-        <tab-view :items='items'>
+    <h1 class="section__title">Tab views :</h1>
+    <div class="w-full grid  gap-4 place-items-center">
+        <card>
+            <tab-view :items='items'>
 
-        </tab-view>
+            </tab-view>
+        </card>
     </div>
 </div>
 
 <div class="space-y-2">
     <h1 class="section__title">Tab views with custom headers:</h1>
-    <div class="w-full grid grid-cols-2 gap-4 place-items-center pl-12">
-        <tab-view :items='items'>
-            <template #item="{item}">
-                <div class="flex space-x-2 items-center">
-                    <component :is="item.header.toLowerCase()"></component>
-                    <span>{{item.header}}</span>
-                </div>
-            </template>
-        </tab-view>
+    <div class="w-full grid  gap-4 place-items-center pl-12">
+        <card class="w-auto">
+            <tab-view :items='items'>
+                <template #item="{item}">
+                    <div class="flex space-x-2 items-center">
+                        <component :is="item.header.toLowerCase()"></component>
+                        <span>{{item.header}}</span>
+
+                    </div>
+                </template>
+            </tab-view>
+        </card>
+        <card class="w-auto">
+            <tab-view :items='items'>
+                <template #item="{item}">
+                    <div class="flex space-x-2 items-center">
+                        <component :is="item.header.toLowerCase()"></component>
+                        <span>{{item.header}}</span>
+                        <badge v-if="item.header==='Notifications'" textColor="text-white" size="xs" bgColor="bg-red-500"><span class="text-xs">5</span></badge>
+                    </div>
+                </template>
+            </tab-view>
+        </card>
     </div>
 </div>
 </template>
@@ -32,7 +48,8 @@ import IconHome from '@/components/icons/IconHome.vue';
 import IconBookmark from '@/components/icons/IconBookmark.vue';
 import IconNotification from '@/components/icons/IconNotification.vue';
 import IconUser from '@/components/icons/IconUser.vue';
-
+import Card from '@/components/surface/Card.vue';
+import Badge from '@/components/data-display/Badge.vue';
 export default defineComponent({
     data() {
         return {
@@ -62,7 +79,9 @@ export default defineComponent({
         home: IconHome,
         bookmarks: IconBookmark,
         notifications: IconNotification,
-        profile: IconUser
+        profile: IconUser,
+        Card,
+        Badge
 
     }
 })

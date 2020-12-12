@@ -17,11 +17,13 @@
             </transition>
         </div>
     </div>
+    <transition name="fade">
+        <div class="p-4" v-if="items[currentTab-1].body">
+            {{items[currentTab-1].body}}
 
-    <div class="p-4">
-        {{items[currentTab-1].body}}
+        </div>
+    </transition>
 
-    </div>
 </div>
 </template>
 
@@ -33,6 +35,7 @@ import {
     defineComponent,
     PropType
 } from "vue";
+
 interface itemType {
     header: string;
     body: string;
@@ -87,6 +90,16 @@ export default defineComponent({
 
 .slide-fade-right-enter-from {
     transform: translateX(-100px);
+    opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
     opacity: 0;
 }
 </style>

@@ -1,15 +1,15 @@
 <template>
 <div class="flex flex-row">
-    <aside class="min-h-screen flex justify-center bg-purple-100 py-6 w-64 sticky">
+    <aside class=" flex justify-center bg-purple-100 py-6 w-64 sticky  ">
         <div class="flex w-full py-4">
-            <ul class="flex flex-col w-full">
-                <li class="relative w-full" v-for="(component, index) in components" :key="index">
+            <ul class="flex flex-col w-full max-h-96 overflow-auto">
+                <li class="relative w-full " v-for="(component, index) in components" :key="index">
                     <!-- <span class="w-2 h-2 rounded-full bg-purple-500 absolute  left-0 top-2">
 
                     </span>-->
 
-                    <router-link active-class="text-purple-700 bg-purple-200" class="flex text-gray-600 w-full pl-4 p-2" :to="`/components/${component.toLowerCase()}`">
-                        <IconModel class="mr-4 hover:rotate-45" />{{ component }}
+                    <router-link active-class="text-purple-700 bg-purple-200" class="flex text-gray-600 w-full pl-4 p-2" :to="component.path">
+                        <IconModel class="mr-4 hover:rotate-45" />{{ component.name }}
                     </router-link>
                 </li>
             </ul>
@@ -38,23 +38,20 @@ export default defineComponent({
 
     data() {
         return {
-            components: [
-                "Alerts",
-                "Avatars",
-                "Badges",
-                "Breadcrumbs",
-                "Buttons",
-                "Cards",
-                "Chips",
-                "Icons",
-                "Inputs",
-                "Tabs"
-            ],
+
         };
+    },
+    computed: {
+        components() {
+            return this.$router.getRoutes().filter(route => route.path.includes('/components/'))
+        }
     },
     components: {
         Breadcrumb,
         IconModel,
+    },
+    mounted() {
+
     },
 });
 </script>
