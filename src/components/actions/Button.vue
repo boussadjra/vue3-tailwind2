@@ -1,6 +1,6 @@
 <template>
 <button :class="buttonClasses" class="flex items-center hover:shadow-lg">
-    <span class="mr-2 ">
+    <span class="mr-2">
         <slot name="prepend"></slot>
     </span>
     <slot></slot>
@@ -17,6 +17,7 @@ import {
 } from "vue";
 
 import {
+    colorable,
     outlineable,
     shaped,
     sizeable,
@@ -44,7 +45,7 @@ export default defineComponent({
             default: false,
         },
     },
-    mixins: [shaped, sizeable, variantable, smoothable, outlineable],
+    mixins: [shaped, sizeable, variantable, smoothable, outlineable, colorable],
     data() {
         return {};
     },
@@ -54,7 +55,7 @@ export default defineComponent({
             let classes: Array < string > = [];
 
             classes = [
-                "flex justify-center  focus:outline-none  focus:ring  focus:border-blue-300",
+                "flex justify-center max-w-max max-h-max whitespace-nowrap focus:outline-none  focus:ring  focus:border-blue-300",
                 this.shapes[this.shape],
                 this.full ? "w-full " : "",
             ];
@@ -105,6 +106,11 @@ export default defineComponent({
             } else {
                 classes = [...classes, this.padding[this.size]];
             }
+
+            //replace the default colors if the colors are provided as props
+            this.bgColor && (classes = this.replaceColors(this, 'bgColor', classes, /bg-[a-z]+[-][1-9]{1}[0]{2}/g))
+            this.bgColorHover && (classes = this.replaceColors(this, 'bgColorHover', classes, /hover:bg-[a-z]+[-][1-9]{1}[0]{2}/g))
+            this.textColor && (classes = this.replaceColors(this, 'textColor', classes, /text-[a-z]+[-][1-9]{1}[0]{2}/g))
 
             return classes;
         },

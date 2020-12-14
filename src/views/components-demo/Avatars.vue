@@ -1,7 +1,7 @@
 <template>
 <div class="space-y-2 pb-4">
     <h1 class="section__title">Avatar in profile card :</h1>
-    <div class="w-full flex flex-row items-center justify-between">
+    <div class="w-full grid--auto-cols gap-4 lg:gap-x-16">
         <card class="min-w-max">
             <template #media>
                 <img src="@/assets/img/walter-verna.jpg" class="h-48 w-96" />
@@ -77,6 +77,30 @@
                 </div>
             </div>
         </card>
+
+        <card class="min-w-max w-96 bg-white">
+            <div class="flex flex-col items-center w-96">
+                <avatar src="https://i.pravatar.cc/200?img=56" size="lg" shape="rounded-full" class="bg-purple-200 row-start-1 text-purple-650">
+                </avatar>
+                <span class="font-bold text-gray-600 text-xl p-2">John Doe</span>
+                <span class="text-sm text-gray-500 ">Web designer</span>
+
+                <div class="flex space-x-2 items-center py-4">
+                    <w-btn circle class="bg-gray-500" size="xs">
+                        <icon-logo-facebook />
+                    </w-btn>
+                    <w-btn circle class="bg-gray-500" size="xs">
+                        <icon-logo-twitter />
+                    </w-btn>
+                    <w-btn circle class="bg-gray-500" size="xs">
+                        <icon-logo-instagram />
+                    </w-btn>
+                    <w-btn circle class="bg-gray-500" size="xs">
+                        <icon-logo-linkedin />
+                    </w-btn>
+                </div>
+            </div>
+        </card>
     </div>
 </div>
 <div class="space-y-2">
@@ -93,7 +117,7 @@
 
 <div class="space-y-2">
     <h1 class="section__title">Avatars with images and different sizes:</h1>
-    <div class="w-full flex flex-row justify-between items-center">
+    <div class="w-full grid--auto-cols gap-4">
         <div class="flex flex-col justify-center items-center space-y-4" v-for="(shape, i) in shapes" :key="i">
             <avatar src="https://i.pravatar.cc/200?img=56" :shape="shape" class="bg-purple-200 row-start-1 text-purple-650">
             </avatar>
@@ -105,7 +129,7 @@
 
 <div class="space-y-2">
     <h1 class="section__title">Avatars with badges:</h1>
-    <div class="w-full flex flex-row justify-between items-center">
+    <div class="w-full grid--auto-cols gap-4">
         <avatar src="https://i.pravatar.cc/200?img=56" shape="rounded-full" class="bg-purple-200 row-start-1 text-purple-650">
             <template #badge>
                 <badge shape="rounded-full" size="md"></badge>
@@ -187,6 +211,10 @@ import ComponentReflecter from "@/components/util/ComponentReflecter.vue";
 import GitHubService from "@/services/GitHubService";
 import StackOverflowService from "@/services/StackOverflowService";
 import IconWithBadge from "@/components/data-display/IconWithBadge.vue";
+import IconLogoFacebook from "@/components/icons/IconLogoFacebook.vue";
+import IconLogoTwitter from "@/components/icons/IconLogoTwitter.vue";
+import IconLogoInstagram from "@/components/icons/IconLogoInstagram.vue";
+import IconLogoLinkedin from "@/components/icons/IconLogoLinkedin.vue";
 
 import {
     defineComponent
@@ -216,6 +244,10 @@ export default defineComponent({
         IconFavoriteFilled,
         IconBadge,
         IconWithBadge,
+        IconLogoFacebook,
+        IconLogoTwitter,
+        IconLogoInstagram,
+        IconLogoLinkedin
     },
     methods: {
         getBadgeColor(key: string) {

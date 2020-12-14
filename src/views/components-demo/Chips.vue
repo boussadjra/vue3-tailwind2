@@ -1,7 +1,7 @@
 <template>
 <div class="space-y-2">
     <h1 class="section__title">Default chips shape:</h1>
-    <div class="w-full grid grid-cols-5 gap-4 place-items-center">
+    <div class="w-full grid--auto-cols gap-4">
         <chip v-for="variant in variants" :key="variant" :variant="variant">
             {{variant}}
         </chip>
@@ -9,7 +9,7 @@
 </div>
 <div class="space-y-2">
     <h1 class="section__title">chips outlined:</h1>
-    <div class="w-full grid grid-cols-5 gap-4 place-items-center">
+    <div class="w-full grid--auto-cols gap-4">
         <chip v-for="variant in variants" :key="variant" outlined :variant="variant">
             {{variant}}
         </chip>
@@ -17,7 +17,7 @@
 </div>
 <div class="space-y-2">
     <h1 class="section__title">smooth chips:</h1>
-    <div class="w-full grid grid-cols-5 gap-4 place-items-center">
+    <div class="w-full grid--auto-cols gap-4">
         <chip v-for="variant in variants" :key="variant" smooth :variant="variant">
             {{variant}}
         </chip>

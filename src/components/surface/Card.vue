@@ -1,5 +1,5 @@
 <template>
-<div class="w-auto min-w-sm border border-gray-200 bg-gray-50 max-w-max   transition-shadow" :class="cardClasses">
+<div class="card  min-w-sm border border-gray-100 bg-gray-50   transition-shadow" :class="cardClasses">
     <h2 class="text-md mb-2 px-4 pt-4" v-if="$slots.header">
         <slot name="header"> </slot>
     </h2>

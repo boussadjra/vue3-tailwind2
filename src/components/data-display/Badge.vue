@@ -17,8 +17,12 @@
 import {
     keyable
 } from "@/@types/global";
-import shaped from '@/mixins/shaped';
-import sizeable from '@/mixins/sizeable';
+import {
+    colorable,
+    shaped,
+    sizeable
+} from '@/mixins';
+
 import {
     defineComponent,
     PropType
@@ -52,16 +56,9 @@ export default defineComponent({
             type: Boolean,
             default: false,
         },
-        bgColor: {
-            type: String,
-            default: "bg-purple-200",
-        },
-        textColor: {
-            type: String,
-            default: "text-purple-700",
-        },
+
     },
-    mixins: [shaped, sizeable],
+    mixins: [shaped, sizeable, colorable],
 
     data() {
         return {

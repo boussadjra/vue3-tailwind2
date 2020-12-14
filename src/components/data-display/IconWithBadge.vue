@@ -1,5 +1,5 @@
 <template>
-<div class="relative h-8">
+<div class="relative h-8 max-w-min">
     <div>
         <slot name="icon"></slot>
     </div>

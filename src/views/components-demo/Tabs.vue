@@ -12,7 +12,7 @@
 
 <div class="space-y-2">
     <h1 class="section__title">Tab views with custom headers:</h1>
-    <div class="w-full grid  gap-4 place-items-center pl-12">
+    <div class="w-full grid  gap-4 place-items-center md:pl-12">
         <card class="w-auto">
             <tab-view :items='items'>
                 <template #item="{item}">

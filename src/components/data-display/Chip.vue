@@ -1,5 +1,5 @@
 <template>
-<div :class="chipClasses" class="flex items-center rounded space-x-1 px-2">
+<div :class="chipClasses" class="flex max-w-max items-center rounded space-x-1 px-2">
     <span class="text-sm">
         <slot></slot>
     </span>
@@ -47,11 +47,11 @@ export default defineComponent({
             } else if (this.outlined) {
                 classes = [
                     ...classes,
+
                     "border bg-transparent",
                     this.borderColors[this.variant],
                     this.colors[this.variant],
                     this.borderColorsHover[this.variant],
-                    this.colorsHover[this.variant],
                 ];
             } else {
                 classes = [

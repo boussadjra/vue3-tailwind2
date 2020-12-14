@@ -1,7 +1,7 @@
 <template>
 <div class="space-y-2">
     <h1 class="section__title">Cards:</h1>
-    <div class="w-full grid grid-cols-3 gap-4 place-items-start">
+    <div class="w-full grid--auto-cols gap-8">
         <card>
             <p class="text-gray-600 text-sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
@@ -36,7 +36,7 @@
 </div>
 <div class="space-y-2">
     <h1 class="section__title">Cards with actions:</h1>
-    <div class="w-full grid grid-cols-3 gap-4 place-items-start">
+    <div class="w-full grid--auto-cols gap-4">
         <card>
             <p class="text-gray-600 text-sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
@@ -87,7 +87,7 @@
 </div>
 <div class="space-y-2">
     <h1 class="section__title">Cards with Media:</h1>
-    <div class="w-full grid grid-cols-3 gap-4 place-items-start">
+    <div class="w-full grid--auto-cols gap-4">
         <card>
             <template #media>
                 <img src="@/assets/img/salade.jpg" alt="" srcset="" />
@@ -177,7 +177,7 @@
 </div>
 <div class="space-y-2">
     <h1 class="section__title">Cards weather:</h1>
-    <div class="w-full grid grid-cols-3 gap-4 place-items-start">
+    <div class="w-full grid--auto-cols gap-4">
         <card class="w-full bg-gradient-to-r from-purple-900 to-purple-700 text-purple-50 rounded-md ">
             <template #header>
                 <div class="flex justify-between">

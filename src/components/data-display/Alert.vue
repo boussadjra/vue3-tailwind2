@@ -1,6 +1,6 @@
 <template>
 <transition name="fade">
-    <div class="relative w-auto h-20 p-2 pl-6 pr-4 rounded text-sm flex items-center  " :class="classes" v-if="modelValue">
+    <div class="relative w-auto h-auto max-h-40 p-2 pl-6 pr-4 rounded text-sm flex items-center  " :class="classes" v-if="modelValue">
         <div>
 
         </div>

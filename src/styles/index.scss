@@ -12,8 +12,12 @@ body{
     overflow-y: hidden;
 
 }
+
+#app{
+    overflow-x: hidden;
+}
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 2px;
     border-radius: 5px
 }
 
@@ -28,4 +32,20 @@ body{
 }
 .section__title{
     @apply text-xl ml-2 pt-16 pb-8 text-gray-700
+}
+
+.grid--auto-cols{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+    place-items: center;
+    &-xs{
+        grid-template-columns: repeat(auto-fill,minmax(240px,1fr));    
+    }
+    
+}
+
+.home{
+    overflow-y: auto;
+    max-height: calc(100vh - 64px);
+
 }

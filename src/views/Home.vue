@@ -1,15 +1,15 @@
 <template>
-<div class="home bg-purple-50 " style="overflow-y: auto; max-height: calc(100vh - 64px)">
+<div class="home bg-purple-50 h-auto min-h-screen lg:min-h-full">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" class="fill-current text-purple-800">
         <path fill-opacity="1" d="M0,32L48,32C96,32,192,32,288,53.3C384,75,480,117,576,128C672,139,768,117,864,90.7C960,64,1056,32,1152,32C1248,32,1344,64,1392,80L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
     </svg>
-    <div class="flex flex-row justify-around  h-96 ">
-        <div class="flex flex-col h-32 items-center">
-            <h1 class="text-6xl font-extrabold text-purple-900 self-start">
+    <div class="flex flex-col-reverse justify-around w-full  lg:h-96 lg:flex-row">
+        <div class="flex flex-col h-32 items-center ">
+            <h1 class="text-4xl font-extrabold text-purple-900 lg:self-start lg:text-6xl">
                 VUEWIND
             </h1>
 
-            <p class="text-xl text-gray-600 py-4 px-1">
+            <p class="text-md text-gray-600 py-4 px-1 lg:text-xl">
                 Let's see the magic of Vue + Tailwind
             </p>
 
@@ -17,11 +17,11 @@
                 <router-link to="/components"> GET STARTED </router-link>
             </w-btn>
         </div>
-        <div class="flex flex-row pr-4 -ml-64">
-            <div class="rounded-full h-64 w-64 flex justify-center items-center">
+        <div class="flex flex-row justify-center space-x-8 w-full py-8 lg:pr-4 lg:w-auto">
+            <div class="rounded-full h-32 w-32 flex justify-center items-center lg:h-64 lg:w-64">
                 <img alt="tailwind logo" src="../assets/tailwind-css-logo.svg" />
             </div>
-            <div class="rounded-full h-64 w-64 flex justify-center items-center">
+            <div class="rounded-full h-32 w-32 flex justify-center items-center lg:h-64 lg:w-64">
                 <img alt="Vue logo" src="../assets/vue-logo.svg" />
             </div>
         </div>
@@ -50,17 +50,17 @@ export default defineComponent({
         "w-btn": Button,
     },
     created() {
-        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener("scroll", this.handleScroll);
     },
     destroyed() {
-        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener("scroll", this.handleScroll);
     },
     methods: {
         handleScroll(event: Event) {
-            console.log('--------------------')
-            console.log(event)
-            console.log('--------------------')
-        }
-    }
+            console.log("--------------------");
+            console.log(event);
+            console.log("--------------------");
+        },
+    },
 });
 </script>

@@ -1,7 +1,7 @@
 <template>
 <div class="space-y-2">
     <h1 class="section__title">Simple alerts:</h1>
-    <div class="w-full grid grid-cols-2 gap-4 place-items-center">
+    <div class="w-full grid--auto-cols gap-4">
         <button @click="reset" v-if="isReset" class="mt-8 px-8 py-2 bg-purple-800 text-purple-100 shadow-md rounded-sm self-end focus:outline-none hover:bg-purple-900 place-self-start ">
             RESET
         </button>
@@ -15,7 +15,7 @@
     </div>
 
     <h1 class="section__title">Alert with titles :</h1>
-    <div class="w-full grid grid-cols-2 gap-4 place-items-center">
+    <div class="w-full grid--auto-cols gap-4">
         <alert v-for="variant in variants2" title="Alert title" :variant="variant.type" v-model="variant.show">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
             accusamus porro maxime, veniam pariatur asperiores?
