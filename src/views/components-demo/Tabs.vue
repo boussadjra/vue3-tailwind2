@@ -37,6 +37,40 @@
         </card>
     </div>
 </div>
+<div class="space-y-2">
+    <h1 class="section__title">Tab view for mobile:</h1>
+    <div class="w-full grid--auto-cols gap-4">
+        <card class="w-auto">
+            <tab-view :items='items' border-top class="max-w-min">
+                <template #item="{item}">
+                    <div class="flex  items-center">
+                        <component :height="32" :width="32" :is="item.header.toLowerCase()"></component>
+
+                    </div>
+                </template>
+            </tab-view>
+        </card>
+        <card class="w-auto">
+            <tab-view :items='items' border-top class="max-w-min">
+                <template #item="{item}">
+                    <div class="flex  items-center ">
+                        <component v-if="item.header!=='Home'" :height="32" :width="32" :is="item.header.toLowerCase()"></component>
+                        <icon-with-badge v-else>
+                            <template #icon>
+                                <home class="text-gray-600" :height="32" :width="32" />
+                            </template>
+
+                            <template #badge>
+                                <badge shape="rounded-full" position="initial" color="red" size="sm"></badge>
+                            </template>
+                        </icon-with-badge>
+                    </div>
+                </template>
+            </tab-view>
+        </card>
+
+    </div>
+</div>
 </template>
 
 <script lang="ts">
@@ -50,6 +84,8 @@ import IconNotification from '@/components/icons/IconNotification.vue';
 import IconUser from '@/components/icons/IconUser.vue';
 import Card from '@/components/surface/Card.vue';
 import Badge from '@/components/data-display/Badge.vue';
+import IconWithBadge from '@/components/data-display/IconWithBadge.vue';
+
 export default defineComponent({
     data() {
         return {
@@ -81,7 +117,8 @@ export default defineComponent({
         notifications: IconNotification,
         profile: IconUser,
         Card,
-        Badge
+        Badge,
+        IconWithBadge
 
     }
 })

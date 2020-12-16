@@ -1,27 +1,22 @@
 <template>
-<div :class="`flex ${borderTop ? 'flex-col-reverse' : 'flex-col'}`">
-    <div class="header flex w-full border-gray-400" :class="`${borderTop ? 'border-t' : 'border-b'}`">
+<div class="w-auto">
+    <div class="header flex w-full ">
         <div class="relative cursor-pointer py-2 px-6 rounded-tr rounded-tl text-gray-700 hover:text-purple-700" :class="{
           ' text-purple-700': currentTab === index + 1,
         }" v-for="(item, index) in items" :key="index" @click="currentTab = index + 1">
             <div>
-                <slot name="item" :item="item"></slot>
 
+                <slot name="item" :item="item"></slot>
+                <TabBg />
                 <div v-if="!$slots.item">
                     {{ item.header }}
+
                 </div>
             </div>
 
-            <transition :name="`slide-fade-${currentTab > prevTab ? 'right' : 'left'}`">
-                <div v-if="currentTab === index + 1" :class="`${borderTop ? 'top-0' : 'bottom-0'}`" class="w-full absolute left-0 border-b-2 border-purple-700 text-purple-700"></div>
-            </transition>
         </div>
     </div>
-    <transition name=" fade">
-        <div class="p-4" v-if="items[currentTab - 1].body">
-            {{ items[currentTab - 1].body }}
-        </div>
-    </transition>
+
 </div>
 </template>
 
@@ -33,6 +28,7 @@ import {
     defineComponent,
     PropType
 } from "vue";
+import TabBg from "./TabBg.vue";
 
 interface itemType {
     header: string;
@@ -44,37 +40,31 @@ export default defineComponent({
         items: {
             type: Array as PropType < Array < itemType >> ,
         },
-        borderTop: {
-            type: Boolean,
-            default: false,
-        },
     },
     data() {
         return {
             currentTab: 1,
-            prevTab: -1,
+            prevTab: -1
         };
     },
     watch: {
         currentTab(newVal, oldVal) {
-            this.prevTab = oldVal;
-        },
+            this.prevTab = oldVal
+        }
     },
-    mounted() {
-        console.log("--------------------");
-        console.log(this.$slots.item);
-        console.log("--------------------");
-    },
+    components: {
+        TabBg
+    }
 });
 </script>
 
 <style>
 .slide-fade-left-enter-active {
-    transition: all 0.3s ease-out;
+    transition: all .3s ease-out;
 }
 
 .slide-fade-left-leave-active {
-    transition: all 0.3s ease;
+    transition: all .3s ease;
 }
 
 .slide-fade-left-enter-from {
@@ -83,11 +73,11 @@ export default defineComponent({
 }
 
 .slide-fade-right-enter-active {
-    transition: all 0.3s ease-out;
+    transition: all .3s ease-out;
 }
 
 .slide-fade-right-leave-active {
-    transition: all 0.3s ease;
+    transition: all .3s ease;
 }
 
 .slide-fade-right-enter-from {
@@ -97,7 +87,7 @@ export default defineComponent({
 
 .fade-enter-active,
 .fade-leave-active {
-    transition: opacity 0.5s ease;
+    transition: opacity .5s ease;
 }
 
 .fade-enter-from,
