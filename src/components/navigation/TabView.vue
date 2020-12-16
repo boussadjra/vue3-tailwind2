@@ -57,6 +57,7 @@ export default defineComponent({
     },
     watch: {
         currentTab(newVal, oldVal) {
+
             this.prevTab = oldVal;
         },
     },

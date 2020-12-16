@@ -54,10 +54,10 @@
             <tab-view :items='items' border-top class="max-w-min">
                 <template #item="{item}">
                     <div class="flex  items-center ">
-                        <component v-if="item.header!=='Home'" :height="32" :width="32" :is="item.header.toLowerCase()"></component>
+                        <component v-if="item.header!=='Home'" class="fill-current text-gray-500 " :height="32" :width="32" :is="item.header.toLowerCase()"></component>
                         <icon-with-badge v-else>
                             <template #icon>
-                                <home class="text-gray-600" :height="32" :width="32" />
+                                <home :height="32" :width="32" />
                             </template>
 
                             <template #badge>
