@@ -16,6 +16,7 @@
             <w-btn size="lg">
                 <router-link to="/components"> GET STARTED </router-link>
             </w-btn>
+
         </div>
         <div class="flex flex-row justify-center space-x-8 w-full py-8 lg:pr-4 lg:w-auto">
             <div class="rounded-full h-32 w-32 flex justify-center items-center lg:h-64 lg:w-64">
@@ -26,6 +27,18 @@
             </div>
         </div>
     </div>
+
+    <div class="h-96 p-8">
+
+        <card class="w-96" elevation="lg">
+            <template #header>
+                <div>
+                    header
+                </div>
+            </template>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis facere dolorem ducimus maiores qui ex!
+        </card>
+    </div>
 </div>
 </template>
 
@@ -34,11 +47,12 @@ import {
     defineComponent,
     ref
 } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue";
+
 import {
     RouterLink
 } from "vue-router";
 import Button from "@/components/actions/Button.vue";
+import Card from "@/components/surface/Card";
 
 interface keyable {
     [key: string]: any;
@@ -46,7 +60,7 @@ interface keyable {
 export default defineComponent({
     name: "Home",
     components: {
-        HelloWorld,
+        Card,
         "w-btn": Button,
     },
     created() {

@@ -122,16 +122,16 @@
 
 <script lang="ts">
 import Button from "@/components/actions/Button.vue";
-import IconClose from "@/components/icons/IconClose.vue";
+import IconClose from "@/components/icons/IconClose";
 
-import IconInformation from "@/components/icons/IconInformation.vue";
-import IconWarning from "@/components/icons/IconWarning.vue";
-import IconCheckmark from "@/components/icons/IconCheckmark.vue";
+import IconInformation from "@/components/icons/IconInformation";
+import IconWarning from "@/components/icons/IconWarning";
+import IconCheckmark from "@/components/icons/IconCheckmark";
 import {
     defineComponent
 } from "vue";
-import IconSearch from "@/components/icons/IconSearch.vue";
-import IconAdd from "@/components/icons/IconAdd.vue";
+import IconSearch from "@/components/icons/IconSearch";
+import IconAdd from "@/components/icons/IconAdd";
 
 export default defineComponent({
     data() {

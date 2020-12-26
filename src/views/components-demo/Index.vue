@@ -6,12 +6,13 @@
             <div class="flex w-full py-4 ">
                 <ul class="flex flex-col w-full max-h-96 overflow-auto">
                     <li class="relative w-full " v-for="(component, index) in components" :key="index">
-                        <!-- <span class="w-2 h-2 rounded-full bg-purple-500 absolute  left-0 top-2">
+                        <!-- <span class="w-2 h-2 rounded-full bg-purple-500 absolute  Right-0 top-2">
 
                     </span>-->
 
-                        <router-link active-class="text-purple-700 bg-purple-200" class="flex text-gray-600 w-full pl-4 p-2" :to="component.path">
-                            <IconModel class="mr-4 hover:rotate-45" />{{ component.name }}
+                        <router-link active-class="text-purple-700 bg-purple-200" class="relative flex  text-gray-600 w-full pl-4 p-2 items-center" :to="'/components/'+component.path">
+                            <IconModel class="mr-4 hover:rotate-45" />
+                            <span>{{ component.name }}</span>
                         </router-link>
                     </li>
                 </ul>
@@ -42,11 +43,19 @@ import {
 import Breadcrumb from "@/components/navigation/Breadcrumb";
 import Button from "@/components/actions/Button.vue";
 
-import IconModel from "@/components/icons/IconModel.vue";
-import IconMenu from "@/components/icons/IconMenu.vue";
+import IconModel from "@/components/icons/IconModel";
+import IconMenu from "@/components/icons/IconMenu";
 import {
     useBreakpoint
 } from '@/composable'
+import IconCaretRight from "@/components/icons/IconCaretRight";
+import {
+    routes
+} from "@/router";
+import {
+    RouteRecordRaw
+} from "vue-router";
+
 export default defineComponent({
     name: "components",
     setup(props) {
@@ -65,19 +74,21 @@ export default defineComponent({
     },
     data() {
         return {
+            currentHovered: -1,
 
         };
     },
     computed: {
         components() {
-            return this.$router.getRoutes().filter(route => route.path.includes('/components/'))
+            return routes.find((route: RouteRecordRaw) => route.path.includes('/components'))?.children;
         }
     },
     components: {
         Breadcrumb,
         IconModel,
         "w-btn": Button,
-        IconMenu
+        IconMenu,
+        IconCaretRight
     },
     mounted() {
 

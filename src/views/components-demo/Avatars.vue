@@ -83,7 +83,7 @@
                 <avatar src="https://i.pravatar.cc/200?img=56" size="lg" shape="rounded-full" class="bg-purple-200 row-start-1 text-purple-650">
                 </avatar>
                 <span class="font-bold text-gray-600 text-xl p-2">John Doe</span>
-                <span class="text-sm text-gray-500 ">Web designer</span>
+                <span class="text-sm text-gray-500">Web designer</span>
 
                 <div class="flex space-x-2 items-center py-4">
                     <w-btn circle class="bg-gray-500" size="xs">
@@ -129,37 +129,49 @@
 
 <div class="space-y-2">
     <h1 class="section__title">Avatars with badges:</h1>
-    <div class="w-full grid--auto-cols gap-4">
-        <avatar src="https://i.pravatar.cc/200?img=56" shape="rounded-full" class="bg-purple-200 row-start-1 text-purple-650">
-            <template #badge>
-                <badge shape="rounded-full" size="md"></badge>
-            </template>
-        </avatar>
-        <avatar src="https://i.pravatar.cc/200?img=58" shape="rounded-full" size="xs" class="bg-purple-200 row-start-1 text-purple-650">
-            <template #badge="{ avatar }">
-                <badge shape="rounded-full" size="xs" :avatar="avatar"></badge>
-            </template>
-        </avatar>
-        <avatar src="https://i.pravatar.cc/200?img=64" shape="rounded-full" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
-            <template #badge="{ avatar }">
-                <badge shape="rounded-full" color="red" size="sm" :avatar="avatar"></badge>
-            </template>
-        </avatar>
-        <avatar src="https://i.pravatar.cc/200?img=65" shape="rounded" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
-            <template #badge="{ avatar }">
-                <badge shape="rounded-full" color="green" size="md" :avatar="avatar"></badge>
-            </template>
-        </avatar>
-        <avatar src="https://i.pravatar.cc/200?img=67" size="sm" class="bg-purple-200 row-start-1 text-purple-600">
-            <template #badge="{ avatar }">
-                <badge shape="rounded-full" ping position="top-right" color="blue" size="sm" :avatar="avatar"></badge>
-            </template>
-        </avatar>
-        <avatar src="https://i.pravatar.cc/200?img=42" shape="rounded-none" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
-            <template #badge="{ avatar }">
-                <badge shape="rounded-full" color="green" size="md" :avatar="avatar"></badge>
-            </template>
-        </avatar>
+    <div class="w-full flex flex-wrap">
+        <div class="w-6/12 md:w-4/12 lg:w-2/12 flex items-center justify-center p-2">
+            <avatar src="https://i.pravatar.cc/200?img=56" shape="rounded-full" class="bg-purple-200 row-start-1 text-purple-650">
+                <template #badge>
+                    <badge shape="rounded-full" size="md"></badge>
+                </template>
+            </avatar>
+        </div>
+        <div class="w-6/12 md:w-4/12 lg:w-2/12 flex items-center justify-center p-2">
+            <avatar src="https://i.pravatar.cc/200?img=58" shape="rounded-full" size="xs" class="bg-purple-200 row-start-1 text-purple-650">
+                <template #badge="{ avatar }">
+                    <badge shape="rounded-full" size="xs" :avatar="avatar"></badge>
+                </template>
+            </avatar>
+        </div>
+        <div class="w-6/12 md:w-4/12 lg:w-2/12 flex items-center justify-center p-2">
+            <avatar src="https://i.pravatar.cc/200?img=64" shape="rounded-full" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
+                <template #badge="{ avatar }">
+                    <badge shape="rounded-full" color="red" size="sm" :avatar="avatar"></badge>
+                </template>
+            </avatar>
+        </div>
+        <div class="w-6/12 md:w-4/12 lg:w-2/12 flex items-center justify-center p-2">
+            <avatar src="https://i.pravatar.cc/200?img=65" shape="rounded" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
+                <template #badge="{ avatar }">
+                    <badge shape="rounded-full" color="green" size="md" :avatar="avatar"></badge>
+                </template>
+            </avatar>
+        </div>
+        <div class="w-6/12 md:w-4/12 lg:w-2/12 flex items-center justify-center p-2">
+            <avatar src="https://i.pravatar.cc/200?img=67" size="sm" class="bg-purple-200 row-start-1 text-purple-600">
+                <template #badge="{ avatar }">
+                    <badge shape="rounded-full" ping position="top-right" color="blue" size="sm" :avatar="avatar"></badge>
+                </template>
+            </avatar>
+        </div>
+        <div class="w-6/12 md:w-4/12 lg:w-2/12 flex items-center justify-center p-2">
+            <avatar src="https://i.pravatar.cc/200?img=42" shape="rounded-none" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
+                <template #badge="{ avatar }">
+                    <badge shape="rounded-full" color="green" size="md" :avatar="avatar"></badge>
+                </template>
+            </avatar>
+        </div>
     </div>
 </div>
 <div class="space-y-2">
@@ -204,17 +216,17 @@
 import Button from "@/components/actions/Button.vue";
 import Avatar from "@/components/data-display/Avatar.vue";
 import Badge from "@/components/data-display/Badge.vue";
-import IconBadge from "@/components/icons/IconBadge.vue";
-import IconFavoriteFilled from "@/components/icons/IconFavoriteFilled.vue";
+import IconBadge from "@/components/icons/IconBadge";
+import IconFavoriteFilled from "@/components/icons/IconFavoriteFilled";
 import Card from "@/components/surface/Card.vue";
 import ComponentReflecter from "@/components/util/ComponentReflecter.vue";
 import GitHubService from "@/services/GitHubService";
 import StackOverflowService from "@/services/StackOverflowService";
 import IconWithBadge from "@/components/data-display/IconWithBadge.vue";
-import IconLogoFacebook from "@/components/icons/IconLogoFacebook.vue";
-import IconLogoTwitter from "@/components/icons/IconLogoTwitter.vue";
-import IconLogoInstagram from "@/components/icons/IconLogoInstagram.vue";
-import IconLogoLinkedin from "@/components/icons/IconLogoLinkedin.vue";
+import IconLogoFacebook from "@/components/icons/IconLogoFacebook";
+import IconLogoTwitter from "@/components/icons/IconLogoTwitter";
+import IconLogoInstagram from "@/components/icons/IconLogoInstagram";
+import IconLogoLinkedin from "@/components/icons/IconLogoLinkedin";
 
 import {
     defineComponent
@@ -247,7 +259,7 @@ export default defineComponent({
         IconLogoFacebook,
         IconLogoTwitter,
         IconLogoInstagram,
-        IconLogoLinkedin
+        IconLogoLinkedin,
     },
     methods: {
         getBadgeColor(key: string) {

@@ -18,7 +18,7 @@ import {
 import {
     defineComponent
 } from "vue";
-import IconCloseOutline from "../icons/IconCloseOutline.vue";
+import IconCloseOutline from "../icons/IconCloseOutline";
 
 export default defineComponent({
     mixins: [outlineable, shaped, sizeable, smoothable, variantable],

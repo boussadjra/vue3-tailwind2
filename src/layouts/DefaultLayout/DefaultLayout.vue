@@ -35,7 +35,7 @@
 
 <script>
 import Button from "@/components/actions/Button.vue";
-import IconLogoGithub from "@/components/icons/IconLogoGithub.vue";
+import IconLogoGithub from "@/components/icons/IconLogoGithub";
 
 export default {
     components: {

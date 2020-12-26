@@ -52,7 +52,7 @@
 </template>
 
 <script lang="ts">
-import IconCaretRight from '@/components/icons/IconCaretRight.vue';
+import IconCaretRight from '@/components/icons/IconCaretRight';
 import Breadcrumb from "@/components/navigation/Breadcrumb";
 import Badge from "@/components/data-display/Badge.vue";
 

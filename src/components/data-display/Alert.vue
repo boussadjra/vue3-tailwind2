@@ -27,11 +27,11 @@ import {
     defineComponent,
     PropType
 } from "vue";
-import IconClose from "@/components/icons/IconClose.vue";
-import IconInformation from "@/components/icons/IconInformation.vue";
-import IconWarning from '../icons/IconWarning.vue';
-import IconCheckmarkOutline from '../icons/IconCheckmarkOutline.vue';
-import IconCloseOutline from '../icons/IconCloseOutline.vue';
+import IconClose from "@/components/icons/IconClose";
+import IconInformation from "@/components/icons/IconInformation";
+import IconWarning from '../icons/IconWarning';
+import IconCheckmarkOutline from '../icons/IconCheckmarkOutline';
+import IconCloseOutline from '../icons/IconCloseOutline';
 export default defineComponent({
     name: "alert",
     props: {

@@ -78,10 +78,10 @@ import {
     defineComponent
 } from 'vue';
 import TabView from '@/components/navigation/TabView.vue'
-import IconHome from '@/components/icons/IconHome.vue';
-import IconBookmark from '@/components/icons/IconBookmark.vue';
-import IconNotification from '@/components/icons/IconNotification.vue';
-import IconUser from '@/components/icons/IconUser.vue';
+import IconHome from '@/components/icons/IconHome';
+import IconBookmark from '@/components/icons/IconBookmark';
+import IconNotification from '@/components/icons/IconNotification';
+import IconUser from '@/components/icons/IconUser';
 import Card from '@/components/surface/Card.vue';
 import Badge from '@/components/data-display/Badge.vue';
 import IconWithBadge from '@/components/data-display/IconWithBadge.vue';

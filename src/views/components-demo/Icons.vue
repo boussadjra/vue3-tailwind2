@@ -36,18 +36,18 @@ interface iconType {
 const requireContext = require.context(
     "@/components/icons",
     true,
-    /\.vue$/i,
+    /\.tsx$/i,
     "sync"
 );
 let iconNames: Array < string >= requireContext
     .keys()
-    .map((file) => file.replace(/(^.\/)|(\.vue$)/g, ""));
+    .map((file) => file.replace(/(^.\/)|(\.tsx$)/g, ""));
 
 let components: iconType = {};
 
 iconNames.forEach((icon) => {
     components[icon] = defineAsyncComponent(() =>
-        import("@/components/icons/" + icon + ".vue")
+        import("@/components/icons/" + icon + "")
     );
 });
 

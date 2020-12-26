@@ -55,9 +55,9 @@ export default defineComponent({
             let classes: Array < string > = [];
 
             classes = [
-                "flex justify-center max-w-max max-h-max whitespace-nowrap focus:outline-none  focus:ring  focus:border-blue-300",
+                "flex justify-center  max-h-max whitespace-nowrap focus:outline-none  focus:ring  focus:border-blue-300",
                 this.shapes[this.shape],
-                this.full ? "w-full " : "",
+                this.full ? "w-full " : (!this.circle ? "max-w-max" : ''),
             ];
 
             if (this.smooth) {
@@ -101,7 +101,7 @@ export default defineComponent({
             if (this.circle) {
                 classes = [
                     ...classes,
-                    "w-12 h-12 p-1 rounded-full flex justify-center items-center  ",
+                    "w-12 h-12   rounded-full flex justify-center items-center  ",
                 ];
             } else {
                 classes = [...classes, this.padding[this.size]];

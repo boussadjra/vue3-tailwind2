@@ -279,23 +279,23 @@
 <script>
 //mL72nBk16#hak
 import Button from "@/components/actions/Button.vue";
-import Card from "@/components/surface/Card.vue";
+import Card from "@/components/surface/Card";
 
 import {
     defineComponent
 } from "vue";
-import IconChat from "@/components/icons/IconChat.vue";
-import IconFavorite from "@/components/icons/IconFavorite.vue";
-import IconShare from "@/components/icons/IconShare.vue";
-import IconFavoriteFilled from "@/components/icons/IconFavoriteFilled.vue";
+import IconChat from "@/components/icons/IconChat";
+import IconFavorite from "@/components/icons/IconFavorite";
+import IconShare from "@/components/icons/IconShare";
+import IconFavoriteFilled from "@/components/icons/IconFavoriteFilled";
 import Avatar from "@/components/data-display/Avatar.vue";
-import IconOverflowMenuVertical from "@/components/icons/IconOverflowMenuVertical.vue";
+import IconOverflowMenuVertical from "@/components/icons/IconOverflowMenuVertical";
 import Badge from '@/components/data-display/Badge.vue';
-import IconAwake from '@/components/icons/IconAwake.vue';
-import IconWindyStrong from '@/components/icons/IconWindyStrong.vue';
-import IconRainDrop from '@/components/icons/IconRainDrop.vue';
-import IconMostlyCloudy from '@/components/icons/IconMostlyCloudy.vue';
-import IconCloudy from '@/components/icons/IconCloudy.vue';
+import IconAwake from '@/components/icons/IconAwake';
+import IconWindyStrong from '@/components/icons/IconWindyStrong';
+import IconRainDrop from '@/components/icons/IconRainDrop';
+import IconMostlyCloudy from '@/components/icons/IconMostlyCloudy';
+import IconCloudy from '@/components/icons/IconCloudy';
 
 export default defineComponent({
     name: "cards",

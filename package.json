@@ -15,9 +15,11 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
+    "vuex": "^4.0.0-0",
+    "vueye-phone-input": "^0.1.2-alpha.1"
   },
   "devDependencies": {
+    "@vue/babel-plugin-jsx": "^1.0.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-typescript": "~4.5.0",
