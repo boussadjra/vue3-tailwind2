@@ -3,7 +3,7 @@
    <transition name="slide">
    
   
-        <aside v-if="showSidebar" class=" sticky justify-center w-64 min-h-screen py-6 overflow-auto  md:flex bg-navy-blue-100 dark:bg-black-500 dark:text-gray-100 ">
+        <aside v-if="showSidebar" style="max-height:calc(100vh - 64px)" class=" sticky justify-center w-64  h-auto py-6 overflow-auto  md:flex bg-navy-blue-100 dark:bg-black-500 dark:text-gray-100 ">
             <div class=" w-full py-4">
                 
               <div class="px-2 ">Styles</div>

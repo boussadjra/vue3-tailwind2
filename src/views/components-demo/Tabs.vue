@@ -39,7 +39,7 @@
 </div>
 <div class="space-y-2">
     <h1 class="section__title">Tab view for mobile:</h1>
-    <div class="w-full grid--auto-cols gap-4">
+    <div class="w-full flex justify-around space-x-4 ">
         <card class="w-auto">
             <tab-view :items='items' border-top class="max-w-min">
                 <template #item="{item}">
