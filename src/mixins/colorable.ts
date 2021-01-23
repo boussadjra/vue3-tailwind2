@@ -14,7 +14,7 @@ const colorable={
         },
         textColor: {
             type: String,
-            default: "text-white",
+            default: "",
         },
     },
     methods: {
