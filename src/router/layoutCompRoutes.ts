@@ -7,7 +7,7 @@ export default  {
       {
 
         path: 'aspect-ratio',
-        name: 'Aspect Ration',
+        name: 'Aspect Ratio',
         component: () => import('../views/layouts-demo/AspectRatios.vue'),
       },
       {
@@ -15,6 +15,12 @@ export default  {
         path: 'container',
         name: 'Container',
         component: () => import('../views/layouts-demo/Containers.vue'),
+      },
+      {
+
+        path: 'flex',
+        name: 'Flex',
+        component: () => import('../views/layouts-demo/Flex.vue'),
       },
      
    

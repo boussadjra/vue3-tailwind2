@@ -6,7 +6,7 @@ const colorable={
     props:{
         bgColor: {
             type: String,
-            default: "bg-navy-blue-500",
+            default: "",
         },
         bgColorHover: {
             type: String,

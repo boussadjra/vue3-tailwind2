@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import NotFound from '../views/NotFound.vue'
 import componentsRoutes from './componentsRoutes'
 import layoutCompRoutes from './layoutCompRoutes'
+import styleRoutes from './styleRoutes'
 
 export const routes: Array<RouteRecordRaw> = [
   {
@@ -18,7 +19,7 @@ export const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/About.vue'),
     meta:{layout:'default-layout'}
   },
-  componentsRoutes,layoutCompRoutes,
+  componentsRoutes,layoutCompRoutes,styleRoutes,
   
   {
     path: '/dashboard',

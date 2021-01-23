@@ -6,6 +6,17 @@
         <aside v-if="showSidebar" class=" sticky justify-center w-64 min-h-screen py-6 overflow-auto  md:flex bg-navy-blue-100 dark:bg-black-500 dark:text-gray-100 ">
             <div class=" w-full py-4">
                 
+              <div class="px-2 ">Styles</div>
+                  <vue3-router-tree :items="styles">
+                    <template #item="{ item }">
+                        <router-link exact-active-class="text-navy-blue-700 dark:text-navy-blue-300" :to=" item.path">
+                            <div class="flex items-center space-x-2">
+                                <IconTextFill class="hover:transform hover:rotate-45 text-gray-500 dark:text-gray-100" height="16" width="16" />
+                                <span class="text-sm font-light text-black-900 dark:text-gray-100 whitespace-nowrap"> {{ item.name }}</span>
+                            </div>
+                        </router-link>
+                    </template>
+                </vue3-router-tree>
               <div class="px-2 ">Layouts</div>
                   <vue3-router-tree :items="layouts">
                     <template #item="{ item }">
@@ -52,7 +63,7 @@
             </template>
             </breadcrumb>
         </div>
-        <main class="w-full min-h-screen pt-4 pb-32 pl-8 pr-16 content dark:bg-black-700 dark:text-black-100">
+        <main class="w-full  h-auto pt-4 pb-32 pl-8 pr-16 content dark:bg-black-700 dark:text-black-100">
             <router-view></router-view>
         </main>
     </section>
@@ -82,10 +93,13 @@ import {
 } from "vue-router";
 
 import componentsRoutes from "@/router/componentsRoutes";
+import styleRoutes from "@/router/styleRoutes";
 import Vue3RouterTree from "vue3-router-tree";
 import IconQueryQueue from "@/components/icons/IconQueryQueue";
 import layoutCompRoutes from "@/router/layoutCompRoutes";
 import IconLayers from "@/components/icons/IconLayers";
+import IconTextFill from "@/components/icons/IconTextFill";
+
 
 
 export default defineComponent({
@@ -107,6 +121,7 @@ export default defineComponent({
             currentHovered: -1,
             components: [],
             layouts: [],
+            styles: [],
         };
     },
     computed: {
@@ -126,7 +141,7 @@ export default defineComponent({
         "w-btn": Button,
         IconMenu,
         IconCaretRight,
-        Vue3RouterTree,IconQueryQueue,IconCaretRight,IconLayers
+        Vue3RouterTree,IconQueryQueue,IconCaretRight,IconLayers,IconTextFill
     },
     methods: {
         generatePath(routes, parentPath) {
@@ -148,6 +163,10 @@ export default defineComponent({
         this.layouts = this.generatePath(
             layoutCompRoutes.children,
             "/layouts"
+        );
+        this.styles = this.generatePath(
+            styleRoutes.children,
+            "/styles"
         );
 
      

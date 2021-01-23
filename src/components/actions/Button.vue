@@ -48,7 +48,7 @@ export default defineComponent({
         return {};
     },
     computed: {
-        buttonClasses(): Array < string > {
+        buttonClasses(): Array < string > { 
             let classes: Array < string > = [];
             classes = [
                 "flex justify-center  max-h-max whitespace-nowrap focus:outline-none  focus:ring  focus:border-blue-300",
