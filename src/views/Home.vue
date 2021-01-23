@@ -14,7 +14,7 @@
       <div class="lg:w-6/12">
         <div class="flex flex-col h-32 items-center w-full">
           <h1
-            class="text-4xl font-extrabold text-navy-blue-900 dark:text-navy-blue-200  lg:text-6xl"
+            class="text-7xl font-extrabold text-navy-blue-900 dark:text-navy-blue-200 "
           >
             VUEWIND
           </h1>
