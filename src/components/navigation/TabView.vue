@@ -1,8 +1,8 @@
 <template>
 <div :class="`flex ${borderTop ? 'flex-col-reverse' : 'flex-col'}`">
     <div class="header flex w-full border-gray-400" :class="`${borderTop ? 'border-t' : 'border-b'}`">
-        <div class="relative cursor-pointer py-2 px-6 rounded-tr rounded-tl text-gray-700 hover:text-purple-700" :class="{
-          ' text-purple-700': currentTab === index + 1,
+        <div class="relative cursor-pointer py-2 px-6 rounded-tr rounded-tl text-gray-700 hover:text-navy-blue-700" :class="{
+          ' text-navy-blue-700': currentTab === index + 1,
         }" v-for="(item, index) in items" :key="index" @click="currentTab = index + 1">
             <div>
                 <slot name="item" :item="item"></slot>
@@ -13,7 +13,7 @@
             </div>
 
             <transition :name="`slide-fade-${currentTab > prevTab ? 'right' : 'left'}`">
-                <div v-if="currentTab === index + 1" :class="`${borderTop ? 'top-0' : 'bottom-0'}`" class="w-full absolute left-0 border-b-2 border-purple-700 text-purple-700"></div>
+                <div v-if="currentTab === index + 1" :class="`${borderTop ? 'top-0' : 'bottom-0'}`" class="w-full absolute left-0 border-b-2 border-navy-blue-700 text-navy-blue-700"></div>
             </transition>
         </div>
     </div>

@@ -6,7 +6,7 @@
 
     <div v-else class="relative">
         <div class="border-2 border-white z-10" :class="[...classes, ...absoluteClass]" :style="styles"></div>
-        <span v-if="ping" :class="[...classes]" :style="styles" class="absolute  animate-ping  rounded-full w-4 h-4 bg-purple-400 opacity-75">
+        <span v-if="ping" :class="[...classes]" :style="styles" class="absolute  animate-ping  rounded-full w-4 h-4 bg-navy-blue-400 opacity-75">
         </span>
     </div>
 

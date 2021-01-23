@@ -7,7 +7,7 @@
                 <img src="@/assets/img/walter-verna.jpg" class="h-48 w-96" />
             </template>
             <div class="relative flex flex-col items-center w-full">
-                <avatar :src="githubUser.avatar_url" shape="rounded-full" size="md" class="absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
+                <avatar :src="githubUser.avatar_url" shape="rounded-full" size="md" class="absolute -top-16 flex bg-navy-blue-200 text-navy-blue-100 row-start-1 row-end-3 text-navy-blue-650 ring-1 ring-white">
                 </avatar>
                 <div class="flex flex-col space-y-1 justify-center items-center -mt-12 w-full">
                     <span class="text-md whitespace-nowrap text-gray-800 font-semibold">
@@ -44,13 +44,13 @@
                 <img src="@/assets/img/masonry.jpg" class="h-48 w-96" />
             </template>
             <div class="relative flex flex-col items-center w-full">
-                <avatar :src="SOFUser.profile_image" shape="rounded-full" size="md" class="absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
+                <avatar :src="SOFUser.profile_image" shape="rounded-full" size="md" class="absolute -top-16 flex bg-navy-blue-200 text-navy-blue-100 row-start-1 row-end-3 text-navy-blue-650 ring-1 ring-white">
                 </avatar>
                 <div class="flex flex-col space-y-1 items-center -mt-12 w-full">
                     <span class="text-md whitespace-nowrap text-gray-800 font-semibold">
                         {{ SOFUser.display_name }}</span>
                     <span class="flex space-x-2 py-3 items-center">
-                        <span class="text-4xl text-purple-600 font-bold">{{
+                        <span class="text-4xl text-navy-blue-600 font-bold">{{
                 SOFUser.reputation
               }}</span>
                         <span>reputation</span>
@@ -80,7 +80,7 @@
 
         <card class="min-w-max w-96 bg-white">
             <div class="flex flex-col items-center w-96">
-                <avatar src="https://i.pravatar.cc/200?img=56" size="lg" shape="rounded-full" class="bg-purple-200 row-start-1 text-purple-650">
+                <avatar src="https://i.pravatar.cc/200?img=56" size="lg" shape="rounded-full" class="bg-navy-blue-200 row-start-1 text-navy-blue-650">
                 </avatar>
                 <span class="font-bold text-gray-600 text-xl p-2">John Doe</span>
                 <span class="text-sm text-gray-500">Web designer</span>
@@ -107,7 +107,7 @@
     <h1 class="section__title">Avatars with images and different sizes:</h1>
     <div class="w-full grid grid-cols-4 gap-4 place-items-center">
         <template v-for="(img, i) in images">
-            <avatar :src="'https://i.pravatar.cc/200?img=' + img" :size="sizes[i]" class="bg-purple-200 row-start-1 text-purple-650">
+            <avatar :src="'https://i.pravatar.cc/200?img=' + img" :size="sizes[i]" class="bg-navy-blue-200 row-start-1 text-navy-blue-650">
             </avatar>
 
             <badge class="text-lg">{{ sizes[i] }}</badge>
@@ -119,7 +119,7 @@
     <h1 class="section__title">Avatars with images and different sizes:</h1>
     <div class="w-full grid--auto-cols gap-4">
         <div class="flex flex-col justify-center items-center space-y-4" v-for="(shape, i) in shapes" :key="i">
-            <avatar src="https://i.pravatar.cc/200?img=56" :shape="shape" class="bg-purple-200 row-start-1 text-purple-650">
+            <avatar src="https://i.pravatar.cc/200?img=56" :shape="shape" class="bg-navy-blue-200 row-start-1 text-navy-blue-650">
             </avatar>
 
             <badge class="text-sm">{{ shape }}</badge>
@@ -131,42 +131,42 @@
     <h1 class="section__title">Avatars with badges:</h1>
     <div class="w-full flex flex-wrap">
         <div class="w-6/12 md:w-4/12 lg:w-2/12 flex items-center justify-center p-2">
-            <avatar src="https://i.pravatar.cc/200?img=56" shape="rounded-full" class="bg-purple-200 row-start-1 text-purple-650">
+            <avatar src="https://i.pravatar.cc/200?img=56" shape="rounded-full" class="bg-navy-blue-200 row-start-1 text-navy-blue-650">
                 <template #badge>
                     <badge shape="rounded-full" size="md"></badge>
                 </template>
             </avatar>
         </div>
         <div class="w-6/12 md:w-4/12 lg:w-2/12 flex items-center justify-center p-2">
-            <avatar src="https://i.pravatar.cc/200?img=58" shape="rounded-full" size="xs" class="bg-purple-200 row-start-1 text-purple-650">
+            <avatar src="https://i.pravatar.cc/200?img=58" shape="rounded-full" size="xs" class="bg-navy-blue-200 row-start-1 text-navy-blue-650">
                 <template #badge="{ avatar }">
                     <badge shape="rounded-full" size="xs" :avatar="avatar"></badge>
                 </template>
             </avatar>
         </div>
         <div class="w-6/12 md:w-4/12 lg:w-2/12 flex items-center justify-center p-2">
-            <avatar src="https://i.pravatar.cc/200?img=64" shape="rounded-full" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
+            <avatar src="https://i.pravatar.cc/200?img=64" shape="rounded-full" size="sm" class="bg-navy-blue-200 row-start-1 text-navy-blue-650">
                 <template #badge="{ avatar }">
                     <badge shape="rounded-full" color="red" size="sm" :avatar="avatar"></badge>
                 </template>
             </avatar>
         </div>
         <div class="w-6/12 md:w-4/12 lg:w-2/12 flex items-center justify-center p-2">
-            <avatar src="https://i.pravatar.cc/200?img=65" shape="rounded" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
+            <avatar src="https://i.pravatar.cc/200?img=65" shape="rounded" size="sm" class="bg-navy-blue-200 row-start-1 text-navy-blue-650">
                 <template #badge="{ avatar }">
                     <badge shape="rounded-full" color="green" size="md" :avatar="avatar"></badge>
                 </template>
             </avatar>
         </div>
         <div class="w-6/12 md:w-4/12 lg:w-2/12 flex items-center justify-center p-2">
-            <avatar src="https://i.pravatar.cc/200?img=67" size="sm" class="bg-purple-200 row-start-1 text-purple-600">
+            <avatar src="https://i.pravatar.cc/200?img=67" size="sm" class="bg-navy-blue-200 row-start-1 text-navy-blue-600">
                 <template #badge="{ avatar }">
                     <badge shape="rounded-full" ping position="top-right" color="blue" size="sm" :avatar="avatar"></badge>
                 </template>
             </avatar>
         </div>
         <div class="w-6/12 md:w-4/12 lg:w-2/12 flex items-center justify-center p-2">
-            <avatar src="https://i.pravatar.cc/200?img=42" shape="rounded-none" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
+            <avatar src="https://i.pravatar.cc/200?img=42" shape="rounded-none" size="sm" class="bg-navy-blue-200 row-start-1 text-navy-blue-650">
                 <template #badge="{ avatar }">
                     <badge shape="rounded-full" color="green" size="md" :avatar="avatar"></badge>
                 </template>
@@ -177,31 +177,31 @@
 <div class="space-y-2">
     <h1 class="section__title">Stacked avatars :</h1>
     <div class="w-full flex flex-row items-center justify-center">
-        <avatar v-for="i in 10" :key="i" :src="'https://i.pravatar.cc/200?img=' + (60 + i)" shape="rounded-full" size="sm" class="flex bg-purple-200 row-start-1 text-purple-650 -ml-4 ring-1 ring-white">
+        <avatar v-for="i in 10" :key="i" :src="'https://i.pravatar.cc/200?img=' + (60 + i)" shape="rounded-full" size="sm" class="flex bg-navy-blue-200 row-start-1 text-navy-blue-650 -ml-4 ring-1 ring-white">
         </avatar>
     </div>
     <div class="w-full flex flex-row items-center pt-8 justify-center">
-        <avatar v-for="i in 10" :key="i" :src="'https://i.pravatar.cc/200?img=' + (20 + i)" shape="rounded-full" size="xs" class="flex bg-purple-200 row-start-1 text-purple-650 -ml-2 ring-1 ring-white">
+        <avatar v-for="i in 10" :key="i" :src="'https://i.pravatar.cc/200?img=' + (20 + i)" shape="rounded-full" size="xs" class="flex bg-navy-blue-200 row-start-1 text-navy-blue-650 -ml-2 ring-1 ring-white">
         </avatar>
     </div>
 </div>
 <div class="space-y-2 pb-4">
     <h1 class="section__title">Avatars with letters :</h1>
     <div class="w-full flex flex-row items-center justify-between">
-        <avatar v-for="(i, index) in 'KLPOABCDEF'" :key="i" shape="rounded-full" size="sm" class="flex bg-purple-200 row-start-1 text-purple-650 ring-1 ring-white">
+        <avatar v-for="(i, index) in 'KLPOABCDEF'" :key="i" shape="rounded-full" size="sm" class="flex bg-navy-blue-200 row-start-1 text-navy-blue-650 ring-1 ring-white">
             {{ i }}
             <template #badge="{ avatar }">
                 <badge shape="rounded-full" :color="index % 2 === 0 ? 'green' : 'red'" size="sm" :avatar="avatar"></badge>
             </template>
         </avatar>
-        <avatar src="https://i.pravatar.cc/200?img=64" shape="rounded-full" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
+        <avatar src="https://i.pravatar.cc/200?img=64" shape="rounded-full" size="sm" class="bg-navy-blue-200 row-start-1 text-navy-blue-650">
             <template #badge="{ avatar }">
                 <badge shape="rounded-full" color="red" size="sm" :avatar="avatar"></badge>
             </template>
         </avatar>
     </div>
     <div class="w-full flex flex-row items-center justify-between pt-8">
-        <avatar v-for="i in 'OLGNBDSZMT'" :key="i" shape="rounded" size="sm" class="flex bg-purple-200 row-start-1 text-purple-650 ring-1 ring-white">
+        <avatar v-for="i in 'OLGNBDSZMT'" :key="i" shape="rounded" size="sm" class="flex bg-navy-blue-200 row-start-1 text-navy-blue-650 ring-1 ring-white">
             {{ i }}
         </avatar>
     </div>

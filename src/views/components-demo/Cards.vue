@@ -60,10 +60,10 @@
             </p>
             <template #footer>
                 <div class="flex space-x-8 ml-4 items-end justify-around">
-                    <IconFavorite height="24" width="24" class="text-gray-600 cursor-pointer hover:text-purple-600" />
-                    <IconChat height="24" width="24" class="text-gray-600 cursor-pointer hover:text-purple-600" />
+                    <IconFavorite height="24" width="24" class="text-gray-600 cursor-pointer hover:text-navy-blue-600" />
+                    <IconChat height="24" width="24" class="text-gray-600 cursor-pointer hover:text-navy-blue-600" />
 
-                    <IconShare height="24" width="24" class="text-gray-600 cursor-pointer hover:text-purple-600" />
+                    <IconShare height="24" width="24" class="text-gray-600 cursor-pointer hover:text-navy-blue-600" />
                 </div>
             </template>
         </card>
@@ -77,9 +77,9 @@
             <template #footer>
                 <div class="flex space-x-8 ml-4 items-end justify-around">
                     <IconFavoriteFilled height="24" width="24" class="cursor-pointer text-red-600" />
-                    <IconChat height="24" width="24" class="text-gray-600 cursor-pointer hover:text-purple-600" />
+                    <IconChat height="24" width="24" class="text-gray-600 cursor-pointer hover:text-navy-blue-600" />
 
-                    <IconShare height="24" width="24" class="text-gray-600 cursor-pointer hover:text-purple-600" />
+                    <IconShare height="24" width="24" class="text-gray-600 cursor-pointer hover:text-navy-blue-600" />
                 </div>
             </template>
         </card>
@@ -103,7 +103,7 @@
             <template #header>
                 <div class="flex space-x-2 items-center w-full justify-between pb-4">
                     <div class="flex space-x-2 items-center w-full">
-                        <avatar src="https://avatars2.githubusercontent.com/u/11801238?s=460&u=07a60f4b248400448eef07da47e3ace15331e06f&v=4" shape="rounded-full" size="sm" class="flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
+                        <avatar src="https://avatars2.githubusercontent.com/u/11801238?s=460&u=07a60f4b248400448eef07da47e3ace15331e06f&v=4" shape="rounded-full" size="sm" class="flex bg-navy-blue-200 text-navy-blue-100 row-start-1 row-end-3 text-navy-blue-650 ring-1 ring-white">
                         </avatar>
                         <div class="flex flex-col space-y-1">
                             <span class="text-md whitespace-nowrap text-gray-700">Boussadjra Brahim</span>
@@ -127,9 +127,9 @@
             <template #footer>
                 <div class="flex space-x-8 ml-4 items-end justify-around">
                     <IconFavoriteFilled height="24" width="24" class="cursor-pointer text-red-600" />
-                    <IconChat height="24" width="24" class="text-gray-600 cursor-pointer hover:text-purple-600" />
+                    <IconChat height="24" width="24" class="text-gray-600 cursor-pointer hover:text-navy-blue-600" />
 
-                    <IconShare height="24" width="24" class="text-gray-600 cursor-pointer hover:text-purple-600" />
+                    <IconShare height="24" width="24" class="text-gray-600 cursor-pointer hover:text-navy-blue-600" />
                 </div>
             </template>
         </card>
@@ -178,7 +178,7 @@
 <div class="space-y-2">
     <h1 class="section__title">Cards weather:</h1>
     <div class="w-full grid--auto-cols gap-4">
-        <card class="w-full bg-gradient-to-r from-purple-900 to-purple-700 text-purple-50 rounded-md ">
+        <card class="w-full bg-gradient-to-r from-navy-blue-900 to-navy-blue-700 text-navy-blue-50 rounded-md ">
             <template #header>
                 <div class="flex justify-between">
                     <badge shape="rounded">Algiers</badge>
@@ -209,7 +209,7 @@
                 </div>
             </template>
         </card>
-        <card class="w-full bg-gradient-to-r from-purple-900 to-purple-700 text-purple-50 rounded-md ">
+        <card class="w-full bg-gradient-to-r from-navy-blue-900 to-navy-blue-700 text-navy-blue-50 rounded-md ">
             <template #header>
                 <div class="flex justify-between">
                     <badge shape="rounded">Laghouat</badge>
@@ -240,7 +240,7 @@
                 </div>
             </template>
         </card>
-        <card class="w-full bg-gradient-to-r from-purple-900 to-purple-700 text-purple-50 rounded-md ">
+        <card class="w-full bg-gradient-to-r from-navy-blue-900 to-navy-blue-700 text-navy-blue-50 rounded-md ">
             <template #header>
                 <div class="flex justify-between">
                     <badge shape="rounded">Annaba</badge>

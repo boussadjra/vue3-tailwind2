@@ -1,5 +1,10 @@
 <template>
-<div>admin</div>
+<div class="p-4">
+    <h1 class="text-2xl text-gray-500">
+        Admin
+    </h1>
+
+</div>
 </template>
 
 <script lang="ts">
@@ -10,9 +15,7 @@ import {
 export default defineComponent({
     name: "admin",
     mounted() {
-        console.log('-------admin mounted------------')
-        console.log(this.$router)
-        console.log('--------------------')
+
     },
 });
 </script>

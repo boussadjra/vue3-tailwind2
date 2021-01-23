@@ -15,7 +15,6 @@ import {
     defineComponent,
     PropType
 } from "vue";
-
 import {
     colorable,
     outlineable,
@@ -23,7 +22,7 @@ import {
     sizeable,
     smoothable,
     variantable,
-} from "@/mixins/index";
+} from "../../mixins/index";
 export default defineComponent({
     name: "w-btn",
     props: {
@@ -31,7 +30,6 @@ export default defineComponent({
             type: Boolean,
             default: false,
         },
-
         raised: {
             type: Boolean,
             default: false,
@@ -49,17 +47,14 @@ export default defineComponent({
     data() {
         return {};
     },
-
     computed: {
         buttonClasses(): Array < string > {
             let classes: Array < string > = [];
-
             classes = [
                 "flex justify-center  max-h-max whitespace-nowrap focus:outline-none  focus:ring  focus:border-blue-300",
                 this.shapes[this.shape],
-                this.full ? "w-full " : (!this.circle ? "max-w-max" : ''),
+                this.full ? "w-full " : !this.circle ? "max-w-max" : "",
             ];
-
             if (this.smooth) {
                 classes = [
                     ...classes,
@@ -79,7 +74,7 @@ export default defineComponent({
             } else if (this.raised) {
                 classes = [
                     ...classes,
-                    "shadow-lg hover:shadow-xl border-t border-l border-r border-gray-100 bg-transparent",
+                    "shadow-lg  hover:shadow-xl border-t border-l border-r  border-gray-100 dark:shadow-2xl dark:border-gray-800  bg-transparent",
                     this.colors[this.variant],
                 ];
             } else if (this.text) {
@@ -97,7 +92,6 @@ export default defineComponent({
                     this.bgColorsHover[this.variant],
                 ];
             }
-
             if (this.circle) {
                 classes = [
                     ...classes,
@@ -106,12 +100,28 @@ export default defineComponent({
             } else {
                 classes = [...classes, this.padding[this.size]];
             }
-
             //replace the default colors if the colors are provided as props
-            this.bgColor && (classes = this.replaceColors(this, 'bgColor', classes, /bg-[a-z]+[-][1-9]{1}[0]{2}/g))
-            this.bgColorHover && (classes = this.replaceColors(this, 'bgColorHover', classes, /hover:bg-[a-z]+[-][1-9]{1}[0]{2}/g))
-            this.textColor && (classes = this.replaceColors(this, 'textColor', classes, /text-[a-z]+[-][1-9]{1}[0]{2}/g))
-
+            this.bgColor &&
+            (classes = this.replaceColors(
+                this,
+                "bgColor",
+                classes,
+                /bg-[a-z\-]+[-][1-9]{1}[0]{2}/g
+            ));
+            this.bgColorHover &&
+            (classes = this.replaceColors(
+                this,
+                "bgColorHover",
+                classes,
+                /hover:bg-[a-z\-]+[-][1-9]{1}[0]{2}/g
+            ));
+            this.textColor &&
+            (classes = this.replaceColors(
+                this,
+                "textColor",
+                classes,
+                /text-[a-z\-]+[-][1-9]{1}[0]{2}/g
+            ));
             return classes;
         },
     },

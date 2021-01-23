@@ -4,7 +4,7 @@
         Badges with different shapes:
     </h1>
     <div class="w-full grid--auto-cols gap-4 ">
-        <badge v-for="shape in shapes" :key="shape" :shape="shape" color="purple">
+        <badge v-for="shape in shapes" :key="shape" :shape="shape" color="navy-blue">
             some text
         </badge>
     </div>
@@ -28,42 +28,42 @@
     <h1 class="section__title">Badges on avatars:</h1>
     <div class="w-full flex flex-wrap space-x-8 items-center">
         <div class="p-2">
-            <avatar src="https://i.pravatar.cc/200?img=56" variant="rounded-full" class="bg-purple-200 row-start-1 text-purple-650">
+            <avatar src="https://i.pravatar.cc/200?img=56" variant="rounded-full" class="bg-navy-blue-200 row-start-1 text-navy-blue-650">
                 <template #badge>
                     <badge shape="rounded-full" size="md"></badge>
                 </template>
             </avatar>
         </div>
         <div class="p-2">
-            <avatar src="https://i.pravatar.cc/200?img=58" variant="rounded-full" size="xs" class="bg-purple-200 row-start-1 text-purple-650">
+            <avatar src="https://i.pravatar.cc/200?img=58" variant="rounded-full" size="xs" class="bg-navy-blue-200 row-start-1 text-navy-blue-650">
                 <template #badge="{ avatar }">
                     <badge shape="rounded-full" size="xs" :avatar="avatar"></badge>
                 </template>
             </avatar>
         </div>
         <div class="p-2">
-            <avatar src="https://i.pravatar.cc/200?img=64" variant="rounded-full" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
+            <avatar src="https://i.pravatar.cc/200?img=64" variant="rounded-full" size="sm" class="bg-navy-blue-200 row-start-1 text-navy-blue-650">
                 <template #badge="{ avatar }">
                     <badge shape="rounded-full" color="red" size="sm" :avatar="avatar"></badge>
                 </template>
             </avatar>
         </div>
         <div class="p-2">
-            <avatar src="https://i.pravatar.cc/200?img=65" variant="rounded" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
+            <avatar src="https://i.pravatar.cc/200?img=65" variant="rounded" size="sm" class="bg-navy-blue-200 row-start-1 text-navy-blue-650">
                 <template #badge="{ avatar }">
                     <badge shape="rounded-full" color="green" size="sm" :avatar="avatar"></badge>
                 </template>
             </avatar>
         </div>
         <div class="p-2">
-            <avatar src="https://i.pravatar.cc/200?img=67" size="sm" class="bg-purple-200 row-start-1 text-purple-600">
+            <avatar src="https://i.pravatar.cc/200?img=67" size="sm" class="bg-navy-blue-200 row-start-1 text-navy-blue-600">
                 <template #badge="{ avatar }">
                     <badge shape="rounded-full" ping position="top-right" color="blue" size="sm" :avatar="avatar"></badge>
                 </template>
             </avatar>
         </div>
         <div class="p-2">
-            <avatar src="https://i.pravatar.cc/200?img=42" variant="rounded-none" size="sm" class="bg-purple-200 row-start-1 text-purple-650">
+            <avatar src="https://i.pravatar.cc/200?img=42" variant="rounded-none" size="sm" class="bg-navy-blue-200 row-start-1 text-navy-blue-650">
                 <template #badge="{ avatar }">
                     <badge shape="rounded-full" color="green" size="sm" :avatar="avatar"></badge>
                 </template>
@@ -81,7 +81,7 @@
             </template>
 
             <template #badge>
-                <badge shape="rounded-full" position="initial" color="purple" size="sm"></badge>
+                <badge shape="rounded-full" position="initial" color="navy-blue" size="sm"></badge>
             </template>
         </icon-with-badge>
 
@@ -133,7 +133,7 @@
             </template>
 
             <template #badge-text>
-                <badge bgColor="bg-yellow-500" shape="rounded-full" size="xs" textColor="text-yellow-100">
+                <badge bgColor="bg-emerald-500" shape="rounded-full" size="xs" textColor="text-emerald-100">
                     <span class="text-xs"> New</span>
                 </badge>
             </template>

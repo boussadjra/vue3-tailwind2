@@ -6,7 +6,7 @@ const colorable={
     props:{
         bgColor: {
             type: String,
-            default: "",
+            default: "bg-navy-blue-500",
         },
         bgColorHover: {
             type: String,
@@ -14,12 +14,12 @@ const colorable={
         },
         textColor: {
             type: String,
-            default: "",
+            default: "text-white",
         },
     },
     methods: {
         replaceColors(vm:any ,color:string,classes:Array<string>,regex:RegExp){
-           
+     
         let _classes=[...classes];
             let index = _classes.findIndex((cl) => {
                 return cl.match(regex);

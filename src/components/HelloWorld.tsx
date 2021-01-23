@@ -33,7 +33,7 @@ console.log('--------------------')
       <div>
 {val}
       </div>
-      <div class="py-2 rounded cursor-pointer px-8 mt-8 bg-purple-600 text-white " onClick={withModifiers(inc, ['self'])}>
+      <div class="py-2 rounded cursor-pointer px-8 mt-8 bg-navy-blue-600 text-white " onClick={withModifiers(inc, ['self'])}>
         {count.value}
      
 

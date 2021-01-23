@@ -35,7 +35,7 @@
             <badge>Data</badge>
             <template #separator>
 
-                <icon-caret-right class="text-purple-500" />
+                <icon-caret-right class="text-navy-blue-500" />
             </template>
         </breadcrumb>
     </div>

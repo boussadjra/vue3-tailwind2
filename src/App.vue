@@ -1,35 +1,36 @@
 <template>
 <div class="">
 
-    <default-layout>
+    <component :is="layout">
         <router-view></router-view>
-    </default-layout>
-
+    </component>
 </div>
 </template>
 
 <script>
-import AdminLayout from "./layouts/AdminLayout/AdminLayout.vue";
+import DashboardLayout from "./layouts/DashboardLayout/DashboardLayout.vue";
 import DefaultLayout from "./layouts/DefaultLayout/DefaultLayout.vue";
 
 export default {
     name: "app",
     data() {
         return {
-            // layout: 'default-layout'
+
         };
     },
     computed: {
         layout() {
-            return this.$router.currentRoute.value.meta || "default-layout";
+            return this.$router.currentRoute.value.meta.layout || "default-layout";
         },
     },
     components: {
         DefaultLayout,
-        AdminLayout,
+        DashboardLayout,
     },
     mounted() {
-
+        // let htmlElem = document.querySelector('html')
+        // htmlElem.classList.add('dark')
+        // console.log(htmlElem.classList)
     },
 };
 </script>

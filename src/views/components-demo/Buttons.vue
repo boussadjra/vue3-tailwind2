@@ -102,17 +102,20 @@
         <w-btn size="md" bgColor="bg-red-600" bgColorHover="hover:bg-red-700" textColor="text-blue-100">
             RED
         </w-btn>
-        <w-btn size="md" bgColor="bg-blue-600" bgColorHover="hover:bg-blue-700" textColor="text-blue-100">
+       <w-btn size="md" bgColor="bg-blue-600" bgColorHover="hover:bg-blue-700" textColor="text-blue-100">
             BLUE
         </w-btn>
         <w-btn size="md" bgColor="bg-yellow-400" bgColorHover="hover:bg-yellow-500" textColor="text-gray-700">
-            BLUE
+            YELLOW
         </w-btn>
         <w-btn size="md" bgColor="bg-gray-700" bgColorHover="hover:bg-gray-800" textColor="text-gray-100">
             DARK
         </w-btn>
         <w-btn size="md" bgColor="bg-gray-100" bgColorHover="hover:bg-gray-200" textColor="text-gray-700">
             LIGHT
+        </w-btn>
+        <w-btn size="md" bgColor="bg-emerald-400" bgColorHover="hover:bg-emerald-500" textColor="text-emerald-900">
+            EMERALD
         </w-btn>
 
     </div>

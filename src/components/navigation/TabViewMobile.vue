@@ -1,8 +1,8 @@
 <template>
 <div class="w-auto">
     <div class="header flex w-full ">
-        <div class="relative cursor-pointer py-2 px-6 rounded-tr rounded-tl text-gray-700 hover:text-purple-700" :class="{
-          ' text-purple-700': currentTab === index + 1,
+        <div class="relative cursor-pointer py-2 px-6 rounded-tr rounded-tl text-gray-700 hover:text-navy-blue-700" :class="{
+          ' text-navy-blue-700': currentTab === index + 1,
         }" v-for="(item, index) in items" :key="index" @click="currentTab = index + 1">
             <div>
 

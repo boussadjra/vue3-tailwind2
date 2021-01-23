@@ -1,5 +1,5 @@
 <template>
-<div :class="classes" class="avatar flex items-end justify-end text-purple-600 min-w-max">
+<div :class="classes" class="avatar flex items-end justify-end text-navy-blue-600 min-w-max">
     <!-- -->
     <img :class="classes" v-if="!$slots.default" :src="src" alt="" />
     <div v-else-if="$slots.default" class="w-full self-center text-4xl flex justify-center items-center font-semibold">
