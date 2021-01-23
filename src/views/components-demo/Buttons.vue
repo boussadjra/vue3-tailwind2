@@ -106,7 +106,7 @@
             BLUE
         </w-btn>
         <w-btn size="md" bgColor="bg-yellow-400" bgColorHover="hover:bg-yellow-500" textColor="text-gray-700">
-            BLUE
+            YELLOW
         </w-btn>
         <w-btn size="md" bgColor="bg-gray-700" bgColorHover="hover:bg-gray-800" textColor="text-gray-100">
             DARK
