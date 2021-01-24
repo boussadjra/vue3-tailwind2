@@ -60,6 +60,13 @@ export default defineComponent({
         danger: ["bg-red-300", "text-red-800"],
         warning: ["bg-yellow-300", "text-yellow-800"],
       },
+        textColors: {
+                default: "text-gray-100",
+                info: "text-blue-900",
+                danger: "text-gray-900",
+                success: "text-green-900",
+                warning: "text-yellow-900",
+            },
     };
   },
   methods: {
@@ -78,7 +85,7 @@ export default defineComponent({
                     this.borderColorsHover[this.variant],
                     this.borderColorsHover[this.variant])
       } else {
-        classes.push(this.bgColors[this.variant]);
+        classes.push(this.bgColors[this.variant],this.textColors[this.variant]);
       }
       return [...classes, classShadow];
     },

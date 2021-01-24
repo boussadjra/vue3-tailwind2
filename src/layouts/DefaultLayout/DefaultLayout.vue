@@ -65,13 +65,13 @@
             </template>
           </w-btn>
         </a>
-        <a href="#">
+        <a href="#"    @click.prevent="isLight = !isLight">
           <component
             :is="isLight ? 'icon-moon' : 'icon-sun'"
             class="text-navy-blue-100 dark:text-navy-blue-50"
             height="24"
             width="24"
-            @click="isLight = !isLight"
+         
           />
         </a>
       </div>
