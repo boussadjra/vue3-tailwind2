@@ -5,62 +5,60 @@
 /* @import './typography.css'; */
 @import './cards.css';
 
-
 @layer base {
 	@font-face {
-	font-family: 'Inter';
-	src: url('../assets/fonts/Inter.ttf') format('truetype-variations');
-	font-weight: 1 999;
-}
+		font-family: 'Inter';
+		src: url('../assets/fonts/Inter.ttf') format('truetype-variations');
+		font-weight: 1 999;
+	}
 
-body {
-	font-family: 'Inter';
-	overflow-y: hidden;
-}
-h1 {
-	@apply text-8xl;
-}
+	body,
+	html {
+		font-family: 'Inter' !important;
+		overflow-y: hidden;
+	}
+	h1 {
+		@apply text-8xl;
+	}
 
-h2 {
-	@apply text-7xl;
-}
+	h2 {
+		@apply text-7xl;
+	}
 
-h3 {
-	@apply text-6xl;
-}
+	h3 {
+		@apply text-6xl;
+	}
 
-h4 {
-	@apply text-5xl;
-}
+	h4 {
+		@apply text-5xl;
+	}
 
-h5 {
-	@apply text-4xl;
-}
+	h5 {
+		@apply text-4xl;
+	}
 
-h6 {
-	@apply text-3xl;
-}
-p {
-	@apply text-sm tracking-wide;
-}
+	h6 {
+		@apply text-3xl;
+	}
+	p {
+		@apply text-sm tracking-wide;
+	}
 }
 
 @layer components {
-.title {
-	@apply text-2xl;
-}
+	.title {
+		@apply text-2xl;
+	}
 
-.sub-title-1 {
-	@apply text-xl;
-}
-.sub-title-2 {
-	@apply text-lg font-light;
-}
-.section__title {
-	@apply text-xl ml-2 pt-16 pb-8 text-gray-700 dark:text-gray-100;
-}
-
-
+	.sub-title-1 {
+		@apply text-xl;
+	}
+	.sub-title-2 {
+		@apply text-lg font-light;
+	}
+	.section__title {
+		@apply text-xl ml-2 pt-16 pb-8 text-gray-700 dark:text-gray-100;
+	}
 }
 #app {
 	overflow-x: hidden;
@@ -80,8 +78,6 @@ p {
 	@apply bg-navy-blue-700;
 	border-radius: 5px;
 }
-
-
 
 .grid--auto-cols {
 	display: grid;
