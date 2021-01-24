@@ -91,7 +91,7 @@ export default defineComponent({
                 positionClass = "right-0 bottom-0 -mr-1 -mb-1";
             }
             let colors = this.color ?
-                `text-${this.color}-200 bg-${this.color}-500` : `${this.bgColor} ${this.textColor}`;
+                `text-${this.color}-200 bg-${this.color}-500` : `bg-navy-blue-700 text-white`;
             return [
                 `h-${this.sizes[this.size]} text-${this.size}`,
                 `w-${this.sizes[this.size]}`,
