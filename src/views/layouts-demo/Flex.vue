@@ -1,7 +1,7 @@
 <template>
   <flex space-y="8" dir="col">
     <flex space-y="4" dir="col">
-      <h2>Display flex with space x 2 and direction row  :</h2>
+      <div class="sub-title-1">Display flex with space x 2 and direction row  :</div>
       <flex space-x="2">
         <div
           v-for="i in 4"
