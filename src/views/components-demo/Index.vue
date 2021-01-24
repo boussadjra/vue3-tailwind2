@@ -3,7 +3,7 @@
    <transition name="slide">
    
   
-        <aside v-if="showSidebar" style="max-height:calc(100vh - 64px)" class=" sticky justify-center w-64   h-auto pt-6 pb-12 overflow-auto  md:flex bg-navy-blue-100 dark:bg-black-500 dark:text-gray-100 ">
+        <aside v-if="showSidebar" style="max-height:calc(100vh - 64px)" class=" sticky justify-center w-64   h-auto pt-6 pb-32 overflow-auto  md:flex bg-navy-blue-100 dark:bg-black-500 dark:text-gray-100 ">
             <div class=" w-full py-4">
                 
               <div class="px-2 ">Styles</div>
@@ -47,7 +47,7 @@
        <div class="sticky top-0 z-20 flex items-center w-full  header">
          
        
-        <a href="#" class="p-4 bg-gray-100 dark:bg-black-600" @click="showSidebar=!showSidebar">
+        <a href="#" class="p-4 bg-gray-100 dark:bg-black-600" @click.prevent="showSidebar=!showSidebar">
           <IconQueryQueue
             height="24"
             width="24"

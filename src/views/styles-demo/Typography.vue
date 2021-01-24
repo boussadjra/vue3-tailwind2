@@ -1,7 +1,7 @@
 <template>
   <flex space-y="8" dir="col">
     <flex space-y="6" dir="col">
-      <div class="sub-title-2 text-navy-blue-300 py-4">Heading and text with different sizes :</div>
+      <div class="sub-title-2 text-navy-blue-700 dark:text-navy-blue-300 py-4">Heading and text with different sizes :</div>
       <flex dir="col" space-y="4">
       <h1>Heading 1</h1>
       <h2>Heading 2</h2>

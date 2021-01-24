@@ -5,7 +5,9 @@
 /* @import './typography.css'; */
 @import './cards.css';
 
-@font-face {
+
+@layer base {
+	@font-face {
 	font-family: 'Inter';
 	src: url('../assets/fonts/Inter.ttf') format('truetype-variations');
 	font-weight: 1 999;
@@ -15,7 +17,6 @@ body {
 	font-family: 'Inter';
 	overflow-y: hidden;
 }
-@layer base {
 h1 {
 	@apply text-8xl;
 }
@@ -43,6 +44,8 @@ p {
 	@apply text-sm tracking-wide;
 }
 }
+
+@layer components {
 .title {
 	@apply text-2xl;
 }
@@ -53,8 +56,12 @@ p {
 .sub-title-2 {
 	@apply text-lg font-light;
 }
+.section__title {
+	@apply text-xl ml-2 pt-16 pb-8 text-gray-700 dark:text-gray-100;
+}
 
 
+}
 #app {
 	overflow-x: hidden;
 }
@@ -74,9 +81,7 @@ p {
 	border-radius: 5px;
 }
 
-.section__title {
-	@apply text-xl ml-2 pt-16 pb-8 text-gray-700 dark:text-gray-100;
-}
+
 
 .grid--auto-cols {
 	display: grid;
