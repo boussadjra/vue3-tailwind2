@@ -80,7 +80,7 @@ export default defineComponent({
             } else if (this.text) {
                 classes = [
                     ...classes,
-                    "text-gray-100 whitespace-nowrap px-2",
+                    " whitespace-nowrap px-2",
                     this.colors[this.variant],
                     this.bgSmoothColorsHover[this.variant],
                 ];

@@ -15,6 +15,7 @@ body {
 	font-family: 'Inter';
 	overflow-y: hidden;
 }
+@layer base {
 h1 {
 	@apply text-8xl;
 }
@@ -38,7 +39,10 @@ h5 {
 h6 {
 	@apply text-3xl;
 }
-
+p {
+	@apply text-sm tracking-wide;
+}
+}
 .title {
 	@apply text-2xl;
 }
@@ -50,9 +54,7 @@ h6 {
 	@apply text-lg font-light;
 }
 
-p {
-	@apply text-sm tracking-wide;
-}
+
 #app {
 	overflow-x: hidden;
 }

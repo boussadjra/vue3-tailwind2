@@ -8,14 +8,14 @@
         textColor="text-gray-700 dark:text-gray-200"
         v-on:click="setCollapsed()"
       >
-        <a href="#">
+ 
           <IconQueryQueue
             height="24"
             width="24"
             :style="collapseBtnStyle"
             class="transition-transform duration-300"
           />
-        </a>
+   
       </w-btn>
     </div>
     <div class="flex space-x-3 items-center justify-between">
@@ -43,6 +43,7 @@
           class="text-navy-blue-700 dark:text-navy-blue-400"
           height="24"
           width="24"
+          @click="isLight = !isLight"
         />
       </a>
     </div>
