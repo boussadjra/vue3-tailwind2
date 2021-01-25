@@ -1,12 +1,12 @@
 <template>
-<div class="badge relative top-0">
-    <span v-if="$slots.default" class="mt-2 py-1" :class="[...classes, ...paddingClasse]">
+<div class="relative top-0 badge">
+    <span v-if="$slots.default" class="py-1 mt-2" :class="[...classes, ...paddingClasse]">
         <slot></slot>
     </span>
 
     <div v-else class="relative">
-        <div class="border-2 border-white z-10" :class="[...classes, ...absoluteClass]" :style="styles"></div>
-        <span v-if="ping" :class="[...classes]" :style="styles" class="absolute  animate-ping  rounded-full w-4 h-4 bg-navy-blue-400 opacity-75">
+        <div class="z-10 border-2 border-white" :class="[...classes, ...absoluteClass]" :style="styles"></div>
+        <span v-if="ping" :class="[...classes]" :style="styles" class="absolute w-4 h-4 rounded-full opacity-75 animate-ping bg-navy-blue-400">
         </span>
     </div>
 
@@ -92,6 +92,9 @@ export default defineComponent({
             }
             let colors = this.color ?
                 `text-${this.color}-200 bg-${this.color}-500` : `bg-navy-blue-700 text-white`;
+                if(this.bgColor){
+                    colors=`${this.bgColor} ${ this.textColor}`
+                }
             return [
                 `h-${this.sizes[this.size]} text-${this.size}`,
                 `w-${this.sizes[this.size]}`,
