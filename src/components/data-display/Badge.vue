@@ -61,9 +61,9 @@ export default defineComponent({
         return {
             sizes: {
                 xs: "h-8px w-8px text-xs",
-                sm: "h-12px w-8px text-sm",
+                sm: "h-12px w-12px text-sm",
                 md: "h-16px w-16px text-md",
-                lg: "h-24px w-16px text-lg",
+                lg: "h-24px w-24px text-md",
                 auto: "auto h-auto w-auto",
             },
             px: {
@@ -89,7 +89,7 @@ export default defineComponent({
             }
             let colors = `bg-navy-blue-700 text-white`;
                 if(this.bgColor){
-                    colors=`${this.bgColor} ${ this.textColor}`
+                    colors=`${this.bgColor} ${this.textColor}`
                 }
             return [
                 `${this.sizes[this.size]}`,
