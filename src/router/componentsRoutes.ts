@@ -71,5 +71,11 @@ export default  {
         name: 'Tabs',
         component: () => import('../views/components-demo/Tabs.vue'),
       },
+      {
+
+        path: 'tooltips',
+        name: 'Tooltips',
+        component: () => import('../views/components-demo/Tooltips.vue'),
+      },
     ]
   }
