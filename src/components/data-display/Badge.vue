@@ -36,10 +36,7 @@ export default defineComponent({
             default: "sm",
         },
 
-        color: {
-            type: String,
-            default: "",
-        },
+       
         avatar: {
             type: Object as PropType < keyable > ,
             default: () => ({
@@ -63,11 +60,11 @@ export default defineComponent({
     data() {
         return {
             sizes: {
-                xs: "8px",
-                sm: "12px",
-                md: "16px",
-                lg: "24px",
-                auto: "auto",
+                xs: "h-8px w-8px text-xs",
+                sm: "h-12px w-8px text-sm",
+                md: "h-16px w-16px text-md",
+                lg: "h-24px w-16px text-lg",
+                auto: "auto h-auto w-auto",
             },
             px: {
                 xs: 2,
@@ -95,8 +92,8 @@ export default defineComponent({
                     colors=`${this.bgColor} ${ this.textColor}`
                 }
             return [
-                `h-${this.sizes[this.size]} text-${this.size}`,
-                `w-${this.sizes[this.size]}`,
+                `${this.sizes[this.size]}`,
+             
                 colors,
                 roundedClass,
                 positionClass,
