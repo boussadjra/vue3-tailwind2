@@ -4,7 +4,7 @@
         Badges with different shapes:
     </h1>
     <div class="w-full gap-4 grid--auto-cols ">
-        <badge v-for="shape in shapes" :key="shape" :shape="shape" textColor="bg-white" bgColor="bg-navy-blue-500">
+        <badge v-for="shape in shapes" :key="shape" :shape="shape" textColor="text-white" bgColor="bg-navy-blue-500">
             some text
         </badge>
     </div>
