@@ -90,8 +90,7 @@ export default defineComponent({
             if (["rounded", "rounded-none"].includes(this.avatar.shape)) {
                 positionClass = "right-0 bottom-0 -mr-1 -mb-1";
             }
-            let colors = this.color ?
-                `text-${this.color}-200 bg-${this.color}-500` : `bg-navy-blue-700 text-white`;
+            let colors = `bg-navy-blue-700 text-white`;
                 if(this.bgColor){
                     colors=`${this.bgColor} ${ this.textColor}`
                 }
