@@ -7,7 +7,7 @@
         <div
           v-for="i in 4"
           :key="i"
-          class="bg-emerald-300 dark:bg-emerald-200 rounded text-black-600 p-4 w-32"
+          class="bg-emerald-300 dark:bg-emerald-900 rounded text-black-600 dark:text-white p-4 w-32"
         >
           lorem ipsum
         </div>
@@ -26,7 +26,7 @@
               v-for="i in 4"
               :key="i"
 
-              class="bg-emerald-300 dark:bg-emerald-200 rounded text-black-600 p-2 w-32"
+              class="bg-emerald-300 dark:bg-emerald-900 rounded text-black-600 dark:text-white p-2 w-32"
             >
               lorem ipsum
             </div>
@@ -42,12 +42,12 @@
           <template #header>
             <badge bgColor="bg-yellow-400" text-color="text-black-400">{{pos}}</badge>
           </template>
-          <flex :align="pos" :spaceX="2" class="h-40 bg-navy-blue-100 ">
+          <flex :align="pos" :spaceX="2" class="h-40 bg-navy-blue-100 dark:bg-navy-blue-900 ">
             <div
               v-for="i in 4"
               :key="i"
 
-              class="bg-emerald-400 dark:bg-emerald-300 rounded text-black-600 p-2 w-32"
+              class="bg-emerald-300 dark:bg-emerald-900 rounded text-black-600 dark:text-white p-2 w-32"
             >
               lorem ipsum
             </div>

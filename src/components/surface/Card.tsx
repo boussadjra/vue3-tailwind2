@@ -45,7 +45,7 @@ export default defineComponent({
             console.log('--------------------')
         })*/
 		return () => (
-			<div class={`card  min-w-sm border border-gray-100 bg-gray-50   transition-shadow ${cardClasses.value}`}>
+			<div class={`card  min-w-sm border border-gray-100 dark:border-black-600  bg-gray-50 dark:bg-black-600  transition-shadow ${cardClasses.value}`}>
 				{slots.header && <div class="text-md mb-2 px-4 pt-4">{slots.header()}</div>}
 				{slots.media && <div class="w-full card__media">{slots.media()}</div>}
 				{slots.mediaAside && <div class="  card__media--aside ">{slots.mediaAside()}</div>}
