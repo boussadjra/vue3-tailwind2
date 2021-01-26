@@ -23,7 +23,6 @@ export default defineComponent({
 			if (slots.mediaAside) {
 				classes+=' flex items-center';
             }
-            console.log("classes ", classes)
 			return classes;
 		});
 
@@ -47,7 +46,7 @@ export default defineComponent({
         })*/
 		return () => (
 			<div class={`card  min-w-sm border border-gray-100 bg-gray-50   transition-shadow ${cardClasses.value}`}>
-				{slots.header && <h2 class="text-md mb-2 px-4 pt-4">{slots.header()}</h2>}
+				{slots.header && <div class="text-md mb-2 px-4 pt-4">{slots.header()}</div>}
 				{slots.media && <div class="w-full card__media">{slots.media()}</div>}
 				{slots.mediaAside && <div class="  card__media--aside ">{slots.mediaAside()}</div>}
 				{slots.default && <div class="flex items-center p-4">{cardClasses} {slots.default()}</div>}

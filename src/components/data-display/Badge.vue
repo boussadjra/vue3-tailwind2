@@ -1,5 +1,5 @@
 <template>
-<div class="relative top-0 badge">
+<div class="relative top-0 badge ">
     <span v-if="$slots.default" class="py-1 mt-2" :class="[...classes, ...paddingClasse]">
         <slot></slot>
     </span>
@@ -93,7 +93,7 @@ export default defineComponent({
                 }
             return [
                 `${this.sizes[this.size]}`,
-             
+             `whitespace-nowrap`,
                 colors,
                 roundedClass,
                 positionClass,

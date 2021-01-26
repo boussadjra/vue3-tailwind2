@@ -2,7 +2,7 @@ import { keyable } from "@/@types/global"
 
 export const SPACES_X:keyable = {
     "0": "space-x-0",
-    "1": "space-x-1",
+    "1": "space-x",
     "2": "space-x-2",
     "3": "space-x-3",
     "4": "space-x-4",
@@ -32,7 +32,7 @@ export const SPACES_X:keyable = {
     "28": "space-x-80",
     "29": "space-x-96",
 
-    "-1": "-space-x-1",
+    "-1": "-space-x",
     "-2": "-space-x-2",
     "-3": "-space-x-3",
     "-4": "-space-x-4",
@@ -65,7 +65,7 @@ export const SPACES_X:keyable = {
 
 export const SPACES_Y:keyable= {
     "0": "space-y-0",
-    "1": "space-y-1",
+    "1": "space-y",
     "2": "space-y-2",
     "3": "space-y-3",
     "4": "space-y-4",
@@ -95,7 +95,7 @@ export const SPACES_Y:keyable= {
     "28": "space-y-80",
     "29": "space-y-96",
 
-    "-1": "-space-y-1",
+    "-1": "-space-y",
     "-2": "-space-y-2",
     "-3": "-space-y-3",
     "-4": "-space-y-4",
