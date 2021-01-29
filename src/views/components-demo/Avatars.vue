@@ -218,7 +218,7 @@ import Avatar from "@/components/data-display/Avatar.vue";
 import Badge from "@/components/data-display/Badge.vue";
 import IconBadge from "@/components/icons/IconBadge";
 import IconFavoriteFilled from "@/components/icons/IconFavoriteFilled";
-import Card from "@/components/surface/Card.vue";
+import Card from "@/components/surface/Card";
 import ComponentReflecter from "@/components/util/ComponentReflecter.vue";
 import GitHubService from "@/services/GitHubService";
 import StackOverflowService from "@/services/StackOverflowService";

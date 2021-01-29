@@ -82,7 +82,7 @@ import IconHome from '@/components/icons/IconHome';
 import IconBookmark from '@/components/icons/IconBookmark';
 import IconNotification from '@/components/icons/IconNotification';
 import IconUser from '@/components/icons/IconUser';
-import Card from '@/components/surface/Card.vue';
+import Card from '@/components/surface/Card';
 import Badge from '@/components/data-display/Badge.vue';
 import IconWithBadge from '@/components/data-display/IconWithBadge.vue';
 

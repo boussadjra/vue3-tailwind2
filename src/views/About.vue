@@ -1,7 +1,6 @@
 <template>
-<div class="p-16">
-    <div class="about p-8 flex items-center shadow-lg border-t border-navy-blue-50 ">
-
+<div class="p-16 bg-white dark:bg-black-700 min-h-screen">
+    <card>
         <div class="h-48 w-48">
             <img class="h-48 w-48 rounded-full shadow-md " src="https://avatars2.githubusercontent.com/u/11801238?s=460&u=07a60f4b248400448eef07da47e3ace15331e06f&v=4" alt="">
 
@@ -15,10 +14,17 @@
 
                 <a href="https://github.com/boussadjra" target="_blank" rel="noopener noreferrer">Github</a>
             </button>
-            <button class="ml-2 mt-8 px-8 py-2 bg-emerald-600 text-navy-blue-100 shadow-md rounded-full self-end focus:outline-none hover:bg-navy-blue-900">
+            <button class="ml-2 mt-8 px-8 py-2 bg-yellow-600 text-navy-blue-100 shadow-md rounded-full self-end focus:outline-none hover:bg-navy-blue-900">
                 <a href="https://stackoverflow.com/users/8172857/boussadjra-brahim" target="_blank" rel="noopener noreferrer">StackOverflow</a>
             </button>
         </div>
-    </div>
+    </card>
 </div>
 </template>
+<script>
+import Card from '@/components/surface/Card'
+export default {
+  components: { Card },
+    
+}
+</script>

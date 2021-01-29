@@ -1,7 +1,7 @@
 <template>
-  <div>
+
     <nav
-      class="h-48 lg:h-16 w-full sticky overflow-hidden top-0 z-20 p-4 bg-navy-blue-800 text-navy-blue-100 flex flex-col lg:flex-row items-center justify-between"
+      class="h-48 lg:h-16  w-full sticky overflow-hidden top-0 z-20 p-4 bg-navy-blue-800 text-navy-blue-100 flex flex-col lg:flex-row items-center justify-between"
     >
       <h1 class="logo text-4xl font-bold text-emerald-500">VUEWIND</h1>
 
@@ -80,7 +80,6 @@
     <main>
       <slot></slot>
     </main>
-  </div>
 </template>
 
 <script>

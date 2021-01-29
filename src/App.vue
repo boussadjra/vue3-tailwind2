@@ -1,10 +1,10 @@
 <template>
-<div class="">
+
 
     <component :is="layout">
         <router-view></router-view>
     </component>
-</div>
+
 </template>
 
 <script>

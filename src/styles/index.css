@@ -68,6 +68,7 @@
 }
 #app {
 	overflow-x: hidden;
+	@apply flex flex-col relative;
 }
 
 ::-webkit-scrollbar {
