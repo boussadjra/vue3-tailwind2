@@ -21,10 +21,12 @@
     </card>
 </div>
 </template>
-<script>
+<script lang="ts">
 import Card from '@/components/surface/Card'
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
   components: { Card },
     
-}
+})
+
 </script>

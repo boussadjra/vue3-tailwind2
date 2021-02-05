@@ -43,6 +43,10 @@
 	p {
 		@apply text-sm tracking-wide;
 	}
+
+	code {
+		@apply text-sm text-black-500 bg-black-100  dark:bg-black-500 dark:text-black-100 rounded;
+	}
 }
 
 @layer components {
@@ -60,11 +64,23 @@
 		@apply text-xl ml-2 pt-16 pb-8 text-gray-700 dark:text-gray-100;
 	}
 
-	.w-btn{
-		@apply  flex justify-center  max-w-max whitespace-nowrap focus:outline-none  focus:ring  focus:border-blue-300
-	  }
+	.w-btn {
+		@apply flex justify-center  max-w-max whitespace-nowrap focus:outline-none  focus:ring  focus:border-blue-300;
+	}
+	.grid-box {
+		@apply bg-emerald-300  dark:bg-emerald-700 rounded text-black-600 dark:text-white p-2  text-center;
+	}
+	.grid-box--default{
+		@apply  p-2  text-center;
 
-	 
+	}
+}
+
+@layer utilities {
+	.centered{
+		@apply flex items-center justify-center w-full;
+
+	}
 }
 #app {
 	overflow-x: hidden;

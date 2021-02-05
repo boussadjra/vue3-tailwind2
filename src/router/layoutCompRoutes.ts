@@ -22,6 +22,12 @@ export default  {
         name: 'Flex',
         component: () => import('../views/layouts-demo/Flex.vue'),
       },
+      {
+
+        path: 'grid',
+        name: 'Grid',
+        component: () => import('../views/layouts-demo/Grid.vue'),
+      },
      
    
       

@@ -5,7 +5,7 @@
     </span>
 
     <div v-else class="relative">
-        <div class="z-10 border-2 border-white" :class="[...classes, ...absoluteClass]" :style="styles"></div>
+        <div class="z-10 border-2 border-white dark:border-black-600" :class="[...classes, ...absoluteClass]" :style="styles"></div>
         <span v-if="ping" :class="[...classes]" :style="styles" class="absolute w-4 h-4 rounded-full opacity-75 animate-ping bg-navy-blue-400">
         </span>
     </div>
@@ -87,7 +87,7 @@ export default defineComponent({
             if (["rounded", "rounded-none"].includes(this.avatar.shape)) {
                 positionClass = "right-0 bottom-0 -mr-1 -mb-1";
             }
-            let colors = `bg-navy-blue-700 text-white`;
+            let colors = `bg-navy-blue-700 dark:bg-navy-blue-400 text-white`;
                 if(this.bgColor){
                     colors=`${this.bgColor} ${this.textColor}`
                 }
