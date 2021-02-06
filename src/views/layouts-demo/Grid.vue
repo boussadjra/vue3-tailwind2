@@ -155,10 +155,10 @@
           colStart="1"
           :colEnd="13"
         >
-          <div class="grid-box--default h-full bg-gray-200">Main content</div>
+          <div class="grid-box--default h-full bg-gray-200 text-black-600">Main content</div>
         </grid-item>
         <grid-item :colStartMd="2" :colEndMd="13" :rowStartMd="6"  :rowStart="5" colStart="1" :colEnd="13">
-          <div class="grid-box--default h-full bg-green-200">footer</div>
+          <div class="grid-box--default h-full bg-green-200 text-black-600">footer</div>
         </grid-item>
       </grid>
     </grid>

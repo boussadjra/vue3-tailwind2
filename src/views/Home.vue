@@ -117,11 +117,11 @@
           elevation="xl"
           style="transform: perspective(320px) rotate3d(8, -64, -12, -4deg)"
         >
-          <flex :spaceX="4" align="center" justify="center">
-            <w-btn v-for="(variant,i) in variants" :key="variant" :class="{'mt-4':i===4}" :variant="variant">{{
+          <grid :gap="2" :colsSm="2" :colsMd="6">
+            <w-btn v-for="(variant,i) in variants" :key="variant" :variant="variant">{{
               variant
             }}</w-btn>
-          </flex>
+          </grid>
         </card>
         <card
           class="w-1/2 h-64 flex items-center justify-center rounded-lg"
@@ -239,7 +239,7 @@ import IconWithBadge from "@/components/data-display/IconWithBadge.vue";
 import IconShoppingCart from "@/components/icons/IconShoppingCart";
 import IconFavorite from "@/components/icons/IconFavorite";
 import Badge from "@/components/data-display/Badge.vue";
-
+import Grid from "@/components/layout/Grid";
 interface keyable {
   [key: string]: any;
 }
@@ -255,7 +255,7 @@ export default defineComponent({
     "w-btn": Button,
     VueLogo,
     TailwindLogo,
-    Flex,
+    Flex,Grid,
     Avatar,
     IconModel,
     IconContainerSoftware,IconNotification,

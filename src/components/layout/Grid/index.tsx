@@ -17,7 +17,7 @@ import {
 	ROWS_XL,
 	ROWS_2XL,
 } from '@/utils/constants/grid';
-// import * as gridProps from '@/utils/constants/grid';
+//  import  *  as  gridProps  from  '@/utils/constants/grid';
 import { computed, defineComponent } from 'vue';
 
 export default defineComponent({
@@ -103,12 +103,28 @@ export default defineComponent({
 
 	setup(props, { slots }) {
 		const classes = computed(() => {
-	return `grid relative${props.widthFull ? 'w-full' : 'max-w-max'} ${COLS[props.cols]} ${COLS_XS[props.colsXs] ? COLS_XS[props.colsXs] : ''} ${COLS_SM[props.colsSm] ? COLS_SM[props.colsSm] : ''} ${COLS_MD[props.colsMd] ? COLS_MD[props.colsMd] : ''} ${COLS_LG[props.colsLg] ? COLS_LG[props.colsLg] : ''} ${COLS_XL[props.colsXl] ? COLS_XL[props.colsXl] : ''} ${COLS_2XL[props['cols-2xl']] ? COLS_2XL[props['cols-2xl']] : ''} ${ROWS[props.rows]} ${ROWS_XS[props.rowsXs] ? ROWS_XS[props.rowsXs] : ''} ${ROWS_SM[props.rowsSm] ? ROWS_SM[props.rowsSm] : ''} ${ROWS_MD[props.rowsMd] ? ROWS_MD[props.rowsMd] : ''} ${ROWS_LG[props.rowsLg] ? ROWS_LG[props.rowsLg] : ''} ${ROWS_XL[props.rowsXl] ? ROWS_XL[props.rowsXl] : ''} ${ROWS_2XL[props['rows-2xl']] ? ROWS_2XL[props['rows-2xl']] : ''} ${GAP[props.gap]} ${GAP_X[props.gapX]} ${GAP_Y[props.gapY]}`;
+			return `grid    ${COLS[props.cols]}  ${COLS_XS[props.colsXs] ? COLS_XS[props.colsXs] : ''}  ${
+				COLS_SM[props.colsSm] ? COLS_SM[props.colsSm] : ''
+			}  ${COLS_MD[props.colsMd] ? COLS_MD[props.colsMd] : ''}  ${
+				COLS_LG[props.colsLg] ? COLS_LG[props.colsLg] : ''
+			}  ${COLS_XL[props.colsXl] ? COLS_XL[props.colsXl] : ''}  ${
+				COLS_2XL[props['cols-2xl']] ? COLS_2XL[props['cols-2xl']] : ''
+			}  ${ROWS[props.rows]}  ${ROWS_XS[props.rowsXs] ? ROWS_XS[props.rowsXs] : ''}  ${
+				ROWS_SM[props.rowsSm] ? ROWS_SM[props.rowsSm] : ''
+			}  ${ROWS_MD[props.rowsMd] ? ROWS_MD[props.rowsMd] : ''}  ${
+				ROWS_LG[props.rowsLg] ? ROWS_LG[props.rowsLg] : ''
+			}  ${ROWS_XL[props.rowsXl] ? ROWS_XL[props.rowsXl] : ''}  ${
+				ROWS_2XL[props['rows-2xl']] ? ROWS_2XL[props['rows-2xl']] : ''
+			}  ${GAP[props.gap]}  ${GAP_X[props.gapX]}  ${GAP_Y[props.gapY]}`;
 		});
 
 		return () => (
-			<div class={classes.value.replace(/[\n+]/g, '').replace(/undefined/g, '').replace(/  /g, '')}>
-				
+			<div
+				class={classes.value
+					.replace(/[\n+]/g, '')
+					.replace(/undefined/g, '')
+					.replace(/    /g, '')}
+			>
 				{slots.default && slots.default()}
 			</div>
 		);
