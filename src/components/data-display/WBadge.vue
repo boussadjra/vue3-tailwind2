@@ -29,7 +29,7 @@ import {
 } from "vue";
 
 export default defineComponent({
-    name: "badge",
+    name: "w-badge",
     props: {
         size: {
             type: String as PropType < "xs" | "sm" | "md" | "lg" > ,

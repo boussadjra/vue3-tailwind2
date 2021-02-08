@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import Button from "../../components/actions/Button.vue";
+import WButton from "../../components/actions/WButton.vue";
 import IconSun from "../../components/icons/IconSun";
 import IconMoon from "../../components/icons/IconMoon";
 import IconQueryQueue from "../../components/icons/IconQueryQueue";
@@ -86,7 +86,7 @@ export default {
     },
   },
   components: {
-    "w-btn": Button,
+    "w-btn": WButton,
     IconSun,
     IconMoon,
     IconQueryQueue,

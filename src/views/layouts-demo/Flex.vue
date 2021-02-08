@@ -1,9 +1,9 @@
 <template>
-  <flex space-y="12" dir="col" >
-   <div class="sub-title-1">Flex wrapper:</div>
-    <flex space-y="4" dir="col">
+  <v-flex space-y="12" dir="col" >
+   <div class="sub-title-1">VFlex wrapper:</div>
+    <v-flex space-y="4" dir="col">
       <div class="sub-title-2">Display flex with space x 2 and direction row :</div>
-      <flex space-x="2">
+      <v-flex space-x="2">
         <div
           v-for="i in 4"
           :key="i"
@@ -11,17 +11,17 @@
         >
           lorem ipsum
         </div>
-      </flex>
-    </flex>
-    <flex space-y="4" dir="col">
+      </v-flex>
+    </v-flex>
+    <v-flex space-y="4" dir="col">
       <div class="sub-title-2">Display flex with different justified alignments :</div>
 
-      <flex space-y="12" dir="col">
+      <v-flex space-y="12" dir="col">
         <card v-for="pos in justifyAlignments" :key="pos" class="w-full" elevation="sm">
           <template #header>
-            <badge bgColor="bg-yellow-400" text-color="text-black-400">{{pos}}</badge>
+            <w-badge bgColor="bg-yellow-400" text-color="text-black-400">{{pos}}</w-badge>
           </template>
-          <flex :justify="pos" :spaceX="2">
+          <v-flex :justify="pos" :spaceX="2">
             <div
               v-for="i in 4"
               :key="i"
@@ -30,19 +30,19 @@
             >
               lorem ipsum
             </div>
-          </flex>
+          </v-flex>
         </card>
-      </flex>
-    </flex>
-    <flex space-y="4" dir="col">
+      </v-flex>
+    </v-flex>
+    <v-flex space-y="4" dir="col">
       <div class="sub-title-2">Display flex with different alignments :</div>
 
-      <flex space-y="12" dir="col">
+      <v-flex space-y="12" dir="col">
         <card v-for="pos in alignments" :key="pos" class="w-full h-64" elevation="sm">
           <template #header>
-            <badge bgColor="bg-yellow-400" text-color="text-black-400">{{pos}}</badge>
+            <w-badge bgColor="bg-yellow-400" text-color="text-black-400">{{pos}}</w-badge>
           </template>
-          <flex :align="pos" :spaceX="2" class="h-40 bg-navy-blue-100 dark:bg-navy-blue-900 ">
+          <v-flex :align="pos" :spaceX="2" class="h-40 bg-navy-blue-100 dark:bg-navy-blue-900 ">
             <div
               v-for="i in 4"
               :key="i"
@@ -53,16 +53,16 @@
             </div>
        
           
-          </flex>
+          </v-flex>
         </card>
-      </flex>
-    </flex>
-  </flex>
+      </v-flex>
+    </v-flex>
+  </v-flex>
 </template>
 
 <script>
-import Flex from "@/components/layout/Flex";
-import Badge from '@/components/data-display/Badge.vue';
+import VFlex from "@/components/layout/VFlex";
+import WBadge from '@/components/data-display/WBadge.vue';
 import Card from '@/components/surface/Card';
 export default {
   data() {
@@ -72,8 +72,8 @@ export default {
     };
   },
   components: {
-    Flex,
-    Badge,
+    VFlex,
+    WBadge,
     Card,
   },
 };

@@ -6,13 +6,13 @@ export default  {
     children: [
       {
 
-        path: 'aspect-ratio',
+        path: 'w-aspect-ratio',
         name: 'Aspect Ratio',
         component: () => import('../views/layouts-demo/AspectRatios.vue'),
       },
       {
 
-        path: 'container',
+        path: 'w-container',
         name: 'Container',
         component: () => import('../views/layouts-demo/Containers.vue'),
       },

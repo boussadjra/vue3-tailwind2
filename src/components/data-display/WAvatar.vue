@@ -1,7 +1,7 @@
 <template>
   <div
     :class="classes"
-    class="avatar flex items-end justify-end text-navy-blue-600 min-w-max"
+    class="w-avatar flex items-end justify-end text-navy-blue-600 min-w-max"
   >
     <!-- -->
     <img :class="classes" v-if="!$slots.default" :src="src" alt="" />
@@ -13,7 +13,7 @@
     </div>
 
     <div class="absolute">
-      <slot name="badge" :avatar="{ size, shape }"></slot>
+      <slot name="badge" :w-avatar="{ size, shape }"></slot>
     </div>
   </div>
 </template>
@@ -25,7 +25,7 @@ import sizeable from "@/mixins/sizeable";
 import { defineComponent, PropType } from "vue";
 
 export default defineComponent({
-  name: "avatar",
+  name: "w-avatar",
 
   props: {
     src: {
@@ -52,7 +52,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.avatar.sm {
+.w-avatar.sm {
   min-width: 64px;
 }
 </style>

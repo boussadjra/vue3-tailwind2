@@ -2,18 +2,18 @@
 <div class="space-y-2">
     <h1 class="section__title">Breadcrumbs:</h1>
     <div class="w-full  place-items-center">
-        <breadcrumb>
+        <v-breadcrumb>
             <span>Home</span>
             <span>Library</span>
             <span>Data</span>
 
-        </breadcrumb>
+        </v-breadcrumb>
     </div>
 </div>
 <div class="space-y-2">
     <h1 class="section__title">Breadcrumbs with custom separator:</h1>
     <div class="w-full  place-items-center">
-        <breadcrumb>
+        <v-breadcrumb>
             <span>Home</span>
             <span>Library</span>
             <span>Data</span>
@@ -22,39 +22,39 @@
 
                 <icon-caret-right />
             </template>
-        </breadcrumb>
+        </v-breadcrumb>
     </div>
 </div>
 
 <div class="space-y-2">
     <h1 class="section__title">Breadcrumbs as badges:</h1>
     <div class="w-full  place-items-center">
-        <breadcrumb>
-            <badge>Home</badge>
-            <badge>Library</badge>
-            <badge>Data</badge>
+        <v-breadcrumb>
+            <w-badge>Home</w-badge>
+            <w-badge>Library</w-badge>
+            <w-badge>Data</w-badge>
             <template #separator>
 
                 <icon-caret-right class="text-navy-blue-500" />
             </template>
-        </breadcrumb>
+        </v-breadcrumb>
     </div>
 </div>
 
 <div class="space-y-2">
     <h1 class="section__title">Breadcrumbs with current route path:</h1>
     <div class="w-full  place-items-center">
-        <breadcrumb :path="$route.path">
+        <v-breadcrumb :path="$route.path">
 
-        </breadcrumb>
+        </v-breadcrumb>
     </div>
 </div>
 </template>
 
 <script lang="ts">
 import IconCaretRight from '@/components/icons/IconCaretRight';
-import Breadcrumb from "@/components/navigation/Breadcrumb";
-import Badge from "@/components/data-display/Badge.vue";
+import VBreadcrumb from "@/components/navigation/VBreadcrumb";
+import WBadge from "@/components/data-display/WBadge.vue";
 
 import {
     defineComponent
@@ -63,9 +63,9 @@ import {
 export default defineComponent({
     name: "breadcrumbs",
     components: {
-        Breadcrumb,
+        VBreadcrumb,
         IconCaretRight,
-        Badge
+        WBadge
     },
 });
 </script>

@@ -1,6 +1,4 @@
-import { computed, defineComponent, onMounted, PropType, reactive, ref, watch } from 'vue';
-
-const ASPECT_W=[
+export const  ASPECT_W=[
     "aspect-w-1",
     "aspect-w-2",
     "aspect-w-3",
@@ -19,7 +17,7 @@ const ASPECT_W=[
     "aspect-w-16"
   ]
 
-  const ASPECT_H=[
+  export const ASPECT_H=[
     "aspect-h-1",
     "aspect-h-2",
     "aspect-h-3",
@@ -37,26 +35,3 @@ const ASPECT_W=[
     "aspect-h-15",
     "aspect-h-16"
   ]
-export default defineComponent({
-	// name: 'card',
-	props: {
-		value: {
-			type: String ,
-            default: '',
-    
-		},
-	},
-
-	setup(props, { slots }) {
-	
-
-     const [width,height]=props.value.split('/').map(size=>Number(size))
-
-		return () => (
-			<div class={`${ASPECT_W[width-1]} ${ASPECT_H[height-1]}`}>
-				{slots.default && slots.default()}
-			
-			</div>
-		);
-	},
-});

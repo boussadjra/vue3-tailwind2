@@ -7,36 +7,33 @@
         </button>
 
         <template v-else>
-            <alert v-for="variant in variants" :variant="variant.type" v-model="variant.show">
+            <w-alert v-for="variant in variants" :variant="variant.type" v-model="variant.show">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
                 accusamus porro maxime, veniam pariatur asperiores?
-            </alert>
+            </w-alert>
         </template>
     </div>
 
-    <h1 class="section__title">Alert with titles :</h1>
+    <h1 class="section__title">WAlert with titles :</h1>
     <div class="w-full grid--auto-cols gap-4">
-        <alert v-for="variant in variants2" title="Alert title" :variant="variant.type" v-model="variant.show">
+        <w-alert v-for="variant in variants2" title="WAlert title" :variant="variant.type" v-model="variant.show">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
             accusamus porro maxime, veniam pariatur asperiores?
-        </alert>
+        </w-alert>
     </div>
     <h1 class="section__title">Outlined alerts :</h1>
     <div class="w-full grid--auto-cols gap-4">
-        <alert v-for="variant in variants2" title="Alert title" outlined :variant="variant.type" v-model="variant.show">
+        <w-alert v-for="variant in variants2" title="WAlert title" outlined :variant="variant.type" v-model="variant.show">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
             accusamus porro maxime, veniam pariatur asperiores?
-        </alert>
+        </w-alert>
     </div>
 </div>
-<div class="p-8">
-    <component-reflecter :component="alert" />
-</div>
+
 </template>
 
 <script lang="ts">
-import Alert from "@/components/data-display/Alert.vue";
-import ComponentReflecter from "@/components/util/ComponentReflecter.vue";
+import WAlert from "@/components/data-display/WAlert.vue";
 import {
     defineComponent
 } from "vue";
@@ -44,12 +41,12 @@ import {
 export default defineComponent({
     name: "alerts",
     components: {
-        Alert,
-        ComponentReflecter,
+        WAlert,
+      
     },
     data() {
         return {
-            alert: Alert,
+           
             variants: [{
                     type: "default",
                     show: true,

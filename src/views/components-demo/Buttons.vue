@@ -96,7 +96,7 @@
 </div>
 
 <div class="space-y-2">
-    <h1 class="section__title">Button with custom colors:</h1>
+    <h1 class="section__title">WButton with custom colors:</h1>
 
     <div class="w-full grid--auto-cols gap-4">
         <w-btn size="md" bgColor="bg-red-600" bgColorHover="hover:bg-red-700" textColor="text-blue-100">
@@ -124,7 +124,7 @@
 </template>
 
 <script lang="ts">
-import Button from "@/components/actions/Button.vue";
+import WButton from "@/components/actions/WButton.vue";
 import IconClose from "@/components/icons/IconClose";
 
 import IconInformation from "@/components/icons/IconInformation";
@@ -146,7 +146,7 @@ export default defineComponent({
         };
     },
     components: {
-        "w-btn": Button,
+        "w-btn": WButton,
         default: IconSearch,
         info: IconInformation,
         warning: IconWarning,

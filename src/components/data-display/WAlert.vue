@@ -33,7 +33,7 @@ import IconCheckmarkOutline from "../icons/IconCheckmarkOutline";
 import IconCloseOutline from "../icons/IconCloseOutline";
 import { outlineable, variantable } from "@/mixins";
 export default defineComponent({
-  name: "alert",
+  name: "w-alert",
   props: {
     modelValue: {
       type: Boolean,

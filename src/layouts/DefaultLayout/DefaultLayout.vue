@@ -79,7 +79,7 @@
 </template>
 
 <script>
-import Button from "@/components/actions/Button.vue";
+import WButton from "@/components/actions/WButton.vue";
 import IconLogoGithub from "@/components/icons/IconLogoGithub";
 import IconModel from "@/components/icons/IconModel";
 import IconHome from "@/components/icons/IconHome";
@@ -99,7 +99,7 @@ export default {
     },
   },
   components: {
-    "w-btn": Button,
+    "w-btn": WButton,
     IconLogoGithub,
     IconModel,
     IconHome,

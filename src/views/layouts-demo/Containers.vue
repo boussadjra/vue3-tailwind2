@@ -1,15 +1,15 @@
 <template>
-  <flex dir="col" :spaceY="4">
-  <flex dir="col">
+  <v-flex dir="col" :spaceY="4">
+  <v-flex dir="col">
   <div class="sub-title-2 text-navy-blue-700 dark:text-navy-blue-300 pt-4">
-      Container usage :
+      WContainer usage :
     </div>
     <p class="pb-4 pl-2 pt-2">
     This component allows you to organize the rendering of other components horizontally with max width.
     </p>
-  </flex>
+  </v-flex>
 
-    <container
+    <w-container
       v-for="size in sizes"
       :key="size"
       :max-width="size"
@@ -25,18 +25,18 @@
           doloribus nulla. Unde, architecto asperiores at laboriosam quis fugiat quos, nam
           tenetur facere voluptas ratione qui nostrum consequatur officia.
         </span>
-        <badge bgColor="bg-yellow-400" text-color="text-black-400">{{ size }}</badge></span
+        <w-badge bgColor="bg-yellow-400" text-color="text-black-400">{{ size }}</w-badge></span
       >
-    </container>
-  </flex>
+    </w-container>
+  </v-flex>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import Container from "@/components/layout/Container";
-import Flex from "@/components/layout/Flex";
-import Badge from "@/components/data-display/Badge.vue";
+import WContainer from "@/components/layout/WContainer";
+import VFlex from "@/components/layout/VFlex";
+import WBadge from "@/components/data-display/WBadge.vue";
 
 export default defineComponent({
   data() {
@@ -57,9 +57,9 @@ export default defineComponent({
     };
   },
   components: {
-    Container,
-    Badge,
-    Flex,
+    WContainer,
+    WBadge,
+    VFlex,
   },
 });
 </script>

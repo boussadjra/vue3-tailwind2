@@ -1,16 +1,11 @@
 import { defineComponent, h, Slot, Transition, VNode } from 'vue';
 export default defineComponent({
-    name: 'breadcrumb',
+    name: 'v-breadcrumb',
     props: {
         path: {
             type: String,
             default: ''
         }
-    },
-    mounted() {
-
-
-
     },
     methods: {
         renderCrumb(token: string | VNode, index: number, length: number) {
@@ -29,12 +24,8 @@ export default defineComponent({
     computed: {
         customSlots(): any {
             if (this.path) {
-
                 let pathTokens = this.path.split('/').filter(token => token)
-
-
-
-                return pathTokens.map((token, index) => {
+                 return pathTokens.map((token, index) => {
                     return this.renderCrumb(token, index, pathTokens.length)
 
                 })

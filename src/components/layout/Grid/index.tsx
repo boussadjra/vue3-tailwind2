@@ -21,6 +21,7 @@ import {
 import { computed, defineComponent } from 'vue';
 
 export default defineComponent({
+	name:'w-grid',
 	props: {
 		cols: {
 			type: [String, Number],

@@ -103,8 +103,8 @@
             <template #header>
                 <div class="flex space-x-2 items-center w-full justify-between pb-4">
                     <div class="flex space-x-2 items-center w-full">
-                        <avatar src="https://avatars2.githubusercontent.com/u/11801238?s=460&u=07a60f4b248400448eef07da47e3ace15331e06f&v=4" shape="rounded-full" size="sm" class="flex bg-navy-blue-200 text-navy-blue-100 row-start-1 row-end-3 text-navy-blue-650 ring-1 ring-white">
-                        </avatar>
+                        <w-avatar src="https://avatars2.githubusercontent.com/u/11801238?s=460&u=07a60f4b248400448eef07da47e3ace15331e06f&v=4" shape="rounded-full" size="sm" class="flex bg-navy-blue-200 text-navy-blue-100 row-start-1 row-end-3 text-navy-blue-650 ring-1 ring-white">
+                        </w-avatar>
                         <div class="flex flex-col space-y-1">
                             <span class="text-sm whitespace-nowrap text-gray-700">Boussadjra Brahim</span>
                             <span class="text-xs whitespace-nowrap text-gray-500">December 5, 2020</span>
@@ -181,7 +181,7 @@
         <card class="w-full bg-gradient-to-r from-navy-blue-900 to-navy-blue-700 text-navy-blue-50 rounded-md ">
             <template #header>
                 <div class="flex justify-between">
-                    <badge shape="rounded">Algiers</badge>
+                    <w-badge shape="rounded">Algiers</w-badge>
                     <span class="text-lg font-bold ">{{new Date().toLocaleTimeString().slice(0,-6)}}</span>
                 </div>
             </template>
@@ -212,7 +212,7 @@
         <card class="w-full bg-gradient-to-r from-navy-blue-900 to-navy-blue-700 text-navy-blue-50 rounded-md ">
             <template #header>
                 <div class="flex justify-between">
-                    <badge shape="rounded">Laghouat</badge>
+                    <w-badge shape="rounded">Laghouat</w-badge>
                     <span class="text-lg font-bold ">{{new Date().toLocaleTimeString().slice(0,-6)}}</span>
                 </div>
             </template>
@@ -243,7 +243,7 @@
         <card class="w-full bg-gradient-to-r from-navy-blue-900 to-navy-blue-700 text-navy-blue-50 rounded-md ">
             <template #header>
                 <div class="flex justify-between">
-                    <badge shape="rounded">Annaba</badge>
+                    <w-badge shape="rounded">Annaba</w-badge>
                     <span class="text-lg font-bold ">{{new Date().toLocaleTimeString().slice(0,-6)}}</span>
                 </div>
             </template>
@@ -278,7 +278,7 @@
 
 <script>
 //mL72nBk16#hak
-import Button from "@/components/actions/Button.vue";
+import WButton from "@/components/actions/WButton.vue";
 import Card from "@/components/surface/Card";
 
 import {
@@ -288,9 +288,9 @@ import IconChat from "@/components/icons/IconChat";
 import IconFavorite from "@/components/icons/IconFavorite";
 import IconShare from "@/components/icons/IconShare";
 import IconFavoriteFilled from "@/components/icons/IconFavoriteFilled";
-import Avatar from "@/components/data-display/Avatar.vue";
+import WAvatar from "@/components/data-display/WAvatar.vue";
 import IconOverflowMenuVertical from "@/components/icons/IconOverflowMenuVertical";
-import Badge from '@/components/data-display/Badge.vue';
+import WBadge from '@/components/data-display/WBadge.vue';
 import IconAwake from '@/components/icons/IconAwake';
 import IconWindyStrong from '@/components/icons/IconWindyStrong';
 import IconRainDrop from '@/components/icons/IconRainDrop';
@@ -301,14 +301,14 @@ export default defineComponent({
     name: "cards",
     components: {
         Card,
-        "w-btn": Button,
+        "w-btn": WButton,
         IconChat,
         IconShare,
         IconFavorite,
         IconFavoriteFilled,
-        Avatar,
+        WAvatar,
         IconOverflowMenuVertical,
-        Badge,
+        WBadge,
         IconAwake,
         IconWindyStrong,
         IconRainDrop,

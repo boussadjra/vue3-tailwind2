@@ -25,7 +25,7 @@ export default  {
       {
 
         path: 'breadcrumbs',
-        name: 'breadcrumbs',
+        name: 'Breadcrumbs',
         component: () => import('../views/components-demo/Breadcrumbs.vue'),
       },
       {

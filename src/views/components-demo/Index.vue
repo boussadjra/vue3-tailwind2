@@ -56,12 +56,12 @@
           />
         </a>
    
-            <breadcrumb :path="$route.path" class="text-gray-400 dark:text-gray-100 dark:bg-black-600 font-light"> 
+            <v-breadcrumb :path="$route.path" class="text-gray-400 dark:text-gray-100 dark:bg-black-600 font-light"> 
               <template #separator>
 
                 <icon-caret-right class="text-gray-400 dark:text-gray-100" />
             </template>
-            </breadcrumb>
+            </v-breadcrumb>
         </div>
         <main class="w-full  h-auto pt-4 pb-32 pl-8 pr-16 content dark:bg-black-700 dark:text-black-100">
             <router-view></router-view>
@@ -76,8 +76,8 @@ import {
     ref,
     watch
 } from "vue";
-import Breadcrumb from "@/components/navigation/Breadcrumb";
-import Button from "@/components/actions/Button.vue";
+import VBreadcrumb from "@/components/navigation/VBreadcrumb";
+import WButton from "@/components/actions/WButton.vue";
 
 import IconModel from "@/components/icons/IconModel";
 import IconMenu from "@/components/icons/IconMenu";
@@ -136,9 +136,9 @@ export default defineComponent({
         },
     },
     components: {
-        Breadcrumb,
+        VBreadcrumb,
         IconModel,
-        "w-btn": Button,
+        "w-btn": WButton,
         IconMenu,
         IconCaretRight,
         Vue3RouterTree,IconQueryQueue,IconCaretRight,IconLayers,IconTextFill
