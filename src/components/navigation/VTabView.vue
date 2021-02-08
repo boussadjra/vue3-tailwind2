@@ -61,11 +61,7 @@ export default defineComponent({
             this.prevTab = oldVal;
         },
     },
-    mounted() {
-        console.log("--------------------");
-        console.log(this.$slots.item);
-        console.log("--------------------");
-    },
+    mounted() {},
 });
 </script>
 

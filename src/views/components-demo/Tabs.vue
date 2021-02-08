@@ -3,9 +3,9 @@
     <h1 class="section__title">Tab views :</h1>
     <div class="w-full grid  gap-4 place-items-center">
         <card>
-            <tab-view :items='items'>
+            <v-tab-view :items='items'>
 
-            </tab-view>
+            </v-tab-view>
         </card>
     </div>
 </div>
@@ -14,7 +14,7 @@
     <h1 class="section__title">Tab views with custom headers:</h1>
     <div class="w-full grid  gap-4 place-items-center md:pl-12">
         <card class="w-auto">
-            <tab-view :items='items'>
+            <v-tab-view :items='items'>
                 <template #item="{item}">
                     <div class="flex space-x-2 items-center">
                         <component :is="item.header.toLowerCase()"></component>
@@ -22,10 +22,10 @@
 
                     </div>
                 </template>
-            </tab-view>
+            </v-tab-view>
         </card>
         <card class="w-auto">
-            <tab-view :items='items'>
+            <v-tab-view :items='items'>
                 <template #item="{item}">
                     <div class="flex space-x-2 items-center">
                         <component :is="item.header.toLowerCase()"></component>
@@ -33,7 +33,7 @@
                         <w-badge v-if="item.header==='Notifications'" textColor="text-white" size="xs" bgColor="bg-red-500"><span class="text-xs">5</span></w-badge>
                     </div>
                 </template>
-            </tab-view>
+            </v-tab-view>
         </card>
     </div>
 </div>
@@ -41,17 +41,17 @@
     <h1 class="section__title">Tab view for mobile:</h1>
     <div class="w-full flex justify-around space-x-4 ">
         <card class="w-auto">
-            <tab-view :items='items' border-top class="max-w-min">
+            <v-tab-view :items='items' border-top class="max-w-min">
                 <template #item="{item}">
                     <div class="flex  items-center">
                         <component :height="32" :width="32" :is="item.header.toLowerCase()"></component>
 
                     </div>
                 </template>
-            </tab-view>
+            </v-tab-view>
         </card>
         <card class="w-auto">
-            <tab-view :items='items' border-top class="max-w-min">
+            <v-tab-view :items='items' border-top class="max-w-min">
                 <template #item="{item}">
                     <div class="flex  items-center ">
                         <component v-if="item.header!=='Home'" class="fill-current text-gray-500 " :height="32" :width="32" :is="item.header.toLowerCase()"></component>
@@ -66,7 +66,7 @@
                         </w-icon-with-badge>
                     </div>
                 </template>
-            </tab-view>
+            </v-tab-view>
         </card>
 
     </div>
@@ -77,7 +77,7 @@
 import {
     defineComponent
 } from 'vue';
-import TabView from '@/components/navigation/TabView.vue'
+import VTabView from '@/components/navigation/VTabView.vue'
 import IconHome from '@/components/icons/IconHome';
 import IconBookmark from '@/components/icons/IconBookmark';
 import IconNotification from '@/components/icons/IconNotification';
@@ -111,7 +111,7 @@ export default defineComponent({
     },
 
     components: {
-        TabView,
+        VTabView,
         home: IconHome,
         bookmarks: IconBookmark,
         notifications: IconNotification,

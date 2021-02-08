@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import TabView from "@/components/navigation/TabView.vue";
+import VTabView from "@/components/navigation/VTabView.vue";
 import {
     defineComponent
 } from "vue";
@@ -13,7 +13,7 @@ export default defineComponent({
 
     },
     components: {
-        TabView,
+        VTabView,
     },
     mounted() {
 
