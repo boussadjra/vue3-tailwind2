@@ -91,7 +91,33 @@ export default defineComponent({
 	setup(props, { slots }) {
 		return () => (
 			<div
-        class={`${COL_SPAN[props.colSpan]}   ${COL_SPAN_XS[props.colSpanXs]}   ${   COL_SPAN_SM[props.colSpanSm]  }   ${COL_SPAN_MD[props.colSpanMd]}   ${COL_SPAN_LG[props.colSpanLg]}   ${   COL_SPAN_XL[props.colSpanXl]  }   ${COL_SPAN_2XL[props['col-span-2xl']]}   ${ROW_SPAN[props.rowSpan]}   ${   ROW_SPAN_XS[props.rowSpanXs]  }   ${ROW_SPAN_SM[props.rowSpanSm]}   ${ROW_SPAN_MD[props.rowSpanMd]}   ${   ROW_SPAN_LG[props.rowSpanLg]  }   ${ROW_SPAN_XL[props.rowSpanXl]}   ${ROW_SPAN_2XL[props['row-span-2xl']]}   ${   COL_START[props.colStart]  }   ${COL_START_XS[props.colStartXs]}   ${COL_START_SM[props.colStartSm]}   ${   COL_START_MD[props.colStartMd]  }   ${COL_START_LG[props.colStartLg]}   ${COL_START_XL[props.colStartXl]}   ${   COL_START_2XL[props['col-start-2xl']]  }   ${COL_END[props.colEnd]}   ${COL_END_XS[props.colEndXs]}   ${COL_END_SM[props.colEndSm]}   ${   COL_END_MD[props.colEndMd]  }   ${COL_END_LG[props.colEndLg]}   ${COL_END_XL[props.colEndXl]}   ${   COL_END_2XL[props['col-end-2xl']]  }   ${ROW_START[props.rowStart]}   ${ROW_START_XS[props.rowStartXs]}   ${   ROW_START_SM[props.rowStartSm]  }   ${ROW_START_MD[props.rowStartMd]}   ${ROW_START_LG[props.rowStartLg]}   ${   ROW_START_XL[props.rowStartXl]  }   ${ROW_START_2XL[props['row-start-2xl']]}   ${ROW_END[props.rowEnd]}   ${   ROW_END_XS[props.rowEndXs]  }   ${ROW_END_SM[props.rowEndSm]}   ${ROW_END_MD[props.rowEndMd]}   ${ROW_END_LG[props.rowEndLg]}   ${   ROW_END_XL[props.rowEndXl]  }   ${ROW_END_2XL[props['row-end-2xl']]}`.replace('undefined','')}
+				class={`${COL_SPAN[props.colSpan]}   ${COL_SPAN_XS[props.colSpanXs]}   ${
+					COL_SPAN_SM[props.colSpanSm]
+				}   ${COL_SPAN_MD[props.colSpanMd]}   ${COL_SPAN_LG[props.colSpanLg]}   ${
+					COL_SPAN_XL[props.colSpanXl]
+				}   ${COL_SPAN_2XL[props['col-span-2xl']]}   ${ROW_SPAN[props.rowSpan]}   ${
+					ROW_SPAN_XS[props.rowSpanXs]
+				}   ${ROW_SPAN_SM[props.rowSpanSm]}   ${ROW_SPAN_MD[props.rowSpanMd]}   ${
+					ROW_SPAN_LG[props.rowSpanLg]
+				}   ${ROW_SPAN_XL[props.rowSpanXl]}   ${ROW_SPAN_2XL[props['row-span-2xl']]}   ${
+					COL_START[props.colStart]
+				}   ${COL_START_XS[props.colStartXs]}   ${COL_START_SM[props.colStartSm]}   ${
+					COL_START_MD[props.colStartMd]
+				}   ${COL_START_LG[props.colStartLg]}   ${COL_START_XL[props.colStartXl]}   ${
+					COL_START_2XL[props['col-start-2xl']]
+				}   ${COL_END[props.colEnd]}   ${COL_END_XS[props.colEndXs]}   ${COL_END_SM[props.colEndSm]}   ${
+					COL_END_MD[props.colEndMd]
+				}   ${COL_END_LG[props.colEndLg]}   ${COL_END_XL[props.colEndXl]}   ${
+					COL_END_2XL[props['col-end-2xl']]
+				}   ${ROW_START[props.rowStart]}   ${ROW_START_XS[props.rowStartXs]}   ${
+					ROW_START_SM[props.rowStartSm]
+				}   ${ROW_START_MD[props.rowStartMd]}   ${ROW_START_LG[props.rowStartLg]}   ${
+					ROW_START_XL[props.rowStartXl]
+				}   ${ROW_START_2XL[props['row-start-2xl']]}   ${ROW_END[props.rowEnd]}   ${
+					ROW_END_XS[props.rowEndXs]
+				}   ${ROW_END_SM[props.rowEndSm]}   ${ROW_END_MD[props.rowEndMd]}   ${ROW_END_LG[props.rowEndLg]}   ${
+					ROW_END_XL[props.rowEndXl]
+				}   ${ROW_END_2XL[props['row-end-2xl']]}`.replace('undefined', '')}
 			>
 				{' '}
 				{slots.default && slots.default()}{' '}

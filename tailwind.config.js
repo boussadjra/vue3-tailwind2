@@ -1,6 +1,6 @@
 let sizes = {};
 for (let index = 1; index <= 100; index++) {
-	sizes[index*4 + 'px'] = (index*4) + 'px';
+	sizes[index * 4 + 'px'] = index * 4 + 'px';
 }
 let minSize = {
 	'0': '0',
@@ -11,14 +11,7 @@ let minSize = {
 };
 
 module.exports = {
-	purge: [
-		"./src/**/*.html",
-		"./src/**/*.vue",
-		"./src/**/*.js",
-		"./src/**/*.ts",
-		"./src/**/*.tsx",
-		"./src/**/*.css"
-	  ],
+	purge: ['./src/**/*.html', './src/**/*.vue', './src/**/*.js', './src/**/*.ts', './src/**/*.tsx', './src/**/*.css'],
 	darkMode: 'class', // or 'media' or 'class'
 	theme: {
 		extend: {
@@ -72,5 +65,5 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
-	plugins: [require('@tailwindcss/aspect-ratio'),],
+	plugins: [require('@tailwindcss/aspect-ratio')],
 };

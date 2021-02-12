@@ -1,8 +1,8 @@
 
 
-const outlineable={
- 
-    props:{
+const outlineable = {
+
+    props: {
         outlined: {
             type: Boolean,
             default: false,

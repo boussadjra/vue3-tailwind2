@@ -1,17 +1,17 @@
 import clientAPI from './AxiosConfig'
-const baseURL="https://api.stackexchange.com/2.2/"
+const baseURL = "https://api.stackexchange.com/2.2/"
 
 export default {
-  getUser(id:number) {
+  getUser(id: number) {
 
-    return clientAPI(baseURL).get('/users/'+id+'?site=stackoverflow&filter=!BTeB3QUF4f5T-AJKd.YG1.ZY78lk*z');
+    return clientAPI(baseURL).get('/users/' + id + '?site=stackoverflow&filter=!BTeB3QUF4f5T-AJKd.YG1.ZY78lk*z');
   },
-  getAnswersCount(id:number){
-    return clientAPI(baseURL).get('/users/'+id+'/answers?site=stackoverflow&filter=total');
+  getAnswersCount(id: number) {
+    return clientAPI(baseURL).get('/users/' + id + '/answers?site=stackoverflow&filter=total');
 
   },
-  getQuestionsCount(id:number){
-    return clientAPI(baseURL).get('/users/'+id+'/questions?site=stackoverflow&filter=total');
+  getQuestionsCount(id: number) {
+    return clientAPI(baseURL).get('/users/' + id + '/questions?site=stackoverflow&filter=total');
 
   },
 }

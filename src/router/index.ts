@@ -10,34 +10,34 @@ export const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'Home',
     component: Home,
-    meta:{layout:'default-layout'}
+    meta: { layout: 'default-layout' }
   },
   {
     path: '/about',
     name: 'About',
 
     component: () => import('../views/About.vue'),
-    meta:{layout:'default-layout'}
+    meta: { layout: 'default-layout' }
   },
-  componentsRoutes,layoutCompRoutes,styleRoutes,
-  
+  componentsRoutes, layoutCompRoutes, styleRoutes,
+
   {
     path: '/dashboard',
     name: 'Dashboard',
     component: () => import('../views/dashboard/Index.vue'),
-    meta:{layout:'dashboard-layout'}
+    meta: { layout: 'dashboard-layout' }
   },
   {
     path: '/demos',
     name: 'Demo',
     component: () => import('../views/Demos.vue'),
-    meta:{layout:'default-layout'}
+    meta: { layout: 'default-layout' }
   },
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: NotFound,
-    meta:{layout:'default-layout'}
+    meta: { layout: 'default-layout' }
   }
 ]
 

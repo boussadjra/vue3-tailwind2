@@ -8,14 +8,12 @@
         textColor="text-gray-700 dark:text-gray-200"
         v-on:click="setCollapsed()"
       >
- 
-          <IconQueryQueue
-            height="24"
-            width="24"
-            :style="collapseBtnStyle"
-            class="transition-transform duration-300"
-          />
-   
+        <IconQueryQueue
+          height="24"
+          width="24"
+          :style="collapseBtnStyle"
+          class="transition-transform duration-300"
+        />
       </w-btn>
     </div>
     <div class="flex space-x-3 items-center justify-between">

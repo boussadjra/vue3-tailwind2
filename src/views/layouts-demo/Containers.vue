@@ -1,13 +1,14 @@
 <template>
   <v-flex dir="col" :spaceY="4">
-  <v-flex dir="col">
-  <div class="sub-title-2 text-navy-blue-700 dark:text-navy-blue-300 pt-4">
-      WContainer usage :
-    </div>
-    <p class="pb-4 pl-2 pt-2">
-    This component allows you to organize the rendering of other components horizontally with max width.
-    </p>
-  </v-flex>
+    <v-flex dir="col">
+      <div class="sub-title-2 text-navy-blue-700 dark:text-navy-blue-300 pt-4">
+        WContainer usage :
+      </div>
+      <p class="pb-4 pl-2 pt-2">
+        This component allows you to organize the rendering of other components
+        horizontally with max width.
+      </p>
+    </v-flex>
 
     <w-container
       v-for="size in sizes"
@@ -25,7 +26,9 @@
           doloribus nulla. Unde, architecto asperiores at laboriosam quis fugiat quos, nam
           tenetur facere voluptas ratione qui nostrum consequatur officia.
         </span>
-        <w-badge bgColor="bg-yellow-400" text-color="text-black-400">{{ size }}</w-badge></span
+        <w-badge bgColor="bg-yellow-400" text-color="text-black-400">{{
+          size
+        }}</w-badge></span
       >
     </w-container>
   </v-flex>
@@ -41,19 +44,7 @@ import WBadge from "@/components/data-display/WBadge.vue";
 export default defineComponent({
   data() {
     return {
-      sizes: [
-        "xs",
-        "sm",
-        "md",
-        "lg",
-        "xl",
-        "2xl",
-        "3xl",
-        "4xl",
-        "5xl",
-        "6xl",
-        "7xl",
-      ],
+      sizes: ["xs", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl", "5xl", "6xl", "7xl"],
     };
   },
   components: {

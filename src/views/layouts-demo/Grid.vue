@@ -80,7 +80,9 @@
           <div class="grid-box--default bg-green-500">span 1 row</div></w-grid-item
         >
         <w-grid-item rowSpan="3">
-          <div class="grid-box--default bg-yellow-600 h-full">span 3 rows</div></w-grid-item
+          <div class="grid-box--default bg-yellow-600 h-full">
+            span 3 rows
+          </div></w-grid-item
         >
         <w-grid-item :colSpan="2">
           <div class="grid-box--default bg-green-600">
@@ -140,10 +142,24 @@
           <div class="grid-box--default h-full bg-blue-500">LOGO</div>
         </w-grid-item>
 
-        <w-grid-item :colStartMd="2" :colEndMd="13" :rowStartMd="1" :rowStart="2" colStart="1" :colEnd="13">
+        <w-grid-item
+          :colStartMd="2"
+          :colEndMd="13"
+          :rowStartMd="1"
+          :rowStart="2"
+          colStart="1"
+          :colEnd="13"
+        >
           <div class="grid-box--default h-full bg-blue-600">header</div>
         </w-grid-item>
-        <w-grid-item :rowStartMd="2" :rowEndMd="7" :colEndMd="2" :rowStart="3" colStart="1" :colEnd="13">
+        <w-grid-item
+          :rowStartMd="2"
+          :rowEndMd="7"
+          :colEndMd="2"
+          :rowStart="3"
+          colStart="1"
+          :colEnd="13"
+        >
           <div class="grid-box--default h-full bg-yellow-500">sidebar</div>
         </w-grid-item>
         <w-grid-item
@@ -155,9 +171,18 @@
           colStart="1"
           :colEnd="13"
         >
-          <div class="grid-box--default h-full bg-gray-200 text-black-600">Main content</div>
+          <div class="grid-box--default h-full bg-gray-200 text-black-600">
+            Main content
+          </div>
         </w-grid-item>
-        <w-grid-item :colStartMd="2" :colEndMd="13" :rowStartMd="6"  :rowStart="5" colStart="1" :colEnd="13">
+        <w-grid-item
+          :colStartMd="2"
+          :colEndMd="13"
+          :rowStartMd="6"
+          :rowStart="5"
+          colStart="1"
+          :colEnd="13"
+        >
           <div class="grid-box--default h-full bg-green-200 text-black-600">footer</div>
         </w-grid-item>
       </w-grid>

@@ -3,7 +3,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
 	setup(props, { slots }) {
 		return () => (
-			<svg  height="512" viewBox="0 0 700 512" width="700" version="1.1" preserveAspectRatio="xMidYMid">
+			<svg height="512" viewBox="0 0 700 512" width="700" version="1.1" preserveAspectRatio="xMidYMid">
 				<linearGradient id="a" gradientUnits="objectBoundingBox" x2="1" y1="-.889" y2="1.889">
 					<stop offset="0" stop-color="#2383ae" />
 					<stop offset="1" stop-color="#6dd7b9" />

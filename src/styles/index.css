@@ -70,16 +70,14 @@
 	.grid-box {
 		@apply bg-emerald-300  dark:bg-emerald-700 rounded text-black-600 dark:text-white p-2  text-center;
 	}
-	.grid-box--default{
-		@apply  p-2  text-center;
-
+	.grid-box--default {
+		@apply p-2  text-center;
 	}
 }
 
 @layer utilities {
-	.centered{
+	.centered {
 		@apply flex items-center justify-center w-full;
-
 	}
 }
 #app {

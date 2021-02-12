@@ -13,8 +13,11 @@
       <vue3-router-tree :items="routes">
         <template #item="{ item }">
           <div class="flex space-x-3 items-center">
-            <component :is="item.name.replace(' ', '')" :class="{'mr-5':!show}" />
-            <router-link v-if="show" exact-active-class="text-navy-blue-700" :to="item.path"
+            <component :is="item.name.replace(' ', '')" :class="{ 'mr-5': !show }" />
+            <router-link
+              v-if="show"
+              exact-active-class="text-navy-blue-700"
+              :to="item.path"
               ><span class="text-md font-light"> {{ item.name }}</span></router-link
             >
           </div>
@@ -40,7 +43,7 @@ import IconUserAvatar from "../../components/icons/IconUserAvatar";
 import IconWarningAlt from "../../components/icons/IconWarningAlt";
 
 export default defineComponent({
-    props:['show'],
+  props: ["show"],
   data: () => ({
     routes: [
       {
@@ -50,7 +53,7 @@ export default defineComponent({
 
         info: "updated",
       },
-  
+
       {
         path: "/dashboard/mail",
         name: "Mail",
@@ -84,9 +87,7 @@ export default defineComponent({
     Sent: IconSend,
     Draft: IconLicenseDraft,
   },
-  mounted() {
-
-  },
+  mounted() {},
 });
 </script>
 

@@ -15,4 +15,3 @@ export const JUSTIFY: keyable = {
 	around: 'justify-around',
 	evenly: 'justify-evenly',
 };
- 

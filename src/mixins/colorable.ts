@@ -1,9 +1,9 @@
 import { ComponentPublicInstance, defineComponent, VNode } from 'vue';
 
 
-const colorable={
- 
-    props:{
+const colorable = {
+
+    props: {
         bgColor: {
             type: String,
             default: "",
@@ -18,13 +18,13 @@ const colorable={
         },
     },
     methods: {
-        replaceColors(vm:any ,color:string,classes:Array<string>,regex:RegExp){
-     
-        let _classes=[...classes];
+        replaceColors(vm: any, color: string, classes: Array<string>, regex: RegExp) {
+
+            let _classes = [...classes];
             let index = _classes.findIndex((cl) => {
                 return cl.match(regex);
             });
-        
+
             _classes[index] = vm[color];
 
             return _classes;

@@ -15,12 +15,12 @@ export default defineComponent({
 
 	render() {
 		return (
-            <div>
-            {this.layout}
-			<component is={this.layout}>
-				<router-view />
-			</component>
-            </div>
+			<div>
+				{this.layout}
+				<component is={this.layout}>
+					<router-view />
+				</component>
+			</div>
 		);
 	},
 });

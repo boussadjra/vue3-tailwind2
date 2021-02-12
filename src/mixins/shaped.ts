@@ -1,10 +1,10 @@
 import { PropType } from "vue";
 
-const shaped={
+const shaped = {
 
-    props:{
+    props: {
         shape: {
-            type: String as PropType < "rounded-none" | "rounded" | "rounded-full" > ,
+            type: String as PropType<"rounded-none" | "rounded" | "rounded-full">,
             default: "rounded",
         },
     },

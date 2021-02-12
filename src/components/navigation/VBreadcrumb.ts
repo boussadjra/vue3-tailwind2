@@ -25,7 +25,7 @@ export default defineComponent({
         customSlots(): any {
             if (this.path) {
                 let pathTokens = this.path.split('/').filter(token => token)
-                 return pathTokens.map((token, index) => {
+                return pathTokens.map((token, index) => {
                     return this.renderCrumb(token, index, pathTokens.length)
 
                 })

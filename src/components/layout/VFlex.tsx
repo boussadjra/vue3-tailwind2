@@ -5,7 +5,7 @@ import { computed, defineComponent, onMounted, PropType, reactive, ref, watch } 
 export default defineComponent({
 	props: {
 		dir: {
-			type: String as PropType<'row' |'row-reverse' |'col'|'col-reverse'>,
+			type: String as PropType<'row' | 'row-reverse' | 'col' | 'col-reverse'>,
 			default: 'row',
 		},
 		wrap: {
@@ -36,8 +36,8 @@ export default defineComponent({
 				class={`flex w-full   ${SPACES_X[props.spaceX]} ${SPACES_Y[props.spaceY]} ${
 					props.dir === 'col' ? 'flex-col' : 'flex-row'
 				} 
-                ${props.dir==='col-reverse' && 'flex-col-reverse'}
-                ${props.dir==='row-reverse' && 'flex-row-reverse'}
+                ${props.dir === 'col-reverse' && 'flex-col-reverse'}
+                ${props.dir === 'row-reverse' && 'flex-row-reverse'}
                 ${props.wrap ? 'flex-wrap' : 'flex-nowrap'} 
                 ${JUSTIFY[props.justify]}
                 ${ALIGHMENTS[props.align]}

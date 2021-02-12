@@ -2,11 +2,11 @@
 
 import { PropType } from "vue";
 
-const sizeable={
- 
-    props:{
+const sizeable = {
+
+    props: {
         size: {
-            type: String as PropType < "xs" | "sm" | "md" | "lg" > ,
+            type: String as PropType<"xs" | "sm" | "md" | "lg">,
             default: "md",
         },
     },

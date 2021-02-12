@@ -1,8 +1,8 @@
 
 
-const smoothable={
- 
-    props:{
+const smoothable = {
+
+    props: {
         smooth: {
             type: Boolean,
             default: false,

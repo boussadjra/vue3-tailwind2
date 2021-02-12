@@ -45,7 +45,7 @@
       </div>
     </section>
 
-    <section class=" px-4 py-4 text-black-600">
+    <section class="px-4 py-4 text-black-600">
       <v-flex class="py-16 text-gray-700 dark:text-gray-300" justify="center">
         <h4 class="font-bold">Features</h4>
       </v-flex>
@@ -53,7 +53,7 @@
       <v-flex justify="around" :spaceX="4" spaceY="4" :align="'center'">
         <card class="w-72 text-lg whitespace-nowrap rounded-xl">
           <template #header>
-            <v-flex justify="center" >
+            <v-flex justify="center">
               <div
                 class="border-4 border-navy-blue-500 dark:border-navy-blue-400 rounded-md flex items-end justify-end pr-1 h-12 w-12"
               >
@@ -107,26 +107,28 @@
         </card>
       </v-flex>
     </section>
-    <section class=" px-4 py-4 text-black-600 w-full">
-        <v-flex class="py-16 text-gray-700 dark:text-gray-300" justify="center">
+    <section class="px-4 py-4 text-black-600 w-full">
+      <v-flex class="py-16 text-gray-700 dark:text-gray-300" justify="center">
         <h5 class="font-bold">Rich components</h5>
       </v-flex>
-      <v-flex justify="center" align="center" dir="col"  :spaceY="10" wrap>
+      <v-flex justify="center" align="center" dir="col" :spaceY="10" wrap>
         <card
-          class="w-1/2 h-64 flex items-center rounded-lg"
+          class="w-1/2 h-64 flex items-center justify-center rounded-lg"
           elevation="xl"
-          style="transform: perspective(320px) rotate3d(8, -64, -12, -4deg)"
+          
         >
-          <w-grid :gap="2" :colsSm="2" :colsMd="6">
-            <w-btn v-for="(variant,i) in variants" :key="variant" :variant="variant">{{
+        <v-flex justify="center" align="center">
+          <w-grid  :gap="2" :colsSm="2" :colsMd="5">
+            <w-btn v-for="(variant, i) in variants" :key="variant" :variant="variant">{{
               variant
             }}</w-btn>
           </w-grid>
+        </v-flex>
         </card>
         <card
           class="w-1/2 h-64 flex items-center justify-center rounded-lg"
           elevation="xl"
-          style="transform: perspective(320px) rotate3d(8, 64, -12, -4deg)"
+        
         >
           <v-flex :spaceX="-2" justify="center" align="center">
             <w-avatar
@@ -135,7 +137,7 @@
               :src="'https://i.pravatar.cc/200?img=' + (60 + i)"
               shape="rounded-full"
               size="sm"
-              class="flex bg-navy-blue-200 row-start-1 text-navy-blue-650  ring-4 ring-white dark:ring-black-600"
+              class="flex bg-navy-blue-200 row-start-1 text-navy-blue-650 ring-4 ring-white dark:ring-black-600"
             >
             </w-avatar>
           </v-flex>
@@ -143,75 +145,100 @@
         <card
           class="w-1/2 h-64 flex items-center justify-center rounded-lg mt-8"
           elevation="xl"
-          style="transform: perspective(320px) rotate3d(8, -64, -12, -4deg)"
+          
         >
           <v-flex :spaceX="12" justify="center" align="center" class="w-full">
-     
-        <w-icon-with-badge>
-            <template #icon>
+            <w-icon-with-badge>
+              <template #icon>
                 <IconNotification height="32" width="32" class="text-gray-600" />
-            </template>
+              </template>
 
-            <template #badge>
-                <w-badge shape="rounded-full" position="initial" bgColor="bg-navy-blue-500 dark:bg-navy-blue-400" size="sm"></w-badge>
-            </template>
-        </w-icon-with-badge>
+              <template #badge>
+                <w-badge
+                  shape="rounded-full"
+                  position="initial"
+                  bgColor="bg-navy-blue-500 dark:bg-navy-blue-400"
+                  size="sm"
+                ></w-badge>
+              </template>
+            </w-icon-with-badge>
 
-        <w-icon-with-badge>
-            <template #icon>
+            <w-icon-with-badge>
+              <template #icon>
                 <IconHome height="32" width="32" class="text-gray-600" />
-            </template>
+              </template>
 
-            <template #badge>
-                <w-badge shape="rounded-full" position="initial" bgColor="bg-red-500" size="sm"></w-badge>
-            </template>
-        </w-icon-with-badge>
-        <w-icon-with-badge>
-            <template #icon>
+              <template #badge>
+                <w-badge
+                  shape="rounded-full"
+                  position="initial"
+                  bgColor="bg-red-500"
+                  size="sm"
+                ></w-badge>
+              </template>
+            </w-icon-with-badge>
+            <w-icon-with-badge>
+              <template #icon>
                 <IconFavorite height="32" width="32" class="text-gray-600" />
-            </template>
+              </template>
 
-            <template #badge>
-                <w-badge shape="rounded-full" ping position="initial" bgColor="bg-green-500" size="sm"></w-badge>
-            </template>
-        </w-icon-with-badge>
+              <template #badge>
+                <w-badge
+                  shape="rounded-full"
+                  ping
+                  position="initial"
+                  bgColor="bg-green-500"
+                  size="sm"
+                ></w-badge>
+              </template>
+            </w-icon-with-badge>
 
-        <w-icon-with-badge>
-            <template #icon>
+            <w-icon-with-badge>
+              <template #icon>
                 <IconChat height="32" width="32" class="text-gray-600" />
-            </template>
+              </template>
 
-            <template #badge-text>
-                <w-badge bgColor="bg-red-500" shape="rounded-full" textColor="text-red-100">
-                    <span class="text-sm"> +9</span>
+              <template #badge-text>
+                <w-badge
+                  bgColor="bg-red-500"
+                  shape="rounded-full"
+                  textColor="text-red-100"
+                >
+                  <span class="text-sm"> +9</span>
                 </w-badge>
-            </template>
-        </w-icon-with-badge>
-        <w-icon-with-badge>
-            <template #icon>
+              </template>
+            </w-icon-with-badge>
+            <w-icon-with-badge>
+              <template #icon>
                 <IconShoppingCart height="32" width="32" class="text-gray-600" />
-            </template>
+              </template>
 
-            <template #badge-text>
-                <w-badge bgColor="bg-blue-500" shape="rounded-full" textColor="text-blue-100">
-                    <span class="text-sm"> 4</span>
+              <template #badge-text>
+                <w-badge
+                  bgColor="bg-blue-500"
+                  shape="rounded-full"
+                  textColor="text-blue-100"
+                >
+                  <span class="text-sm"> 4</span>
                 </w-badge>
-            </template>
-
-        </w-icon-with-badge>
-        <w-icon-with-badge>
-            <template #icon>
+              </template>
+            </w-icon-with-badge>
+            <w-icon-with-badge>
+              <template #icon>
                 <IconModel height="32" width="32" class="text-gray-600" />
-            </template>
+              </template>
 
-            <template #badge-text>
-                <w-badge bgColor="bg-emerald-500" shape="rounded-full" size="xs" textColor="text-emerald-100">
-                    <span class="text-xs"> New</span>
+              <template #badge-text>
+                <w-badge
+                  bgColor="bg-emerald-500"
+                  shape="rounded-full"
+                  size="xs"
+                  textColor="text-emerald-100"
+                >
+                  <span class="text-xs"> New</span>
                 </w-badge>
-            </template>
-
-        </w-icon-with-badge>
- 
+              </template>
+            </w-icon-with-badge>
           </v-flex>
         </card>
       </v-flex>
@@ -255,24 +282,20 @@ export default defineComponent({
     "w-btn": WButton,
     VueLogo,
     TailwindLogo,
-    VFlex,WGrid,
+    VFlex,
+    WGrid,
     WAvatar,
     IconModel,
-    IconContainerSoftware,IconNotification,
-    IconMoon,IconHome,IconChat,WIconWithBadge,IconFavorite,IconShoppingCart,WBadge
+    IconContainerSoftware,
+    IconNotification,
+    IconMoon,
+    IconHome,
+    IconChat,
+    WIconWithBadge,
+    IconFavorite,
+    IconShoppingCart,
+    WBadge,
   },
-  created() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
-  methods: {
-    handleScroll(event: Event) {
-      console.log("--------------------");
-      console.log(event);
-      console.log("--------------------");
-    },
-  },
+
 });
 </script>
