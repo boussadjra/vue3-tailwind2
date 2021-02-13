@@ -17,7 +17,17 @@
 		font-family: 'Inter' !important;
 		overflow-y: hidden;
 	}
-	h1 {
+	input.h-8::placeholder {
+  @apply text-sm;
+}
+input.h-10::placeholder {
+  @apply text-base;
+}
+
+input.h-12::placeholder {
+  @apply text-base;
+}
+h1 {
 		@apply text-8xl;
 	}
 
