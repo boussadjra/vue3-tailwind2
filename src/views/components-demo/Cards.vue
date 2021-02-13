@@ -3,7 +3,7 @@
     <h6 class="section__title">Cards:</h6>
     <div class="w-full grid--auto-cols gap-8">
       <card>
-        <p class="text-gray-600 text-sm">
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus illum totam
           nulla, sunt enim numquam eveniet animi nostrum eius quia laborum ex facilis
           aspernatur? Alias eos error voluptatibus repudiandae quia.
@@ -11,22 +11,22 @@
       </card>
       <card>
         <template #header>
-          <h6 class="text-2xl font-semibold text-gray-600">Some header</h6>
+          <h6 class="text-2xl font-semibold text-gray-600 dark:text-gray-400">Some header</h6>
         </template>
-        <p class="text-gray-600 text-sm">
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus illum totam
           nulla, sunt enim numquam eveniet animi nostrum eius quia laborum ex facilis
           aspernatur? Alias eos error voluptatibus repudiandae quia.
         </p>
       </card>
       <card>
-        <p class="text-gray-600 text-sm">
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus illum totam
           nulla, sunt enim numquam eveniet animi nostrum eius quia laborum ex facilis
           aspernatur? Alias eos error voluptatibus repudiandae quia.
         </p>
         <template #footer>
-          <h6 class="text-2xl font-semibold text-gray-600">Some footer</h6>
+          <h6 class="text-2xl font-semibold text-gray-600 dark:text-gray-400">Some footer</h6>
         </template>
       </card>
     </div>
@@ -35,7 +35,7 @@
     <h6 class="section__title">Cards with actions:</h6>
     <div class="w-full grid--auto-cols gap-4">
       <card>
-        <p class="text-gray-600 text-sm">
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus illum totam
           nulla, sunt enim numquam eveniet animi nostrum eius quia laborum ex facilis
           aspernatur? Alias eos error voluptatibus repudiandae quia.
@@ -48,7 +48,7 @@
         </template>
       </card>
       <card>
-        <p class="text-gray-600 text-sm">
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus illum totam
           nulla, sunt enim numquam eveniet animi nostrum eius quia laborum ex facilis
           aspernatur? Alias eos error voluptatibus repudiandae quia.
@@ -58,24 +58,24 @@
             <IconFavorite
               height="24"
               width="24"
-              class="text-gray-600 cursor-pointer hover:text-navy-blue-600"
+              class="text-gray-600 dark:text-gray-400 cursor-pointer hover:text-navy-blue-600"
             />
             <IconChat
               height="24"
               width="24"
-              class="text-gray-600 cursor-pointer hover:text-navy-blue-600"
+              class="text-gray-600 dark:text-gray-400 cursor-pointer hover:text-navy-blue-600"
             />
 
             <IconShare
               height="24"
               width="24"
-              class="text-gray-600 cursor-pointer hover:text-navy-blue-600"
+              class="text-gray-600 dark:text-gray-400 cursor-pointer hover:text-navy-blue-600"
             />
           </div>
         </template>
       </card>
       <card>
-        <p class="text-gray-600 text-sm">
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus illum totam
           nulla, sunt enim numquam eveniet animi nostrum eius quia laborum ex facilis
           aspernatur? Alias eos error voluptatibus repudiandae quia.
@@ -90,13 +90,13 @@
             <IconChat
               height="24"
               width="24"
-              class="text-gray-600 cursor-pointer hover:text-navy-blue-600"
+              class="text-gray-600 dark:text-gray-400 cursor-pointer hover:text-navy-blue-600"
             />
 
             <IconShare
               height="24"
               width="24"
-              class="text-gray-600 cursor-pointer hover:text-navy-blue-600"
+              class="text-gray-600 dark:text-gray-400 cursor-pointer hover:text-navy-blue-600"
             />
           </div>
         </template>
@@ -110,7 +110,7 @@
         <template #media>
           <img src="@/assets/img/salade.jpg" alt="" srcset="" />
         </template>
-        <p class="text-gray-600 text-sm">
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus illum totam
           nulla, sunt enim numquam eveniet animi nostrum eius quia laborum ex facilis
           aspernatur? Alias eos error voluptatibus repudiandae quia.
@@ -140,7 +140,7 @@
               <IconOverflowMenuVertical
                 height="24"
                 width="24"
-                class="justify-self-end text-gray-600 cursor-pointer"
+                class="justify-self-end text-gray-600 dark:text-gray-400 cursor-pointer"
               />
             </w-btn>
           </div>
@@ -148,7 +148,7 @@
         <template #media>
           <img src="@/assets/img/walter-verna.jpg" alt="" srcset="" />
         </template>
-        <p class="text-gray-600 text-sm">
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus illum totam
           nulla, sunt enim numquam eveniet animi nostrum eius quia laborum ex facilis
           aspernatur? Alias eos error voluptatibus repudiandae quia.
@@ -163,13 +163,13 @@
             <IconChat
               height="24"
               width="24"
-              class="text-gray-600 cursor-pointer hover:text-navy-blue-600"
+              class="text-gray-600 dark:text-gray-400 cursor-pointer hover:text-navy-blue-600"
             />
 
             <IconShare
               height="24"
               width="24"
-              class="text-gray-600 cursor-pointer hover:text-navy-blue-600"
+              class="text-gray-600 dark:text-gray-400 cursor-pointer hover:text-navy-blue-600"
             />
           </div>
         </template>
@@ -179,8 +179,8 @@
           <img src="@/assets/img/aflou.jpg" alt="" srcset="" />
         </template>
         <div>
-          <h6 class="text-md font-bold text-gray-600">Aflou</h6>
-          <p class="text-gray-600 text-sm py-1">
+          <h6 class="text-md font-bold text-gray-600 dark:text-gray-400">Aflou</h6>
+          <p class="text-gray-600 dark:text-gray-400 text-sm py-1">
             Aflou is a town and commune in Laghouat Province, Algeria. It is located in
             the Amour Range of the Saharan Atlas, at an elevation of 1,426 m, which makes
             it one of the highest towns in Algeria. Aflou is the capital of Aflou
@@ -207,7 +207,7 @@
         </template>
         <div class="h-full">
           <h6 class="text-2xl font-bold text-gray-700">Some title</h6>
-          <p class="text-gray-600 text-md leading-snug">
+          <p class="text-gray-600 dark:text-gray-400 text-md leading-snug">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rem maiores
             provident mollitia tenetur alias quidem quia suscipit, amet aut eaque nisi
             tempora voluptates numquam. Soluta dolorem recusandae sapiente atque, quos
