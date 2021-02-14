@@ -98,15 +98,56 @@
         </w-grid>
       </w-grid>
     </w-grid>
+     <w-grid :gapY="6">
+      <w-grid :gapY="3">
+        <div>Input with appended icons:</div>
+        <w-grid :gap-x="4" :cols="3">
+          <w-input
+           
+            shape="rounded-full"
+            outlined
+            placeholder="dropdown"
+          >
+            <template #append>
+              <IconChevronDown />
+            </template>
+          </w-input>
+          <w-input
+            label="Your phone number"
+     
+            outlined
+            placeholder="phone number"
+          >
+            <template #append>
+              <icon-close />
+            </template>
+          </w-input>
+          <w-input
+            label="Your Birthdate"
+     
+            outlined
+            placeholder="Birthdate"
+          >
+            <template #append>
+              <icon-calendar/>
+            </template>
+          </w-input>
+        </w-grid>
+      </w-grid>
+    </w-grid>
   </w-grid>
 </template>
 
 <script lang="ts">
 import WInput from "@/components/form/WInput";
+import IconCalendar from "@/components/icons/IconCalendar";
+import IconChevronDown from "@/components/icons/IconChevronDown";
+import IconClose from "@/components/icons/IconClose";
 import IconLocation from "@/components/icons/IconLocation";
 import IconPhone from "@/components/icons/IconPhone";
 import IconSearch from "@/components/icons/IconSearch";
 import WGrid from "@/components/layout/Grid";
+
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -119,7 +160,7 @@ export default defineComponent({
   components: {
     WGrid,
     WInput,
-    IconSearch,IconPhone,IconLocation
+    IconSearch,IconPhone,IconLocation,IconChevronDown,IconClose,IconCalendar
   },
 });
 </script>

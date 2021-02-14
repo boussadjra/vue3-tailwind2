@@ -45,7 +45,7 @@ export default defineComponent({
 					...classes,
 					this.bgSmoothColors[this.variant],
 					'text-gray-600 dark:text-gray-300',
-					this.bgSmoothColorsHover[this.variant],
+					// this.bgSmoothColorsHover[this.variant],
 				];
 			} else if (this.outlined) {
 				classes = [
@@ -81,9 +81,9 @@ export default defineComponent({
 					<input
 						placeholder={this.placeholder}
 						id={this.uuid}
-						class="bg-transparent placeholder-gray-500 fo   px-4 h-full w-full outline-none focus:text-gray-600 focus:dark:text-gray-300 "
+						class="bg-transparent placeholder-gray-500 fo   px-4 h-full w-full outline-none focus:text-gray-600 dark:focus:text-gray-300 "
 					/>
-					{this.$slots.append && <div class="text-md mb-2 px-4 pt-4">{this.$slots.append()}</div>}
+					{this.$slots.append && <div class="text-md  pr-2">{this.$slots.append()}</div>}
 				</div>
 			</div>
 		);
