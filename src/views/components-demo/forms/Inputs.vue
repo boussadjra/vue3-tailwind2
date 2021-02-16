@@ -65,92 +65,72 @@
       <w-grid :gapY="3">
         <div>Input with prepended icons:</div>
         <w-grid :gap-x="4" :cols="3">
-          <w-input
-           
-            shape="rounded-full"
-            outlined
-            placeholder="Search"
-          >
+          <w-input shape="rounded-full" outlined placeholder="Search">
             <template #prepend>
               <icon-search />
             </template>
           </w-input>
-          <w-input
-            label="Your phone number"
-     
-            outlined
-            placeholder="phone number"
-          >
+          <w-input label="Your phone number" outlined placeholder="phone number">
             <template #prepend>
               <icon-phone />
             </template>
           </w-input>
-          <w-input
-            label="Your Address"
-     
-            outlined
-            placeholder="address"
-          >
+          <w-input label="Your Address" outlined placeholder="address">
             <template #prepend>
-              <icon-location/>
+              <icon-location />
             </template>
           </w-input>
         </w-grid>
       </w-grid>
     </w-grid>
-     <w-grid :gapY="6">
+    <w-grid :gapY="6">
       <w-grid :gapY="3">
         <div>Input with appended icons:</div>
         <w-grid :gap-x="4" :cols="3">
-          <w-input
-           
-            shape="rounded-full"
-            outlined
-            placeholder="dropdown"
-          >
+          <w-input shape="rounded-full" outlined placeholder="dropdown">
             <template #append>
               <IconChevronDown />
             </template>
           </w-input>
-          <w-input
-            label="Your phone number"
-     
-            outlined
-            placeholder="phone number"
-          >
+          <w-input label="Your phone number" outlined placeholder="phone number">
             <template #append>
               <icon-close />
             </template>
           </w-input>
-          <w-input
-            label="Your Birthdate"
-     
-            outlined
-            placeholder="Birthdate"
-          >
+          <w-input label="Your Birthdate" outlined placeholder="Birthdate">
             <template #append>
-              <icon-calendar/>
+              <icon-calendar />
             </template>
           </w-input>
         </w-grid>
       </w-grid>
     </w-grid>
-     <w-grid :gapY="6">
+    <w-grid :gapY="6">
       <w-grid :gapY="3">
         <div>Input with helper text:</div>
         <w-grid :gap-x="4" :cols="3">
-         
-          <w-input
-            label="Your email"
-     
-            outlined
-            placeholder="Email"
-          >
+          <w-input label="Your email" variant="danger" outlined placeholder="Email">
             <template #append>
-              <icon-email/>
+              <icon-email />
             </template>
             <template #helper>
-              <span class="text-red-400">The email address is invalud </span>
+              <span class="text-red-500">The email address is invalid </span>
+            </template>
+          </w-input>
+          <w-input label="Your password" variant="warning" outlined placeholder="Password">
+            <template #prepend>
+              <icon-locked />
+            </template>
+            <template #helper>
+              <span class="text-yellow-500">The password is too weak </span>
+            </template>
+          </w-input>
+          <w-input label="Your password" variant="success" outlined placeholder="Password">
+            <template #prepend>
+              <icon-locked />
+            </template>
+            <template #helper>
+              <span class="text-emerald-600">The password is good </span>
             </template>
           </w-input>
         </w-grid>
@@ -166,6 +146,7 @@ import IconChevronDown from "@/components/icons/IconChevronDown";
 import IconClose from "@/components/icons/IconClose";
 import IconEmail from "@/components/icons/IconEmail";
 import IconLocation from "@/components/icons/IconLocation";
+import IconLocked from "@/components/icons/IconLocked";
 import IconPhone from "@/components/icons/IconPhone";
 import IconSearch from "@/components/icons/IconSearch";
 import WGrid from "@/components/layout/Grid";
@@ -182,7 +163,13 @@ export default defineComponent({
   components: {
     WGrid,
     WInput,
-    IconSearch,IconPhone,IconLocation,IconChevronDown,IconClose,IconCalendar,IconEmail
+    IconSearch,
+    IconPhone,
+    IconLocation,
+    IconChevronDown,
+    IconClose,
+    IconCalendar,
+    IconEmail,IconLocked
   },
 });
 </script>
