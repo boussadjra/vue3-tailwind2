@@ -3,7 +3,7 @@
     <h1 class="section__title">Tab views :</h1>
     <div class="w-full grid gap-4 place-items-center">
       <card>
-        <v-tab-view :items="items"> </v-tab-view>
+        <w-tab-view :items="items"> </w-tab-view>
       </card>
     </div>
   </div>
@@ -12,17 +12,17 @@
     <h1 class="section__title">Tab views with custom headers:</h1>
     <div class="w-full grid gap-4 place-items-center md:pl-12">
       <card class="w-auto">
-        <v-tab-view :items="items">
+        <w-tab-view :items="items">
           <template #item="{ item }">
             <div class="flex space-x-2 items-center">
               <component :is="item.header.toLowerCase()"></component>
               <span>{{ item.header }}</span>
             </div>
           </template>
-        </v-tab-view>
+        </w-tab-view>
       </card>
       <card class="w-auto">
-        <v-tab-view :items="items">
+        <w-tab-view :items="items">
           <template #item="{ item }">
             <div class="flex space-x-2 items-center">
               <component :is="item.header.toLowerCase()"></component>
@@ -36,7 +36,7 @@
               >
             </div>
           </template>
-        </v-tab-view>
+        </w-tab-view>
       </card>
     </div>
   </div>
@@ -44,7 +44,7 @@
     <h1 class="section__title">Tab view for mobile:</h1>
     <div class="w-full flex justify-around space-x-4">
       <card class="w-auto">
-        <v-tab-view :items="items" border-top class="max-w-min">
+        <w-tab-view :items="items" border-top class="max-w-min">
           <template #item="{ item }">
             <div class="flex items-center">
               <component
@@ -54,10 +54,10 @@
               ></component>
             </div>
           </template>
-        </v-tab-view>
+        </w-tab-view>
       </card>
       <card class="w-auto">
-        <v-tab-view :items="items" border-top class="max-w-min">
+        <w-tab-view :items="items" border-top class="max-w-min">
           <template #item="{ item }">
             <div class="flex items-center">
               <component
@@ -83,7 +83,7 @@
               </w-icon-with-badge>
             </div>
           </template>
-        </v-tab-view>
+        </w-tab-view>
       </card>
     </div>
   </div>
@@ -91,7 +91,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import VTabView from "@/components/navigation/VTabView.vue";
+import WTabView from "@/components/navigation/WTabView.vue";
 import IconHome from "@/components/icons/IconHome";
 import IconBookmark from "@/components/icons/IconBookmark";
 import IconNotification from "@/components/icons/IconNotification";
@@ -125,7 +125,7 @@ export default defineComponent({
   },
 
   components: {
-    VTabView,
+    WTabView,
     home: IconHome,
     bookmarks: IconBookmark,
     notifications: IconNotification,

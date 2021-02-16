@@ -1,6 +1,6 @@
 import { defineComponent, h, Slot, Transition, VNode } from 'vue';
 export default defineComponent({
-    name: 'v-breadcrumb',
+    name: 'w-breadcrumb',
     props: {
         path: {
             type: String,

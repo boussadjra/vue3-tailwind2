@@ -135,6 +135,27 @@
         </w-grid>
       </w-grid>
     </w-grid>
+     <w-grid :gapY="6">
+      <w-grid :gapY="3">
+        <div>Input with helper text:</div>
+        <w-grid :gap-x="4" :cols="3">
+         
+          <w-input
+            label="Your email"
+     
+            outlined
+            placeholder="Email"
+          >
+            <template #append>
+              <icon-email/>
+            </template>
+            <template #helper>
+              <span class="text-red-400">The email address is invalud </span>
+            </template>
+          </w-input>
+        </w-grid>
+      </w-grid>
+    </w-grid>
   </w-grid>
 </template>
 
@@ -143,6 +164,7 @@ import WInput from "@/components/form/WInput";
 import IconCalendar from "@/components/icons/IconCalendar";
 import IconChevronDown from "@/components/icons/IconChevronDown";
 import IconClose from "@/components/icons/IconClose";
+import IconEmail from "@/components/icons/IconEmail";
 import IconLocation from "@/components/icons/IconLocation";
 import IconPhone from "@/components/icons/IconPhone";
 import IconSearch from "@/components/icons/IconSearch";
@@ -160,7 +182,7 @@ export default defineComponent({
   components: {
     WGrid,
     WInput,
-    IconSearch,IconPhone,IconLocation,IconChevronDown,IconClose,IconCalendar
+    IconSearch,IconPhone,IconLocation,IconChevronDown,IconClose,IconCalendar,IconEmail
   },
 });
 </script>

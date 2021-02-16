@@ -91,14 +91,14 @@
           />
         </a>
 
-        <v-breadcrumb
+        <w-breadcrumb
           :path="$route.path"
           class="text-gray-400 dark:text-gray-100 dark:bg-black-600 font-light"
         >
           <template #separator>
             <icon-caret-right class="text-gray-400 dark:text-gray-100" />
           </template>
-        </v-breadcrumb>
+        </w-breadcrumb>
       </div>
       <main
         class="w-full h-auto pt-4 pb-32 pl-8 pr-16 content dark:bg-black-700 dark:text-black-100"
@@ -111,7 +111,7 @@
 
 <script>
 import { defineComponent, ref, watch } from "vue";
-import VBreadcrumb from "@/components/navigation/VBreadcrumb";
+import WBreadcrumb from "@/components/navigation/WBreadcrumb";
 import WButton from "@/components/actions/WButton.vue";
 
 import IconModel from "@/components/icons/IconModel";
@@ -160,7 +160,7 @@ export default defineComponent({
     },
   },
   components: {
-    VBreadcrumb,
+    WBreadcrumb,
     IconModel,
     "w-btn": WButton,
     IconMenu,
