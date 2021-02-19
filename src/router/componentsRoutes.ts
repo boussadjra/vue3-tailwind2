@@ -60,6 +60,11 @@ export default {
           path: 'checkboxes',
           name: 'Checkboxes',
           component: () => import('../views/components-demo/forms/Checkboxes.vue'),
+        },
+        {
+          path: 'radio-buttons',
+          name: 'Radio buttons',
+          component: () => import('../views/components-demo/forms/RadioButtons.vue'),
         }
       ]
     }
