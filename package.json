@@ -15,6 +15,7 @@
         "postcss": "^7.0.35",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1",
         "vue": "^3.0.0",
+        "vue-i18n": "^9.0.0-rc.7",
         "vue-router": "^4.0.0-0",
         "vue3-router-tree": "^0.2.4",
         "vuex": "^4.0.0-0",

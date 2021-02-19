@@ -5,6 +5,6 @@ import store from './store'
 import 'css-pro-layout/dist/css/css-pro-layout.min.css';
 import './styles/index.css'
 let app = createApp(App)
-
-let root = app.use(store).use(router).mount('#app')
+import i18n from './i18n'
+let root = app.use(i18n).use(store).use(router).mount('#app')
 
