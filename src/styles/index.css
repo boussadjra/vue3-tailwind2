@@ -27,6 +27,10 @@ input.h-10::placeholder {
 input.h-12::placeholder {
   @apply text-base;
 }
+
+input:checked + svg {
+  	display: block;
+  }
 h1 {
 		@apply text-8xl;
 	}

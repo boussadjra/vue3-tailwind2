@@ -3,7 +3,7 @@
     <div class="sub-title-1">Inputs :</div>
     <w-grid :gapY="4">
       <w-grid :gapY="3">
-        <div>Outlined inputs with different shapes :</div>
+        <div class="pb-4">Outlined inputs with different shapes :</div>
         <w-grid :gap-x="4" :cols="3">
           <w-input
             label="Some label"
@@ -18,7 +18,7 @@
     </w-grid>
     <w-grid :gapY="6">
       <w-grid :gapY="3">
-        <div>Smooth inputs with different shapes :</div>
+        <div class="pb-4">Smooth inputs with different shapes :</div>
         <w-grid :gap-x="4" :cols="3">
           <w-input
             label="Some label"
@@ -33,7 +33,7 @@
     </w-grid>
     <w-grid :gapY="6">
       <w-grid :gapY="3">
-        <div>Outlined inputs with different variants :</div>
+        <div class="pb-4">Outlined inputs with different variants :</div>
         <w-grid :gap="4" :cols="3">
           <w-input
             label="Some label"
@@ -48,7 +48,7 @@
     </w-grid>
     <w-grid :gapY="6">
       <w-grid :gapY="3">
-        <div>Smooth inputs with different variants :</div>
+        <div class="pb-4">Smooth inputs with different variants :</div>
         <w-grid :gap="4" :cols="3">
           <w-input
             label="Some label"
@@ -63,7 +63,7 @@
     </w-grid>
     <w-grid :gapY="6">
       <w-grid :gapY="3">
-        <div>Input with prepended icons:</div>
+        <div class="pb-4">Input with prepended icons:</div>
         <w-grid :gap-x="4" :cols="3">
           <w-input shape="rounded-full" outlined placeholder="Search">
             <template #prepend>
@@ -85,7 +85,7 @@
     </w-grid>
     <w-grid :gapY="6">
       <w-grid :gapY="3">
-        <div>Input with appended icons:</div>
+        <div class="pb-4">Input with appended icons:</div>
         <w-grid :gap-x="4" :cols="3">
           <w-input shape="rounded-full" outlined placeholder="dropdown">
             <template #append>
@@ -107,7 +107,7 @@
     </w-grid>
     <w-grid :gapY="6">
       <w-grid :gapY="3">
-        <div>Input with helper text:</div>
+        <div class="pb-4">Input with helper text:</div>
         <w-grid :gap-x="4" :cols="3">
           <w-input label="Your email" variant="danger" outlined placeholder="Email">
             <template #append>

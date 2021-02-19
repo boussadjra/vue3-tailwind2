@@ -55,6 +55,11 @@ export default {
           path: 'inputs',
           name: 'Inputs',
           component: () => import('../views/components-demo/forms/Inputs.vue'),
+        },
+        {
+          path: 'checkboxes',
+          name: 'Checkboxes',
+          component: () => import('../views/components-demo/forms/Checkboxes.vue'),
         }
       ]
     }
