@@ -6,6 +6,7 @@ export default defineComponent({
 	name: 'w-radio',
 	props: {
 		modelValue: [String, Number],
+		value: [String, Number],
 		label: {
 			type: String,
 			default: '',
@@ -32,7 +33,11 @@ export default defineComponent({
 			},
 		};
 	},
-	created() {},
+	created() {
+		console.log('--------------------')
+		console.log(this.$attrs)
+		console.log('--------------------')
+	},
 	computed: {
 		customColors(): keyable {
 			return { ...this.colors, default: 'text-blue-600' };
@@ -47,21 +52,7 @@ export default defineComponent({
 
 			return classes;
 		},
-		checkMarkClasses() {
-			let classes = ['fill-current hidden   dark:text-gray-300 pointer-events-none'];
-
-			classes.push(this.checkMarkSizes[this.size]);
-
-			return classes;
-		},
-		helperClasses() {
-			let classes = ['text-xs  px-1'];
-			if (this.shape === 'rounded-full') {
-				classes.push('px-4');
-			}
-
-			return classes;
-		},
+	
 	},
 
 	render() {
@@ -74,18 +65,15 @@ export default defineComponent({
 							class={this.classes}
 							// class="opacity-0 absolute"
 							{...this.$attrs}
-							value={this.modelValue}
+							value={this.value}
 							onInput={($event: Event) =>
 								this.$emit('update:modelValue', ($event.target as HTMLInputElement).value)
 							}
 						/>
-						{/* <svg class={this.checkMarkClasses} viewBox="0 0 20 20">
-							<path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
-						</svg> */}
+					
 					</div>
 					<div class="select-none">{this.$slots.label ? this.$slots.label() : this.label}</div>
 				</label>
-				<div>{this.$slots.helper && <span class={this.helperClasses}>{this.$slots.helper()}</span>}</div>
 			</div>
 		);
 	},
