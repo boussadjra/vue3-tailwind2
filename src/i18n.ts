@@ -3,7 +3,8 @@ import { createI18n } from "vue-i18n";
 
 const i18n = createI18n({
   legacy: false,
-  locale: "ja",
+  locale: "en",
+  globalInjection: true,
   messages: {
     en: {
       message: {

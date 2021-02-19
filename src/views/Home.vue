@@ -25,7 +25,7 @@
           >
             Let's see the magic of Vue + Tailwind
           </p>
-<h2>{{ $t("message.greeting", {}, { locale: "en" }) }}</h2>
+
           <w-btn size="lg" bgColor="bg-navy-blue-500 dark:bg-navy-blue-400">
             <router-link to="/components"> GET STARTED </router-link>
           </w-btn>
