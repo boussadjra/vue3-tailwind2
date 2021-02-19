@@ -4,10 +4,7 @@ import { defineComponent, PropType } from 'vue';
 export default defineComponent({
 	name: 'w-input',
 	props: {
-		placeholder: {
-			type: String,
-			default: '',
-		},
+		modelValue: [String, Number],
 		label: {
 			type: String,
 			default: '',
@@ -22,7 +19,6 @@ export default defineComponent({
 
 	data() {
 		return {
-			uuid: '',
 			inputSizes: {
 				sm: 'h-8',
 				md: 'h-10',
@@ -31,11 +27,13 @@ export default defineComponent({
 		};
 	},
 	created() {
-		this.uuid = `input${new Date().getTime()}`;
+	
 	},
 	computed: {
 		classes() {
-			let classes: Array<string> = ['group flex items-center   focus-within:border-navy-blue-500 focus-within:text-navy-blue-500 '];
+			let classes: Array<string> = [
+				'group flex items-center   focus-within:border-navy-blue-500 focus-within:text-navy-blue-500 ',
+			];
 
 			classes.push(this.inputSizes[this.size]);
 			classes.push(this.shapes[this.shape]);
@@ -81,21 +79,20 @@ export default defineComponent({
 		return (
 			<div class="space-y-2">
 				<label class={this.labelClasses} for={this.uuid}>
-					{this.label} 
+					{this.label}
 				</label>
 				<div class={this.classes}>
 					{this.$slots.prepend && <div class="text-md  pl-2 ">{this.$slots.prepend()}</div>}
 
 					<input
-						placeholder={this.placeholder}
-						id={this.uuid}
+						{...this.$attrs}
+						value={this.modelValue}
+						onInput={($event:Event) => this.$emit('update:modelValue', ($event.target as HTMLInputElement).value)}
 						class="bg-transparent placeholder-gray-500 fo   px-4 h-full w-full outline-none focus:text-gray-600 dark:focus:text-gray-300 "
 					/>
 					{this.$slots.append && <div class="text-md  pr-2">{this.$slots.append()}</div>}
 				</div>
-				<div>
-				{this.$slots.helper && <span class={this.helperClasses}>{this.$slots.helper()}</span>}
-				</div>
+				<div>{this.$slots.helper && <span class={this.helperClasses}>{this.$slots.helper()}</span>}</div>
 			</div>
 		);
 	},

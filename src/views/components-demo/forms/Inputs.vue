@@ -117,7 +117,7 @@
               <span class="text-red-500">The email address is invalid </span>
             </template>
           </w-input>
-          <w-input label="Your password" variant="warning" outlined placeholder="Password">
+          <w-input label="Your password" type="password" variant="warning" outlined placeholder="Password">
             <template #prepend>
               <icon-locked />
             </template>
@@ -125,12 +125,12 @@
               <span class="text-yellow-500">The password is too weak </span>
             </template>
           </w-input>
-          <w-input label="Your password" variant="success" outlined placeholder="Password">
+          <w-input v-model="pwd" label="Your password" variant="success" outlined placeholder="Password">
             <template #prepend>
               <icon-locked />
             </template>
             <template #helper>
-              <span class="text-emerald-600">The password is good </span>
+              <span class="text-emerald-600">The password is strong </span>
             </template>
           </w-input>
         </w-grid>
@@ -158,7 +158,18 @@ export default defineComponent({
     return {
       shapes: ["rounded-none", "rounded", "rounded-full"],
       variants: ["danger", "success", "warning"],
+      pwd:''
     };
+  },
+  watch:{
+    pwd(v){
+      console.log('----------pwd----------')
+      console.log(v)
+      console.log('--------------------')
+    }
+  },
+  methods: {
+ 
   },
   components: {
     WGrid,
