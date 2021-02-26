@@ -65,6 +65,11 @@ export default {
           path: 'radio-buttons',
           name: 'Radio buttons',
           component: () => import('../views/components-demo/forms/RadioButtons.vue'),
+        },
+        {
+          path: 'selects',
+          name: 'Selects',
+          component: () => import('../views/components-demo/forms/Selects.vue'),
         }
       ]
     }

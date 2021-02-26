@@ -1,4 +1,3 @@
-import { ComponentPublicInstance, defineComponent, VNode } from 'vue';
 
 
 const colorable = {

@@ -5,7 +5,7 @@
       <w-grid :gapY="4">
         <div class="pb-6">Checkboxes with different sizes :</div>
         <w-grid :gap-x="4" :cols="3">
-          <w-radio v-for="size in sizes" :key="size" :size="size">
+          <w-radio checked v-for="size in sizes" :key="size" :size="size">
             <template #label>
               <span class="">
                 size <span class="font-bold italic">{{ size }}</span>
@@ -19,7 +19,7 @@
       <w-grid :gapY="4">
         <div class="pb-6">Checkboxes with different variants :</div>
         <w-grid :gap-x="4" :cols="3">
-          <w-radio v-for="variant in variants" :key="variant" :variant="variant">
+          <w-radio checked v-for="variant in variants" :key="variant" :variant="variant">
             <template #label>
               <span class="">
                 variant <span class="font-bold italic">{{ variant }}</span>
@@ -31,7 +31,7 @@
       <hr class="dark:border-t dark:border-black-500" />
      <w-grid :gapY="4">
         <div class="pb-6">Checkboxes with data binding :</div>
-        <w-grid :gap-x="2" :cols="3" :widthFull="false">
+        <w-grid :gap-y="2"  :widthFull="false">
           <w-radio value="option1" label="option 1" name="option" v-model="option"  />
           <w-radio value="option2" label="option 2" name="option" v-model="option" />
           <w-radio value="option3" label="option 3" name="option" v-model="option" />

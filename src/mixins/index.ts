@@ -4,11 +4,11 @@ import sizeable from './sizeable'
 import smoothable from './smoothable'
 import variantable from './variantable'
 import colorable from './colorable'
-
+import inputable from './inputable'
 export {
     outlineable,
     shaped,
     sizeable,
     smoothable,
-    variantable, colorable,
+    variantable, colorable, inputable
 }

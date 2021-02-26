@@ -69,10 +69,10 @@ h1 {
     /* border-color: #6b7280; */
     border-width: 0!important;
     /* border-radius: 0px; */
-    padding-top: 0.5rem;
-    padding-right: 0.75rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.75rem;
+    padding-top: 0rem;
+    padding-right: .25rem;
+    padding-bottom: 0rem;
+    padding-left: 0.25rem;
     font-size: 1rem;
     line-height: 1.5rem;
 }

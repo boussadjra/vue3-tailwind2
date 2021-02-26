@@ -1,5 +1,5 @@
 <template>
-  <section class="home bg-navy-blue-50 dark:bg-black-700 h-auto min-h-screen pb-64">
+  <section class="home bg-white dark:bg-black-700 h-auto min-h-screen pb-64">
     <!-- :style="'background-image:url('+require('@/assets/img/flowers.png')+')'" -->
     <svg
       xmlns="http://www.w3.org/2000/svg"
