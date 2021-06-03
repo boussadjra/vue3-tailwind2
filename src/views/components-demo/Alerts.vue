@@ -1,6 +1,7 @@
 <template>
   <div class="space-y-2">
     <h1 class="section__title">Simple alerts:</h1>
+    <component :is="'img'"/>
     <div class="w-full grid--auto-cols gap-4">
       <button
         @click="reset"

@@ -6,7 +6,7 @@ const shaped = {
         shape: {
             type: String as PropType<"rounded-none" | "rounded" | "rounded-full">,
             default: "rounded",
-        },
+        }, 
     },
     data() {
         return {

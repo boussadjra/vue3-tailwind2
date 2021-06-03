@@ -16,6 +16,7 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
+				'body-color': '#525B73',
 				'navy-blue': {
 					'50': '#f2f3f9',
 					'100': '#e6e6f3',

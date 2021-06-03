@@ -32,7 +32,7 @@ export default {
 
       path: 'buttons',
       name: 'Buttons',
-      component: () => import('../views/components-demo/Buttons.vue'),
+      component: () => import('../views/components-demo/Buttons'),
     },
     {
 
